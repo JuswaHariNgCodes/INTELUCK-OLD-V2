@@ -1,0 +1,247 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    User Management
+{% endblock %}
+
+{% block content %}
+
+{% include 'topbar.html' %}
+<div class="content-wrapper custom-background-main-card" >
+  {% include 'sidebar.html' %}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <!-- MODULE PROPERTIES -->
+    <p id="moduleName" name="moduleName" class="d-none"></p>
+    <p id="objectType" name="objectType" class="d-none">00</p>
+    <p id="SAPMainTable" name="SAPMainTable" class="d-none"></p>
+    <p id="SAPChildTable1" name="SAPChildTable1" class="d-none"></p>
+    <p id="rowItemType" name="rowItemType" class="d-none"></p>
+    <p id="rowServiceType" name="rowServiceType" class="d-none"></p>
+    <p id="formSettingsURL" name="formSettingsURL" class="d-none"></p>
+    <p id="updateFormSettingsURL" name="updateFormSettingsURL" class="d-none"></p>
+    <p id="updateFormSettingsURL" name="updateFormSettingsURL" class="d-none"></p>
+    <p id="currentLoggedInUserId" name="currentLoggedInUserId" class="d-none">
+    <p id="enableSAPModuleTopBarButtons" name="enableSAPModuleTopBarButtons" class="d-none">Y</p>
+  <!-- MODULE PROPERTIES -->
+    <div class="container-fluid">
+        <div class="row mb-0">
+        <div id="myProgress" class="d-none m-0 p-0">
+          <div id="myBar" class="m-0 p-0">
+
+          </div>
+        </div>
+        <div class="col-sm-6">
+            <h1 class="m-0">User Management</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6 m-0">
+            <ol class="breadcrumb float-sm-right">
+            <div class="btn-group btn-group-sm">
+                <button type="button" id="btnEdit" class="btn bg-light">Edit<i class="fas fa-edit text-purple text-lg ml-1"></i></button>
+                <button type="button" class="btn bg-teal dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                  <a class="dropdown-item" href="#">Cancel<i class="fas fa-ban text-danger text-lg ml-1"></i></a>
+                  <a class="dropdown-item" href="#">Close<i class="fas fa-door-closed text-danger text-lg ml-1"></i></a>
+                </div>
+              </div>
+            </ol>
+        </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content-header -->
+<h1 id="currentLoggedInUserId" class="d-none" >
+
+</h1>
+
+<!-- Main content -->
+<section class="content" >
+  <div class="container-fluid ">
+  <form action=""  method="POST" enctype="multipart/form-data" id="OUSRForm" class="form-horizontal" novalidate autocomplete="off">
+    {% csrf_token %}
+    <div id="modulebody" class="container-fluid-custom">
+      <div class="card card-primary card-outline custom-background-header-content" style="height: 145vh !important">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-3">
+              <div id="userDetails" class="">
+                <div class="box-profile">
+                    <div class="form-group text-center">
+                        <img class="profile-user-img img-fluid img-circle avatar-choices d-none" name="user_pic" alt="User profile picture" data-id="avatar1" data-path="user-profile-pictures/Avatar1.png" src="{{ MEDIA_URL }}user-profile-pictures/Avatar1.png">
+                        <img class="profile-user-img img-fluid img-circle avatar-choices d-none" name="user_pic" alt="User profile picture" data-id="avatar2" data-path="user-profile-pictures/Avatar2.png" src="{{ MEDIA_URL }}user-profile-pictures/Avatar2.png">
+                        <img class="profile-user-img img-fluid img-circle avatar-choices d-none" name="user_pic" alt="User profile picture" data-id="avatar3" data-path="user-profile-pictures/Avatar3.png" src="{{ MEDIA_URL }}user-profile-pictures/Avatar3.png">
+                        <img class="profile-user-img img-fluid img-circle avatar-choices d-none" name="user_pic" alt="User profile picture" data-id="avatar4" data-path="user-profile-pictures/Avatar4.png" src="{{ MEDIA_URL }}user-profile-pictures/Avatar4.png">
+                        <img class="profile-user-img img-fluid img-circle avatar-choices d-none" name="user_pic" alt="User profile picture" data-id="avatar5" data-path="user-profile-pictures/Avatar5.png" src="{{ MEDIA_URL }}user-profile-pictures/Avatar5.png">
+                        <img class="profile-user-img img-fluid img-circle avatar-choices" name="user_pic" alt="User profile picture" data-id="avatar6" data-path="user-profile-pictures/Avatar6.png" src="{{ MEDIA_URL }}user-profile-pictures/Avatar6.png">
+                    </div>
+                    <div class="form-group row ">
+                        <div class="custom-control custom-checkbox col-sm-6">
+                            <input class="custom-control-input editable-checkbox" type="checkbox" id="superuser" name="superuser" >
+                            <label for="superuser" class="custom-control-label">Super User</label>
+                        </div> 
+                        <div class="custom-control custom-checkbox col-sm-6">
+                            <input class="custom-control-input editable-checkbox" type="checkbox" id="locked" name="locked">
+                            <label for="locked" class="custom-control-label">Locked</label>
+                        </div>
+                    </div>
+                    <div class="form-group row ">
+                        <label for="id" class="col-sm-3 col-form-label">User ID</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control input-serialize" id="id" name="id" placeholder="User ID"  readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="username" class="col-sm-3 col-form-label">Username</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control input-serialize uneditable" id="username" name="username" placeholder="Username" autocomplete="off" required >
+            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="emp_id" class="col-sm-3 col-form-label">Emp ID</label>
+                        <div class="col-sm-9 input-group">
+                            <input type="text" class="form-control input-serialize" id="emp_id" name="emp_id" placeholder="Emp ID" required readonly>
+                            <div class="input-group-append toggle-visible">
+                                <button type="button" class="btn btn-flat bg-teal editable-button" data-toggle="modal" data-target="#modalEmployeeList" ><i class="fas fa-stream" ></i></button>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="name" class="col-sm-3 col-form-label">Emp Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control input-serialize" id="name" name="name" placeholder="Name" required readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email" class="col-sm-3 col-form-label">Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control input-serialize" id="email" name="email" placeholder="Email" autocomplete="off" required readonly>
+                        
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="password" class="col-sm-3 col-form-label">Password</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control editable input-serialize" pattern=".{8,12}" id="password" name="password" placeholder="Password (Atleast 8 characters)" required>
+                        
+                        </div>
+                    </div>
+                    <div class="form-group row d-none">
+                        <label for="image_path" class="col-sm-3 col-form-label">Image</label>
+                        <div class="input-group col-sm-9">
+                            <div class="custom-file">
+                            <input type="file" class="custom-file-input editable-file input-serialize" id="image_path" name="image_path" accept=".jpg,.png" >
+                            
+                            <label class="custom-file-label " for="image_path">Choose file</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- /.card-body -->
+            </div>
+                <!-- /.card -->
+              <hr/>
+            <div class="row prevent-select">
+              <div class="col-sm-3 mt-2">
+                <div class="form-group row ">
+                  <input class="col-sm-3 custom-control-input editable-checkbox" type="checkbox" id="superuser" name="superuser" >
+                  <div class="input-group col-sm-12">
+                      <div class="custom-file">
+                        <img class="btn img-circle avatar-selection image-sidebar elevation-2 mt-3" alt="User Image" id="avatar1" src="{{ MEDIA_URL }}/user-profile-pictures/Avatar1.png" data-value="user-profile-pictures/Avatar1.png" style="padding:0 !important">
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3 mt-2">
+                <div class="form-group row ">
+                  <input class="col-sm-3 custom-control-input editable-checkbox" type="checkbox" id="superuser" name="superuser" >
+                  <div class="input-group col-sm-12">
+                      <div class="custom-file">
+                        <img class="btn img-circle avatar-selection image-sidebar elevation-2 mt-3" alt="User Image" id="avatar2" src="{{ MEDIA_URL }}/user-profile-pictures/Avatar2.png" data-value="user-profile-pictures/Avatar2.png" style="padding:0 !important">
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3 mt-2">
+                <div class="form-group row ">
+                  <input class="col-sm-3 custom-control-input editable-checkbox" type="checkbox" id="superuser" name="superuser" >
+                  <div class="input-group col-sm-12">
+                      <div class="custom-file">
+                        <img class="btn img-circle avatar-selection image-sidebar elevation-2 mt-3" alt="User Image" id="avatar3" src="{{ MEDIA_URL }}/user-profile-pictures/Avatar3.png" data-value="user-profile-pictures/Avatar3.png" style="padding:0 !important">
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3 mt-2">
+                <div class="form-group row ">
+                  <input class="col-sm-3 custom-control-input editable-checkbox" type="checkbox" id="superuser" name="superuser" >
+                  <div class="input-group col-sm-12">
+                      <div class="custom-file">
+                        <img class="btn img-circle avatar-selection image-sidebar elevation-2 mt-3" alt="User Image" id="avatar4" src="{{ MEDIA_URL }}/user-profile-pictures/Avatar4.png" data-value="user-profile-pictures/Avatar4.png" style="padding:0 !important">
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3 mt-5">
+                <div class="form-group row ">
+                  <input class="col-sm-3 custom-control-input editable-checkbox" type="checkbox" id="superuser" name="superuser" >
+                  <div class="input-group col-sm-12">
+                      <div class="custom-file">
+                        <img class="btn img-circle avatar-selection image-sidebar elevation-2 mt-3" alt="User Image" id="avatar5" src="{{ MEDIA_URL }}/user-profile-pictures/Avatar5.png" data-value="user-profile-pictures/Avatar5.png" style="padding:0 !important">
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3 mt-5">
+                <div class="form-group row ">
+                  <input class="col-sm-3 custom-control-input editable-checkbox" type="checkbox" id="superuser" name="superuser" >
+                  <div class="input-group col-sm-12">
+                      <div class="custom-file">
+                        <img class="btn img-circle avatar-selection image-sidebar elevation-2 mt-3" alt="User Image" id="avatar6" src="{{ MEDIA_URL }}/user-profile-pictures/Avatar6.png" data-value="user-profile-pictures/Avatar6.png" style="padding:0 !important">
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                
+                
+            </div>
+            <div class="col-lg-9 ">
+              {% include 'ousr/partials/OUSR-template-details.html' %}    
+            </div>
+          </div>
+        </div>  
+        <div class="card-footer card-primary card-outline">
+          <div class="btn-group">
+            <button type="submit" name="add" value="1" class="btn btn-lg btn-success fresh-submit-button submit-buttons" id="btnAddConfirm">Add & View</button>
+            <a type="button" class="btn btn-lg btn-success dropdown-toggle dropdown-icon submit-buttons" data-toggle="dropdown">
+              <span class="sr-only">Toggle Dropdown</span>
+            </a>
+            <div class="dropdown-menu" role="menu">
+              <button type="submit" name="add-new" value="2" class="btn btn-lg btn-success dropdown-item submit-buttons" >Add & New</button>
+            </div>
+          </div>
+          <button type="submit" name="update" value="3" class="btn btn-lg btn-success d-none editable-submit-button submit-buttons" id="btnUpdateConfirm">Update</button>
+          <button type="button" name="cancel"  value="4" class="btn btn-lg btn-danger editable-submit-button submit-buttons" id="btnCancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+    </form>  
+  </div>
+</section>
+<!-- /.content -->
+
+</div>
+{% include "ousr/modals/modals.html" %}
+
+
+<script type="text/javascript" src="{% static 'ousr/functions.js' %}"></script>
+<script type="text/javascript" src="{% static 'ousr/main.js' %}"></script>
+<script type="text/javascript" src="{% static 'ousr/modals/modals.js' %}"></script>
+
+{% endblock %}
+

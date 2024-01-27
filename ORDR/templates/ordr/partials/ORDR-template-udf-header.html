@@ -1,0 +1,80 @@
+
+{% for i in udfDetailsJSON %}
+    {% if i.RTable != None %}
+        <div class="form-group row m-0" >
+            <label for="{{i.AliasID}}" class="col-sm-5 col-form-label">{{i.Descr}}</label>
+            <div class="col-sm-7 ">
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend d-none">
+                        <a type="button" class="btn btn-warning"><i class="fas fa-arrow-alt-circle-right"></i></a>
+                    </div>
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize diapi" id="{{i.AliasID}}" name="{{i.AliasID}}" >
+                    <div class="input-group-append">
+                        <a type="button" id="btnUDF_UDT" name="btnUDF_ModalRelated" class="btn btn-flat bg-primary editable-text-button" data-related="{{i.RTable}}" data-related-type="{{i.RelType}}" data-populate-field-id="{{i.AliasID}}"><i class="fas fa-stream" ></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% elif i.RelUDO  != None  %}
+        <div class="form-group row m-0" >
+            <label for="{{i.AliasID}}" class="col-sm-5 col-form-label">{{i.Descr}}</label>
+            <div class="col-sm-7 ">
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend d-none">
+                        <a type="button" class="btn btn-warning"><i class="fas fa-arrow-alt-circle-right"></i></a>
+                    </div>
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize diapi" id="{{i.AliasID}}" name="{{i.AliasID}}">
+                    <div class="input-group-append">
+                        <a type="button" id="btnUDF_UDO" name="btnUDF_ModalRelated" class="btn btn-flat bg-primary editable-text-button" data-toggle="modal" data-related="{{i.UDOParentTable}}" data-related-type="{{i.RelType}}" data-populate-field-id="{{i.AliasID}}"><i class="fas fa-stream" ></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% elif i.RelSO  != None  %}
+        <div class="form-group row m-0" >
+            <label for="{{i.AliasID}}" class="col-sm-5 col-form-label">{{i.Descr}}</label>
+            <div class="col-sm-7 ">
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend d-none">
+                        <a type="button" class="btn btn-warning"><i class="fas fa-arrow-alt-circle-right"></i></a>
+                    </div>
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize diapi" id="{{i.AliasID}}" name="{{i.AliasID}}" >
+                    <div class="input-group-append">
+                        <a type="button" id="btnUDF_SO" name="btnUDF_ModalRelated" class="btn btn-flat bg-primary editable-text-button" data-toggle="modal" data-related="{{i.RelSO}}" data-related-type="{{i.RelType}}" data-populate-field-id="{{i.AliasID}}"><i class="fas fa-stream" ></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% elif i.RTable == None and i.RelUDO == None and i.ValidValues == None and i.EditType == None%}
+        <div class="form-group row m-0">
+            <label for="{{i.AliasID}}" class="col-sm-5 col-form-label">{{i.Descr}}</label>
+            <div class="col-sm-7">
+                <input type="text" class="form-control form-control-sm editable-text input-serialize di-api" id="{{i.AliasID}}" name="{{i.AliasID}}">
+            </div>
+        </div>
+    {% elif i.RTable == None and i.RelUDO == None and i.ValidValues == None and i.EditType != None %}
+        <div class="form-group row m-0">
+            <label for="{{i.AliasID}}" class="col-sm-5 col-form-label">{{i.Descr}}</label>
+            <div class="col-sm-7">
+                <input type="text" class="form-control form-control-sm editable-text input-serialize di-api text-right amount" id="{{i.AliasID}}" name="{{i.AliasID}}" data-format="{{i.EditType}}">
+            </div>
+        </div>
+    {% elif i.RTable == None and i.RelUDO == None and i.ValidValues != None%}
+        <div class="form-group row m-0">
+            <label for="{{i.AliasID}}" class="col-sm-5 col-form-label">{{i.Descr}}</label>
+            <div class="col-sm-7">
+                <div class="input-group input-group-sm" id="{{i.AliasID}}" name="{{i.AliasID}}">
+                    <select class="form-control form-control-sm input-serialize diapi" id="{{i.AliasID}}" name="{{i.AliasID}}" data-field-id="{{i.FieldID}}" >
+                        {% for i2 in udfDetailsValidValuesJSON %}
+                            {% if i2.FieldID == i.FieldID%}
+                                <option value='{{i2.FldValue}}'>{{i2.Descr}}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+{% endfor %}
+

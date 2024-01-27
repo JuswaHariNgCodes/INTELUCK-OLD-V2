@@ -1,0 +1,319 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  {{ request.session.module_name }}
+{% endblock %}
+
+{% block content %}
+
+{% include 'topbar.html' %}
+
+<div class="content-wrapper custom-background-main-card" >
+  {% include 'sidebar.html' %}
+  <!-- Content Header (Page header) -->
+  <section class="content-header ">
+    <!-- START MODULE PROPERTIES -->
+    <p id="moduleName" name="moduleName" class="d-none">pctpuploader1</p>
+    <p id="objectType" name="objectType" class="d-none">17</p>
+    <p id="SAPMainTable" name="SAPMainTable" class="d-none">ordr</p>
+    <p id="SAPChildTable1" name="SAPChildTable1" class="d-none">rdr1</p>
+    <p id="rowItemType" name="rowItemType" class="d-none">rdr1</p>
+    <p id="rowServiceType" name="rowServiceType" class="d-none">rdr2</p>
+    <p id="formSettingsURL" name="formSettingsURL" class="d-none">get-form-settings-ordr</p>
+    <p id="updateFormSettingsURL" name="updateFormSettingsURL" class="d-none">post-form-settings-ordr</p>
+    <p id="currentLoggedInUserId" name="currentLoggedInUserId" class="d-none"></p>
+    <p id="currentLoggedInEmpId" name="currentLoggedInEmpId" class="d-none" ></p>
+    <p id="currentLoggedInName" name="currentLoggedInName" class="d-none" ></p>
+    <p id="OITMCondition" name="OITMCondition" class="d-none"></p>
+    <p id="enableSAPModuleTopBarButtons" name="enableSAPModuleTopBarButtons" class="d-none">N</p>
+
+    <!-- DECIMALS -->
+    <p id="TotalsAccuracy" name="TotalsAccuracy" class="d-none database-settings" >{{ request.session.TotalsAccuracy }}</p>
+    <p id="PriceAccuracy" name="PriceAccuracy" class="d-none database-settings" >{{ request.session.PriceAccuracy }}</p>
+    <p id="RateAccuracy" name="RateAccuracy" class="d-none database-settings" >{{ request.session.RateAccuracy }}</p>
+    <p id="AccuracyofQuantities" name="AccuracyofQuantities" class="d-none database-settings" >{{ request.session.AccuracyofQuantities }}</p>
+    <p id="PercentageAccuracy" name="PercentageAccuracy" class="d-none database-settings" >{{ request.session.PercentageAccuracy }}</p>
+    <p id="MeasuringAccuracy" name="MeasuringAccuracy" class="d-none database-settings" >{{ request.session.MeasuringAccuracy }}</p>
+    <p id="QueryAccuracy" name="QueryAccuracy" class="d-none database-settings" >{{ request.session.QueryAccuracy }}</p>
+    <!-- CURRENCIES -->
+    <p id="MainCurncy" name="MainCurncy" class="d-none database-settings" >
+    <p id="SysCurrncy" name="SysCurrncy" class="d-none database-settings" >
+    <!-- DATE FORMAT -->
+    <p id="DateFormat" name="DateFormat" class="database-settings d-none">{{ request.session.DateFormat }}</p>
+    <p id="DateFormatString" name="DateFormatString" class="d-none database-settings" ></p>
+
+    <!-- MASTER DATA TYPES -->
+    <p id="CardType" name="CardType" class="d-none ocrd-settings" >C</p>
+    <!-- END MODULE PROPERTIES -->
+      <div class="container-fluid m-0 ">
+        <div class="row mb-0">
+          <div id="myProgress" class="d-none m-0 p-0">
+            <div id="myBar" class="m-0 p-0">
+
+            </div>
+          </div>
+          <div class="col-sm-6">
+              <h1 class="m-0">{{ request.session.module_name }}</h1>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content-header -->
+
+  
+  <!-- Main content -->
+  <section class="content" >
+    <div class="container-fluid">
+    <form action=""  method="POST" enctype="multipart/form-data" id="ORDRForm"  class="form-horizontal" novalidate autocomplete="off">
+      {% csrf_token %}
+
+      <div id="modulebody" class="row container-fluid-custom gx-3">
+        <div id="SydtemFieldsContainer" class="col-lg-12" >
+          <div class="card card-primary card-outline custom-background-header-content" style="height: 180vh !important">
+            <div class="card-body">
+              <div class="overflow-none">
+                <div >
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="form-group row mb-1 m-0" >
+                          <label for="CardCode" class="col-sm-3 col-form-label">File</label>
+                          <div class="col-sm-9">
+                              <div class="custom-file">
+                                <input type="file" accept="csv" class="custom-file-input form-control form-control-sm" id="csvFile">
+                                <label class="custom-file-label" for="csvFile">Choose file</label>
+                              </div>
+                          </div>   
+                      </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-lg-8" style="display:flex !important">
+                      <div class="info-box col-2 mr-3">
+                        <span class="info-box-icon bg-danger elevation-1"><i class="fa-solid fa-triangle-exclamation text-danger" style="background-color:white;border: 3px #DC3545 solid; border-radius:50%; padding:10px"></i></span>
+                        <div class="info-box-content">
+                          <span class="info-box-text"><b>Required Field</b>&nbsp;&nbsp;</span>
+                          <span class="info-box-number" id="requiredValues">
+                            0
+                          </span>
+                        </div>
+                      </div>
+                      <div class="info-box col-2 mr-3">
+                        <span class="info-box-icon elevation-1" style="background-color: #964B00; color:white"><i class="fa-solid fa-triangle-exclamation" style="background-color:white;color: #964B00;border: 3px #964B00 solid; border-radius:50%; padding:10px"></i></span>
+                        <div class="info-box-content">
+                          <span class="info-box-text"><b>Invalid Value</b>&nbsp;&nbsp;</span>
+                          <span class="info-box-number" id="invalidValues">
+                            0
+                          </span>
+                        </div>
+                      </div>
+                      <div class="info-box col-2 mr-3">
+                        <span class="info-box-icon bg-warning elevation-1" style="color:white !important"><i class="fa-solid fa-triangle-exclamation" style="background-color:white;color: #FFC107;border: 3px #FFC107 solid; border-radius:50%; padding:10px"></i></span>
+                        <div class="info-box-content">
+                          <span class="info-box-text"><b>Invalid Date</b>&nbsp;&nbsp;</span>
+                          <span class="info-box-number" id="invalidDate">
+                            0
+                          </span>
+                        </div>
+                      </div>
+                      <div class="info-box col-2 mr-3">
+                        <span class="info-box-icon bg-black elevation-1"><i class="fa-solid fa-triangle-exclamation" style="background-color:white;color: black;border: 3px black solid; border-radius:50%; padding:10px"></i></span>
+                        <div class="info-box-content">
+                          <span class="info-box-text"><b>Duplicate BN</b>&nbsp;&nbsp;</span>
+                          <span class="info-box-number" id="notUniqueValues">
+                            0
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-4 text-right">
+                        <a class="btn btn-lg m-0 p-0" data-toggle="modal" data-target="#modalPCTPUploaderLegends"><i class="fa fa-question-circle text-secondary" style="background-color:white;font-size:40px;border-radius:50%;"></i></a>
+                      </div>
+                      
+                    </div>
+                    <!-- /.col -->
+                  </div>
+                  <div class="row m-3" style="display:flex !important">
+                    <div class="col-lg-5" style="display:flex !important">
+                      <div class="info-box col-3 mr-3">
+                        <span class="info-box-icon bg-success elevation-1"><i class="fa-solid fa-check"></i></span>
+                        <div class="info-box-content">
+                          <span class="info-box-text text-success"><strong>READY!</strong></span>
+                          <span class="info-box-number text-success" id="ready">
+                            0
+                          </span>
+                        </div>
+                      </div>
+                      <div class="info-box col-3 mr-3">
+                        <span class="info-box-icon bg-danger elevation-1"><i class="fa-solid fa-times"></i></span>
+                        <div class="info-box-content">
+                          <span class="info-box-text text-danger"><strong>FAILED!</strong></span>
+                          <span class="info-box-number text-danger" id="failed">
+                            0
+                          </span>
+                        </div>
+                      </div>
+                      <div class="info-box col-3 mr-3">
+                        <span class="info-box-icon bg-info elevation-1"><i class="fa-solid fa-calculator"></i></span>
+                        <div class="info-box-content">
+                          <span class="info-box-text text-info"><strong>COUNT</strong></span>
+                          <span class="info-box-number text-info" id="count">
+                            0
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-7" style="display:flex !important">
+                      <div class="info-box col-2 mr-3">
+                        <span class="info-box-icon bg-primary elevation-1"><i class="fa-solid fa-triangle-exclamation" style="background-color:white;color: #0275D8;border: 3px #0275D8 solid; border-radius:50%; padding:10px"></i></span>
+                        <div class="info-box-content">
+                          <span class="info-box-text"><b>Item</b></span>
+                          <span class="info-box-number" id="existingValues">
+                            0
+                          </span>
+                        </div>
+                      </div>
+                      <div class="info-box col-2 mr-3">
+                        <span class="info-box-icon elevation-1" style="background-color: #A020F0; color:white"><i class="fa-solid fa-triangle-exclamation" style="background-color:white;color: #A020F0;border: 3px #A020F0 solid; border-radius:50%; padding:10px"></i></span>
+                        <div class="info-box-content">
+                          <span class="info-box-text"><b>POD</b></span>
+                          <span class="info-box-number" id="existingValuesPOD">
+                            0
+                          </span>
+                        </div>
+                      </div>
+                      <div class="info-box col-2 mr-3">
+                        <span class="info-box-icon elevation-1" style="background-color: #9ACD32; color:white"><i class="fa-solid fa-triangle-exclamation" style="background-color:white;color: #9ACD32;border: 3px #9ACD32 solid; border-radius:50%; padding:10px"></i></span>
+                        <div class="info-box-content">
+                          <span class="info-box-text"><b>Billing</b></span>
+                          <span class="info-box-number" id="existingValuesBilling">
+                            0
+                          </span>
+                        </div>
+                      </div>
+                      <div class="info-box col-2 mr-3">
+                        <span class="info-box-icon elevation-1" style="background-color: #87CEEB; color:white"><i class="fa-solid fa-triangle-exclamation" style="background-color:white;color: #87CEEB;border: 3px #87CEEB solid; border-radius:50%; padding:10px"></i></span>
+                        <div class="info-box-content">
+                          <span class="info-box-text"><b>TP</b></span>
+                          <span class="info-box-number" id="existingValuesTP">
+                            0
+                          </span>
+                        </div>
+                      </div>
+                      <div class="info-box col-2 mr-3">
+                        <span class="info-box-icon elevation-1" style="background-color: #FF00FF; color:white"><i class="fa-solid fa-triangle-exclamation" style="background-color:white;color: #FF00FF;border: 3px #FF00FF solid; border-radius:50%; padding:10px"></i></span>
+                        <div class="info-box-content">
+                          <span class="info-box-text"><b>Pricing</b></span>
+                          <span class="info-box-number" id="existingValuesPricing">
+                            0
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="col-lg-12">
+                    <p class="text-center">
+                      <strong>Progress</strong>
+                    </p>
+                    </div>
+                    <div class="col-lg-4">    
+                      <div class="progress-group">
+                        <span class="progress-text"><b>Postable in Item Maser Data</b></span>
+                        <span class="float-right"><b>0/<span id="postableItem">0</span></b></span>
+                        <div class="progress progress-sm">
+                          <div class="progress-bar bg-primary" style="width: 75%"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">    
+                      <div class="progress-group">
+                        <span class="progress-text"><b>Postable in PCTP</b></span>
+                        <span class="float-right"><b>0/<span id="postablePOD">0</span></b></span>
+                        <div class="progress progress-sm">
+                          <div class="progress-bar bg-warning" style="width: 75%"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">    
+                      <div class="progress-group">
+                        <span class="progress-text"><b>Cell Count</b></span>
+                        <span class="float-right"><b>480</b>/800</span>
+                        <div class="progress progress-sm">
+                          <div class="progress-bar bg-info" style="width: 60%"></div>
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                    <div class="row">
+                      <div class="col-sm-12 mx-1">
+                          <div class="p-0 pt-1 border-bottom-0">
+                            <ul class="nav nav-tabs " id="custom-tabs-three-tab" role="tablist">
+                              <li class="nav-item ">
+                                <a class="nav-link content-tab active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#contents" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Contents</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="card-body card-primary card-outline custom-background-inner-content" style="height: 500px !important">
+                            <div class="tab-content custom-content" id="custom-tabs-three-tabContent" >
+                              <div class="tab-pane fade show active" id="contents" role="tab panel" aria-labelledby="contents" >
+                                
+                                <div class="overflow-auto" >
+                                  <div id="rowLoader" class="d-none"></div>
+                                    <div id="ContentRows" class="card-body table-responsive p-0" style="height: 900px; width: 100%">
+                                      <table class="table table-head-fixed text-nowrap table-bordered table-sm mx-0" id="tblContentRows" >
+                                        <thead>
+                                          
+                                        </thead>
+                                      </table>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- <hr/> -->
+                </div>
+              </div>
+            </div>
+            <div id="submitButtons" class="card-footer card-primary card-outline">
+              <div class="btn-group">
+                  <button type="button" name="action" class="btn btn-lg btn-success fresh-submit-button submit-buttons" id="btnAddConfirm">Post</button>
+              </div>
+              <button type="submit" name="action" value="update" class="btn btn-lg btn-success d-none editable-submit-button submit-buttons" id="btnUpdateConfirm">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </form>
+    </div>
+  </section>
+  <!-- /.content -->
+  
+</div>
+
+  {% include "addon-pctp-uploader-1/modals/modals.html" %}
+  <!-- INDEPENDENT DATALIST -->
+  <datalist id='CardCodeQueryResult' name='CardCodeQueryResult' class="datalist">
+    {% for i in businessPartnerList %}
+    <option value="{{i.0}}" label="{{i.1}}"></option>
+    {%endfor%}
+  </datalist>
+  <datalist id='ItemCodeQueryResult' name='ItemCodeQueryResult' class="datalist">
+    {% for i in itemList %}
+    <option value="{{i.0}}" label="{{i.1}}"></option>
+    {%endfor%}
+  </datalist>
+  <datalist id='UomCodeQueryResult' name='UomCodeQueryResult' class="datalist">
+  
+  </datalist>
+
+  
+  <!-- END INDEPENDENT DATALIST -->
+  <!-- DEPENDENT DATALIST -->
+
+  <!-- END DEPENDENT DATALIST -->
+  <script type="text/javascript" src="{% static 'addon-pctp-uploader-1/functions.js' %}"></script>
+  <script type="text/javascript" src="{% static 'addon-pctp-uploader-1/main.js' %}"></script>
+  <script type="text/javascript" src="{% static 'addon-pctp-uploader-1/modals/modals.js' %}"></script>
+ 
+  {% endblock %}
+  
+

@@ -1,0 +1,166 @@
+
+<thead>
+    <tr class='text-center custom-row' >
+        <th class="text-center" style="width: 50px !important" >#</th>
+        <th class="text-center px-5">position *</th>
+        <th class="text-center px-5">width</th>
+        <th class="text-center px-5">id</th>
+        <th class="text-center px-5">name</th>
+        <th class="text-center px-5">tabIndex</th>
+        <th class="text-center px-5">textAlign</th>
+        <th class="text-center px-5">rowAddVerifier</th>
+        <th class="text-center px-5">diApi</th>
+        <th class="text-center px-5">masterData</th>
+        <th class="text-center px-5">defaultCode</th>
+        <th class="text-center px-5">defaultValue</th>
+        <th class="text-center px-5">modal</th>
+        <th class="text-center px-5">type</th>
+        <th class="text-center px-5">selectOptions</th>
+        <th class="text-center px-5">format</th>
+        <th class="text-center px-5">decimalFormat</th>
+        <th class="text-center px-5">dataListTable</th>
+        <th class="text-center px-5">dataListID</th>
+        <th class="text-center px-5">connectedName</th>
+        <th class="text-center px-5">postable</th>
+        <th class="text-center px-5">dnone</th>
+        <th class="text-center px-5">validValues</th>
+        <th class="text-center px-5">functionDetails</th>
+        <th class="text-center px-5">functionTriggerBy</th> 
+        <th class="text-center px-5">fillable</th>
+        <th class="text-center px-5">readOnly</th> 
+    </tr>
+</thead>
+<tbody>
+    {% for i in contentRows %}
+    <tr class="m-0">
+        <td class="text-center rownumber">
+            {{ forloop.counter }}
+        </td> 
+        <td class="text-center">
+            <input type='number' class='form-control form-control-sm editable-text row-input required' name='position'  value="{{i.position}}">        
+        </td>
+        <td class="text-center">
+            <div class="input-group input-group-sm">
+                <input type='number' class='form-control form-control-sm editable-text row-input text-right required'  name='width'  value="{{i.width|slice:":-2"}}">       
+                <div class="input-group-append">
+                    <span class="input-group-text">px</span>
+                </div> 
+            </div>
+        </td>
+        <td class="text-center">
+            <input type='text' class='form-control form-control-sm editable-text row-input required'  name='id'  value="{{i.id}}">        
+        </td>
+        <td class="text-center">
+            <input type='text' class='form-control form-control-sm editable-text row-input required'  name='name'  value="{{i.name}}">        
+        </td>
+        <td class="text-center">
+            <select type='text' class='form-control form-control-sm editable-text row-input'  name='tabIndex'  >
+                <option value="" {% if i.tabIndex == '' %}selected{% endif %}></option>
+                <option value="-1" {% if i.tabIndex == '-1' %}selected{% endif %}>-1</option>    
+            </select>   
+        </td>
+        <td class="text-center">   
+            <select type='text' class='form-control form-control-sm editable-text row-input'  name='textAlign'  >
+                <option value="text-left" {% if i.textAlign == 'text-left' %}selected{% endif %}>text-left</option>
+                <option value="text-center" {% if i.textAlign == 'text-center' %}selected{% endif %}>text-center</option>
+                <option value="text-right" {% if i.textAlign == 'text-right' %}selected{% endif %}>text-right</option>    
+            </select>  
+        </td>
+        <td class="text-center"> 
+            <select type='text' class='form-control form-control-sm editable-text row-input'  name='rowAddVerifier'  >
+                <option value="true" {% if i.rowAddVerifier == 'true' %}selected{% endif %}>true</option>
+                <option value="false" {% if i.rowAddVerifier == 'false' %}selected{% endif %}>false</option>
+            </select>    
+        </td>
+        <td class="text-center">
+            <input type='text' class='form-control form-control-sm editable-text row-input'  name='diapi'  value="{{i.diapi}}">        
+        </td>
+        <td class="text-center">
+            <select type='text' class='form-control form-control-sm editable-text row-input'  name='masterdata'  >
+                <option value="true" {% if i.masterdata == 'true' %}selected{% endif %}>true</option>
+                <option value="false" {% if i.masterdata == 'false' %}selected{% endif %}>false</option>    
+            </select>      
+        </td>
+        <td class="text-center">
+            <input type='text' class='form-control form-control-sm editable-text row-input'  name='defaultCode'  value="{{i.defaultCode}}">        
+        </td> 
+        <td class="text-center">
+            <input type='text' class='form-control form-control-sm editable-text row-input'  name='defaultValue'  value="{{i.defaultValue}}">        
+        </td>
+        <td class="text-center">
+            <input type='text' class='form-control form-control-sm editable-text row-input'  name='modal'  value="{{i.modal}}">        
+        </td>
+        <td class="text-center">
+            <select type='text' class='form-control form-control-sm editable-text row-input'  name='type' >
+                <option value="input" {% if i.type == 'input' %}selected{% endif %}>input</option>
+                <option value="select" {% if i.type == 'select' %}selected{% endif %}>select</option>    
+                <option value="checkbox" {% if i.type == 'checkbox' %}selected{% endif %}>checkbox</option>    
+                <option value="textarea" {% if i.type == 'textarea' %}selected{% endif %}>textarea</option>     
+            </select>      
+        </td>
+        <td class="text-center">
+            <input type='text' class='form-control form-control-sm editable-text row-input'  name='selectoptions'  value="{{i.selectoptions}}">        
+        </td>
+        <td class="text-center">
+            <input type='text' class='form-control form-control-sm editable-text row-input'  name='format'  value="{{i.format}}">        
+        </td>
+        <td class="text-center">  
+            <select type='text' class='form-control form-control-sm editable-text row-input' name='decimalFormat'>
+                <option value="" {% if i.decimalFormat == '' %}selected{% endif %}></option>
+                <option value="TotalsAccuracy" {% if i.decimalFormat == 'TotalsAccuracy' %}selected{% endif %}>TotalsAccuracy</option>
+                <option value="AccuracyofQuantities" {% if i.decimalFormat == 'AccuracyofQuantities' %}selected{% endif %}>AccuracyofQuantities</option>    
+                <option value="PriceAccuracy" {% if i.decimalFormat == 'PriceAccuracy' %}selected{% endif %}>PriceAccuracy</option>    
+                <option value="RateAccuracy" {% if i.decimalFormat == 'RateAccuracy' %}selected{% endif %}>RateAccuracy</option>     
+                <option value="PercentageAccuracy" {% if i.decimalFormat == 'PercentageAccuracy' %}selected{% endif %}>PercentageAccuracy</option>     
+                <option value="MeasuringAccuracy" {% if i.decimalFormat == 'MeasuringAccuracy' %}selected{% endif %}>MeasuringAccuracy</option>     
+                <option value="QueryAccuracy" {% if i.decimalFormat == 'QueryAccuracy' %}selected{% endif %}>QueryAccuracy</option>     
+            </select>   
+        </td>
+        <td class="text-center">
+            <input type='text' class='form-control form-control-sm editable-text row-input'  name='dataListTable'  value="{{i.dataListTable}}">        
+        </td>
+        <td class="text-center">
+            <input type='text' class='form-control form-control-sm editable-text row-input'  name='dataListID'  value="{{i.dataListID}}">        
+        </td>
+        <td class="text-center">
+            <input type='text' class='form-control form-control-sm editable-text row-input'  name='connectedName'  value="{{i.connectedName}}">        
+        </td>
+        <td class="text-center">  
+            <select type='text' class='form-control form-control-sm editable-text row-input'  name='postable'  >
+                <option value="true" {% if i.postable == 'true' %}selected{% endif %}>true</option>
+                <option value="false" {% if i.postable == 'false' %}selected{% endif %}>false</option>    
+            </select>    
+        </td>
+        <td class="text-center">
+            <select type='text' class='form-control form-control-sm editable-text row-input'  name='dnone'  >
+                <option value="" {% if i.dnone == '' %}selected{% endif %}></option>
+                <option value="d-none" {% if i.dnone == 'd-none' %}selected{% endif %}>d-none</option>    
+            </select>       
+        </td>
+        <td class="text-center">
+            <input type='text' class='form-control form-control-sm editable-text row-input'  name='validValues'  value="{{i.validValues}}">        
+        </td>
+        <td class="text-center">
+            <input type='text' class='form-control form-control-sm editable-text row-input'  name='functionDetails'  value="{{i.functionDetails}}">        
+        </td>
+        <td class="text-center">
+            <input type='text' class='form-control form-control-sm editable-text row-input'  name='functionTriggerBy'  value="{{i.functionTriggerBy}}">        
+        </td>
+        <td class="text-center">
+            <select type='text' class='form-control form-control-sm editable-text row-input'  name='fillable'  >
+                <option value="true" {% if i.fillable == 'true' %}selected{% endif %}>true</option>
+                <option value="false" {% if i.fillable == 'false' %}selected{% endif %}>false</option>    
+            </select>       
+        </td>
+        <td class="text-center">
+            <select type='text' class='form-control form-control-sm editable-text row-input'  name='readOnly'  >
+                <option value="" {% if i.readOnly == '' %}selected{% endif %}></option>
+                <option value="readonly" {% if i.readOnly == 'readonly' %}selected{% endif %}>readonly</option>    
+            </select>       
+        </td>
+    </tr>
+    {% endfor %}
+    
+</tbody>
+
+

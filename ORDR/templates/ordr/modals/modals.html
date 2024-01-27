@@ -1,0 +1,687 @@
+
+<!-- MASTER DATA MODALS -->
+<div class="modal fade" id="modalEmployeeList">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="overlay">
+                <i class="fas fa-2x fa-sync fa-spin"></i>
+            </div>
+        <div class="modal-header bg-warning">
+            <h4 class="modal-title">List of Employees</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body ">
+            <table id="tblEmployee" class="table table-bordered table-striped table-hover d-none">
+                  <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Emp ID</th>
+                    <th>Last Name</th>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Email</th>
+                    <th>Job Title</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+            </table>
+        </div>
+        <div class="modal-footer ">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- END EMPLOYEE LIST MODAL -->
+
+<div class="modal fade" id="modalUserList" name="00">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-warning ">
+            <h4 class="modal-title">List of Users</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <table id="tblUser" class="table table-bordered table-striped table-hover">
+                  <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>User ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Emp ID</th>
+                    <th>Emp Name</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+            </table>
+        </div>
+        <div class="modal-footer ">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- END USER LIST MODAL -->
+
+<div class="modal fade" id="modalBusinessPartnerList" >
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-warning ">
+            <h4 class="modal-title">List of Business Partners</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <table id="tblBusinessPartner" class="table table-bordered table-striped table-hover">
+                  <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>BP Code</th>
+                    <th>BP Name</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    {% for i in businessPartnerList %}
+                    <tr>
+                        <td class="item-0">{{forloop.counter}}</td>
+                        <td class="item-1">{{i.0}}</td>
+                        <td class="item-2">{{i.1}}</td>
+                    </tr>
+
+                    {%endfor%}
+                  </tbody>
+            </table>
+        </div>
+        <div class="modal-footer ">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- END BUSINESS PARTNER LIST MODAL -->
+
+<div class="modal fade" id="modalContactPersonList" >
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-warning ">
+            <h4 class="modal-title">List of Contact Perons</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <table id="tblContactPerson" class="table table-bordered table-striped table-hover">
+                  <thead>
+                  <tr>
+                    <th>#</th>
+                    <th class="d-none">Code</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Telephone</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+            </table>
+        </div>
+        <div class="modal-footer ">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- END CONTACT PERSON LIST MODAL -->
+
+<div class="modal fade" id="modalSalesEmployeeList" >
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-warning ">
+            <h4 class="modal-title">List of Sales Employee</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <table id="tblSalesEmployee" class="table table-bordered table-striped table-hover">
+                  <thead>
+                  <tr>
+                    <th>#</th>
+                    <th class="d-none">Code</th>
+                    <th>Name</th>
+                    <th>Remarks</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+            </table>
+        </div>
+        <div class="modal-footer ">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- END SALES PERSON LIST MODAL -->
+<!-- END HEADER -->
+
+<div class="modal fade" id="modalItemList" >
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-warning ">
+            <h4 class="modal-title">List of Items</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <table id="tblItem" class="table table-bordered table-striped table-hover">
+                  <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Item Code</th>
+                    <th>Item Description</th>
+                    <th>In Stock</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    {% for i in itemList %}
+                    <tr>
+                        <td class="item-0">{{forloop.counter}}</td>
+                        <td class="item-1">{{i.0}}</td>
+                        <td class="item-2">{{i.1}}</td>
+                        <td class="item-3">{{i.11}}</td>
+                    </tr>
+                    {%endfor%}
+                  </tbody>
+            </table>
+        </div>
+        <div class="modal-footer ">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- END ITEM LIST MODAL -->
+
+
+<div class="modal fade" id="modalUnitOfMeasureList" >
+  
+</div>
+<!-- /.modal -->
+<!-- END UNIT OF MEASURE MODAL -->
+
+<div class="modal fade" id="modalWarehouseList" >
+   
+</div>
+<!-- /.modal -->
+<!-- END WAREHOUSE LIST MODAL -->
+
+
+
+
+<!-- END MASTER DATA MODAL -->
+
+<!-- UDF REUSABLE MODAL -->
+<div class="modal fade" id="modalReusableUDF" name="modalReusableUDF">
+  
+</div>
+
+<!-- /.modal -->
+
+
+<!-- END UDF REUSABLE MODAL -->
+
+<!-- END MODULE MODAL -->
+
+<!-- MODULE MODAL -->
+
+<div class="modal fade" id="modalSalesOrderList" name="documentModal">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+        <div class="modal-header bg-warning ">
+            <h4 class="modal-title">List of Sales Order</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <table id="tblSalesOrder" name="tblDocument" class="table table-bordered table-striped table-hover">
+                  <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Document Entry</th>
+                    <th>Document Num</th>
+                    <th>Posting Date</th>
+                    <th>Customer Code</th>
+                    <th>Customer Name</th>
+                    <th>Remarks</th>
+                    <th>Due Date</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+            </table>
+        </div>
+        <div class="modal-footer ">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- END UNIT OF MEASURE MODAL -->
+
+<!-- END MODULE MODAL -->
+
+
+<!-- ACTION MODALS -->
+<!-- Success -->
+<div class="modal fade" id="modal-success">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-success">
+        <div class="modal-header">
+            <h4 class="modal-title" id="modaltitle">Success!</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <h5 id="modal-success-body"></h5>
+        </div>
+       
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- Danger -->
+<div class="modal fade" id="modal-danger">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-danger">
+        <div class="modal-header">
+            <h4 class="modal-title" id="modaltitle">Fail!</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <h5 id="modal-danger-body"></h5>
+        </div>
+       
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- Loading -->
+<div class="modal fade" id="modal-loading">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="modaltitle">Loading</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body text-center">
+            <div class="spinner-grow text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-secondary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-success" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-danger" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-warning" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-info" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow bg-lime" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="spinner-grow text-dark" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+         
+        </div>
+       
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+<!-- END ACTION MODAL -->
+
+<!-- UTILITY MODALS -->
+<div class="modal fade" id="modalFormSettings">
+    <div class="modal-dialog modal-lg" >
+        <div class="modal-content">
+        <div class="modal-header bg-warning ">
+            <h4 class="modal-title">Form Settings</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body overflow-auto" >
+            <table id="tblFormSettings" class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-center">#</th>
+                        <th class="d-none">Position</th>
+                        <th class="d-none">Width</th>
+                        <th class="text-center">Column</th>
+                        <th class="text-center">Visible</th>
+                        <th class="d-none">id</th>
+                        <th class="d-none">name</th>
+                        <th class="d-none">diapi</th>
+                        <th class="d-none">masterdata</th>
+                        <th class="d-none">modal</th>
+                        <th class="d-none">type</th>
+                        <th class="d-none">selectoptions</th>
+                        <th class="d-none">format</th>
+                        <th class="d-none">dataListTable</th>
+                        <th class="d-none">dataListID</th>
+                        <th class="d-none">dataListFieldToSearch</th>
+                        <th class="d-none">connectedName</th>
+                        <th class="d-none">postable</th>
+                        <th class="d-none">dnone</th>
+                
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+                
+            </table>
+        </div>
+        <div class="modal-footer justify-content-between">
+            <button type="button" class="btn btn-success" id="btnFormSettingsUpdate">Update</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- END FORM SETTINGS MODAL -->
+
+<div class="modal fade" id="modalLogoutConfirmation">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content ">
+        <div class="modal-header bg-danger">
+            <h4 class="modal-title" id="modaltitle">Alert!</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <h2 id="modal-logout-body">Do you really want to log out? <i class="fa-solid fa-face-frown" style="color: #FFAE42  !important"></i></h2>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" id="btnConfirmLogout">Logout</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
+       
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- END LOGOUT MODALS -->
+
+<div class="modal fade" id="modalShipToDetails" >
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content">
+        <div class="modal-header bg-warning">
+            <h4 class="modal-title" id="modaltitle">Address Component</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body overflow-auto" >
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Street / PO Box</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize shipdetails" id="ShipToStreet" name="ShipToStreet" data-default-source="Street" data-SQL-field="Street" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Street No.</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize shipdetails" id="ShipToStreetNo" name="ShipToStreetNo" data-default-source="StreetNo" data-SQL-field="StreetNo" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Block</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize shipdetails" id="ShipToBlock" name="ShipToBlock" data-default-source="Block" data-SQL-field="Block" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">City</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize shipdetails" id="ShipToCity" name="ShipToCity" data-default-source="City" data-SQL-field="City" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Zip Code</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize shipdetails" id="ShipToZipCode" name="ShipToZipCode" data-default-source="ZipCode" data-SQL-field="ZipCode" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">County</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize shipdetails" id="ShipToCounty" name="ShipToCounty" data-default-source="County" data-SQL-field="County" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">State</label>
+                <div class="col-sm-8 ">
+                    <div class="input-group input-group-sm" id="CardCodeDiv" name="CardCodeDiv">
+                        <select class="form-control form-control-sm col-sm-12 my-1 address-select diapi shipdetails" id="ShipToState" name="ShipToState"  data-name="ShipToState"  data-default-source="State" data-address-type="S" data-SQL-field="State">
+                            {% for i in stateList %}
+                            <option value="{{i.0}}" label="{{i.2}}"></option>
+                            {%endfor%}
+                        </select>
+                    </div>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Country</label>
+                <div class="col-sm-8 ">
+                    <div class="input-group input-group-sm" id="CardCodeDiv" name="CardCodeDiv">
+                        <select class="form-control form-control-sm col-sm-12 my-1 address-select diapi shipdetails" id="ShipToCountry" name="ShipToCountry"  data-name="ShipToCountry"  data-default-source="Country" data-address-type="S" data-SQL-field="Country">
+                            {% for i in countryList %}
+                            <option value="{{i.0}}" label="{{i.1}}"></option>
+                            {%endfor%}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Building / Floor / Room</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize shipdetails" id="ShipToBuilding" name="ShipToBuilding" data-default-source="BuildingFloorRoom" data-SQL-field="Building" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Address Name 2</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize shipdetails" id="ShipToAddress2" name="ShipToAddress2" data-default-source="AddressName2" data-SQL-field="Address2" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Address Name 3</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize shipdetails" id="ShipToAddress3" name="ShipToAddress3" data-default-source="AddressName3" data-SQL-field="Address3" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">GLN</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize shipdetails" id="ShipToGlobalLocationNumber" name="ShipToGlobalLocationNumber" data-default-source="GlobalLocationNumber" required>
+                </div>
+            </div>	
+          </div>
+          <div class="modal-footer justify-content-between ">
+            <button type="button" class="btn btn-success" id="btnShipToDetailsUpdate"  data-dismiss="modal">Update</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+    <!-- END SHIP TO MODALS -->
+
+<div class="modal fade" id="modalBillToDetails" >
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content">
+        <div class="modal-header bg-warning">
+            <h4 class="modal-title" id="modaltitle">Address Component</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body overflow-auto" >
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Street / PO Box</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize billdetails" id="BillToStreet" name="BillToStreet" data-default-source="Street" data-SQL-field="Street" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Street No.</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize billdetails" id="BillToStreetNo" name="BillToStreetNo" data-default-source="StreetNo" data-SQL-field="StreetNo" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Block</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize billdetails" id="BillToBlock" name="BillToBlock" data-default-source="Block" data-SQL-field="Block" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">City</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize billdetails" id="BillToCity" name="BillToCity" data-default-source="City" data-SQL-field="City" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Zip Code</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize billdetails" id="BillToZipCode" name="BillToZipCode" data-default-source="ZipCode" data-SQL-field="ZipCode" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">County</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize billdetails" id="BillToCounty" name="BillToCounty" data-default-source="County" data-SQL-field="County" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">State</label>
+                <div class="col-sm-8 ">
+                    <div class="input-group input-group-sm" id="CardCodeDiv" name="CardCodeDiv">
+                        <select class="form-control form-control-sm col-sm-12 my-1 address-select diapi billdetails" id="BillToState" name="BillToState"  data-name="BillToState"  data-default-source="State" data-address-type="S" data-SQL-field="State">
+                            {% for i in stateList %}
+                            <option value="{{i.0}}" label="{{i.2}}"></option>
+                            {%endfor%}
+                        </select>
+                    </div>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Country</label>
+                <div class="col-sm-8 ">
+                    <div class="input-group input-group-sm" id="CardCodeDiv" name="CardCodeDiv">
+                        <select class="form-control form-control-sm col-sm-12 my-1 address-select diapi billdetails" id="BillToCountry" name="BillToCountry"  data-name="BillToCountry"  data-default-source="Country" data-address-type="S" data-SQL-field="Country">
+                            {% for i in countryList %}
+                            <option value="{{i.0}}" label="{{i.1}}"></option>
+                            {%endfor%}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Building / Floor / Room</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize billdetails" id="BillToBuilding" name="BillToBuilding" data-default-source="BuildingFloorRoom" data-SQL-field="Building" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Address Name 2</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize billdetails" id="BillToAddress2" name="BillToAddress2" data-default-source="AddressName2" data-SQL-field="Address2" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">Address Name 3</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize billdetails" id="BillToAddress3" name="BillToAddress3" data-default-source="AddressName3" data-SQL-field="Address3" required>
+                </div>
+            </div>	
+            <div class="form-group row m-0" >
+                <label for="emp_id" class="col-sm-4 col-form-label">GLN</label>
+                <div class="col-sm-8 ">
+                    <input type="text" class="form-control form-control-sm editable-text input-serialize billdetails" id="BillToGlobalLocationNumber" name="BillToGlobalLocationNumber" data-default-source="GlobalLocationNumber" data-SQL-field="City" required>
+                </div>
+            </div>	
+          </div>
+          <div class="modal-footer justify-content-between ">
+            <button type="button" class="btn btn-success" id="btnBillToDetailsUpdate"  data-dismiss="modal">Update</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- END BILL TO MODALS -->
+<!-- END UTILITY MODALS -->
+

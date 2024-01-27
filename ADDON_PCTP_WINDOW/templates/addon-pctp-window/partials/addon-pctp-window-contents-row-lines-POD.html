@@ -1,0 +1,436 @@
+
+
+    {% for i in queryResultPODJson %}
+        <tr>
+            <td class="text-center sticky-col first-col first-col-pod rownumber prevent-select">
+                {{forloop.counter}}
+            </td> 
+            <td class="text-center sticky-col second-col second-col-pod ">
+                <input type='checkbox' class='form-control form-control-sm' ></input>
+            </td>
+            <td class="text-center sticky-col third-col third-col-pod">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input'>
+            </td>
+            <td class="text-center sticky-col fourth-col fourth-col-pod date">
+                {% if i.U_BookingDate == '1900-01-01T00:00:00.000' %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_BookingDate{{forloop.counter}}" name="U_BookingDate" value=""/>
+                {% else %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_BookingDate{{forloop.counter}}" name="U_BookingDate" value="{{i.U_BookingDate|default_if_none:""}}"/>
+                {% endif %}
+            </td>    
+            <td class="text-center sticky-col fifth-col fifth-col-pod sticky-last-column">
+                <div class="input-group input-group-sm">
+                    <input type='text' class='form-control form-control-sm editable-text input-serialize row-input text-center' name="U_BookingNumber" value="{{i.U_BookingNumber}}" readonly>
+                    <div class="input-group-append " data-toggle='modal' data-target='#modalPODVertical'>
+                        <a type="button" class="btn btn-flat bg-info"><i class="not-date fa-solid fa-square-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </td>
+            <td class="text-center not-prevent-select"> 
+            <!-- SAP ID (SALES ORDER) -->
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input'>
+            </td>
+            <td class="text-center not-prevent-select">
+                {{i.U_ClientName}}
+            </td>
+            <td class="text-center not-prevent-select">
+            <!-- Group Project / Location (SAP) -->
+                {{i.U_GroupProject}}
+            </td>
+            <td class="text-center not-prevent-select">
+                {{i.U_SAPClient}}
+            </td>
+            <td class="text-center not-prevent-select">
+                {{i.U_TruckerName}}
+            </td>
+            <td class="text-center not-prevent-select">
+                {{i.U_SAPTrucker}}
+            </td>
+            <td class="text-center not-prevent-select">
+                {{i.U_PlateNumber}}
+            </td>
+            <td class="text-center">
+                <select class='form-control form-control-sm editable-text input-serialize row-input' >
+                    {% if i.U_VehicleTypeCap is None %}
+                        <option selected value="">-</option>
+                    {% endif %}
+                    {% for i2 in queryResultVehicleTypeAndCapacityJson %}
+                        {% if i2.Code == i.U_VehicleTypeCap %}
+                            <option selected value="{{i2.Code}}">{{i2.Name}}</option>
+                        {% else %}
+                            <option value="{{i2.Code}}">{{i2.Name}}</option>
+                        {% endif%}
+                    {%  endfor %}
+                </select>
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_DeliveryOrigin}}">
+            </td>
+            <td class="text-center">
+                <select class='form-control form-control-sm editable-text input-serialize row-input'>
+                        <option value="" {% if i.U_Island == None %} selected {% endif %}>-</option>
+                        <option value="LUZON" {% if i.U_Island == 'Luzon' %} selected {% endif %}>Luzon</option>
+                        <option value="VISAYAS" {% if i.U_Island == 'Visayas' %} selected {% endif %}>Visayas</option>
+                        <option value="MINDANAO" {% if i.U_Island == 'Mindanao' %} selected {% endif %}>Mindanao</option>
+                </select>
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_Destination}}">
+            </td>
+            <td class="text-center">
+                <select class='form-control form-control-sm editable-text input-serialize row-input'>
+                    <option value="" {% if i.U_Island_D == None %} selected {% endif %}>-</option>
+                    <option value="LUZON" {% if i.U_Island_D == 'Luzon' %} selected {% endif %}>Luzon</option>
+                    <option value="VISAYAS" {% if i.U_Island_D == 'Visayas' %} selected {% endif %}>Visayas</option>
+                    <option value="MINDANAO" {% if i.U_Island_D == 'Mindanao' %} selected {% endif %}>Mindanao</option>
+                </select>
+            </td>
+            <td class="text-center">
+                <select class='form-control form-control-sm editable-text input-serialize row-input'>
+                    <option value="" {% if i.U_IFINTERISLAND == None %} selected {% endif %} >-</option>
+                    <option value="No" {% if i.U_IFINTERISLAND == 'No' %} selected {% endif %}>No</option>
+                    <option value="Yes" {% if i.U_IFINTERISLAND == 'Yes' %} selected {% endif %}>Yes</option>
+                </select>
+            </td>
+            <td class="text-center">
+                <select class='form-control form-control-sm editable-text input-serialize row-input u_deliverystatus' >
+                    {% if i.U_DeliveryStatus is None %}
+                        <option selected value="">-</option>
+                    {% endif %}
+                    {% for i2 in queryResultDeliveryStatusJson %}
+                        {% if i2.Code == i.U_DeliveryStatus %}
+                            <option selected value="{{i2.Code}}">{{i2.Name}}</option>
+                        {% else %}
+                            <option value="{{i2.Code}}">{{i2.Name}}</option>
+                        {% endif%}
+                    {%  endfor %}
+                </select>
+            </td>
+            <td class="text-center">
+                {% if i.U_DeliveryDateDTR == '1900-01-01T00:00:00.000' %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_DeliveryDateDTR{{forloop.counter}}" name="U_DeliveryDateDTR" value=""/>
+                {% else %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_DeliveryDateDTR{{forloop.counter}}" name="U_DeliveryDateDTR" value="{{i.U_DeliveryDateDTR|default_if_none:""}}"/>
+                {% endif %}
+            </td>
+            <td class="text-center">
+                {% if i.U_DeliveryDatePOD == '1900-01-01T00:00:00.000' %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_DeliveryDatePOD{{forloop.counter}}" name="U_DeliveryDatePOD" value=""/>
+                {% else %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_DeliveryDatePOD{{forloop.counter}}" name="U_DeliveryDatePOD" value="{{i.U_DeliveryDatePOD|default_if_none:""}}"/>
+                {% endif %}
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_NoOfDrops|default_if_none:0.00}}">
+            </td>
+            <td class="text-center">
+                <select class='form-control form-control-sm editable-text input-serialize row-input u_triptype' >
+                    {% if i.U_TripType is None %}
+                        <option selected value="">-</option>
+                    {% endif %}
+                    {% for i2 in queryResultTripTypeJson %}
+                        {% if i2.Code == i.U_TripType %}
+                            <option selected value="{{i2.Code}}">{{i2.Name}}</option>
+                        {% else %}
+                            <option value="{{i2.Code}}">{{i2.Name}}</option>
+                        {% endif%}
+                    {%  endfor %}
+                </select>
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_Remarks|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_DocNum|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_TripTicketNo|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_WaybillNo|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_ShipmentNo|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_DeliveryReceiptNo|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_SeriesNo|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_OtherPODDoc|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_RemarksPOD|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_Receiveby|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                {% if i.U_ClientReceivedDate == '1900-01-01T00:00:00.000' %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_ClientReceivedDate{{forloop.counter}}" name="U_ClientReceivedDate" value=""/>
+                {% else %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_ClientReceivedDate{{forloop.counter}}" name="U_ClientReceivedDate" value="{{i.U_ClientReceivedDate|default_if_none:""}}"/>
+                {% endif %}
+            </td>
+            <td class="text-center">
+                {% if i.U_ActualDateRec_Intitial == '1900-01-01T00:00:00.000' %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_ActualDateRec_Intitial{{forloop.counter}}" name="U_ActualDateRec_Intitial" value=""/>
+                {% else %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_ActualDateRec_Intitial{{forloop.counter}}" name="U_ActualDateRec_Intitial" value="{{i.U_ActualDateRec_Intitial|default_if_none:""}}"/>
+                {% endif %}
+            </td>
+            <td class="text-center">
+                {% if i.U_InitialHCRecDate == '1900-01-01T00:00:00.000' %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_InitialHCRecDate{{forloop.counter}}" name="U_InitialHCRecDate" value=""/>
+                {% else %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_InitialHCRecDate{{forloop.counter}}" name="U_InitialHCRecDate" value="{{i.U_InitialHCRecDate|default_if_none:""}}"/>
+                {% endif %}
+            </td>
+            <td class="text-center">
+                {% if i.U_ActualHCRecDate == '1900-01-01T00:00:00.000' %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_ActualHCRecDate{{forloop.counter}}" name="U_ActualHCRecDate" value=""/>
+                {% else %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_ActualHCRecDate{{forloop.counter}}" name="U_ActualHCRecDate" value="{{i.U_ActualHCRecDate|default_if_none:""}}"/>
+                {% endif %}
+            </td>
+            <td class="text-center">
+                {% if i.U_DateReturned == '1900-01-01T00:00:00.000' %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_DateReturned{{forloop.counter}}" name="U_DateReturned" value=""/>
+                {% else %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_DateReturned{{forloop.counter}}" name="U_DateReturned" value="{{i.U_DateReturned|default_if_none:""}}"/>
+                {% endif %}
+            </td>
+            <td class="text-center">
+                {{i.U_PODinCharge|default_if_none:""}}
+            </td>
+            <td class="text-center">
+                {% if i.U_VerifiedDateHC == '1900-01-01T00:00:00.000' %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_VerifiedDateHC{{forloop.counter}}" name="U_VerifiedDateHC" value=""/>
+                {% else %}
+                    <input class="form-control form-control-sm editable-text input-serialize row-input text-center custom-date-input" id="U_VerifiedDateHC{{forloop.counter}}" name="U_VerifiedDateHC" value="{{i.U_VerifiedDateHC|default_if_none:""}}"/>
+                {% endif %}
+            </td>
+            <td class="text-center">
+                <select class='form-control form-control-sm editable-text input-serialize row-input u_triptype'>
+                    {% if i.U_PODStatusDetail is None %}
+                        <option selected value="">-</option>
+                    {% endif %}
+                    {% for i2 in queryResultPodStatusJson %}
+                        {% if i2.Code == i.U_PODStatusDetail %}
+                            <option selected value="{{i2.Code}}">{{i2.Name}}</option>
+                        {% else %}
+                            <option value="{{i2.Code}}">{{i2.Name}}</option>
+                        {% endif%}
+                    {%  endfor %}
+                </select>
+            </td>
+            <td class="text-center">
+                {{i.U_PTFNo|default_if_none:""}}
+            </td>
+            <td class="text-center">
+                {% if i.U_DateForwardedBT == '1900-01-01T00:00:00.000' %}
+                    <input class="form-control form-control-sm text-center custom-date-input" id="U_DateForwardedBT{{forloop.counter}}" name="U_DateForwardedBT"value=""/>
+                {% else %}
+                    <input class="form-control form-control-sm text-center custom-date-input" id="U_DateForwardedBT{{forloop.counter}}" name="U_DateForwardedBT"value="{{i.U_DateForwardedBT|default_if_none:""}}"/>
+                {% endif %}
+            </td>
+            <td class="text-center">
+                {{i.U_VERIFICATION_TAT|default_if_none:0.00}}
+            </td>
+            <td class="text-center">
+                {{i.U_POD_TAT|default_if_none:0.00}}
+            </td>
+            <td class="text-center">
+                {{i.U_BillingDeadline|default_if_none:""}}
+            </td>
+            <td class="text-center">
+                <select class='form-control form-control-sm editable-text input-serialize row-input u_triptype'>
+                    {% if i.U_BillingStatus is None %}
+                        <option selected value="">-</option>
+                    {% endif %}
+                    {% for i2 in queryResultBillingStatusJson %}
+                        {% if i2.Code == i.U_BillingStatus %}
+                            <option selected value="{{i2.Code}}">{{i2.Name}}</option>
+                        {% else %}
+                            <option value="{{i2.Code}}">{{i2.Name}}</option>
+                        {% endif%}
+                    {%  endfor %}
+                </select>
+            </td>
+            <td class="text-center">
+                {{i.U_ServiceType|default_if_none:""}}
+            </td>
+            <td class="text-center">
+                {{i.U_SINo|default_if_none:""}}
+            </td>
+            <td class="text-center">
+                {{i.U_BillingTeam|default_if_none:""}}
+            </td>
+            <td class="text-center">
+                {{i.U_BTRemarks|default_if_none:""}}
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_SOBNumber|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+            <!-- Outline No. (Criteria for GetCocaRates) -->
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input'>
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_CBM}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_SI_DRNo|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_DeliveryMode|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_SourceWhse|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_DestinationClient|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_TotalInvAmount}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_SONo}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_ForwardLoad}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_BackLoad}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_IDNumber}}">
+            </td>
+            <td class="text-center">
+                <select class='form-control form-control-sm editable-text input-serialize row-input u_triptype'>
+                        {% if i.U_TypeOfAccessorial is None %}
+                            <option selected value="">-</option>
+                        {% endif %}
+                        {% for i2 in queryResultTypeOfAccessorialJson %}
+                            {% if i2.Code == i.U_TypeOfAccessorial %}
+                                <option selected value="{{i2.Code}}">{{i2.Name}}</option>
+                            {% else %}
+                                <option value="{{i2.Code}}">{{i2.Name}}</option>
+                            {% endif%}
+                        {%  endfor %}
+                </select>
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_ApprovalStatus}}">
+            </td>
+
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_TimeInEmptyDem}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_TimeOutEmptyDem}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_VerifiedEmptyDem}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_TimeInLoadedDem}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_TimeOutLoadedDem}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_VerifiedLoadedDem}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_Remarks2}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_TimeInAdvLoading}}">
+            </td>
+            <td class="text-center">
+                {{i.U_DayOfTheWeek}}
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_TimeIn|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_TimeOut|default_if_none:""}}">
+            </td>
+            <td class="text-center">
+                {{i.U_TotalNoExceed|default_if_none:0.00}}
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_ODOIn|default_if_none:0.00}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_ODOOut|default_if_none:0.00}}">
+            </td>
+            <td class="text-center">
+                {{i.U_TotalUsage|default_if_none:0.00}}
+            </td>
+            <td class="text-center">
+                {{i.U_ClientSubStatus}}
+            </td>
+            <td class="text-center">
+                {{i.U_ClientSubOverdue|default_if_none:0.00}}
+            </td>
+            <td class="text-center">
+                {{i.U_ClientPenaltyCalc}}
+            </td>
+            <td class="text-center">
+                {{i.U_PodStatusPayment|default_if_none:""}}
+            </td>
+            <td class="text-center">
+                {{i.U_PodSubmitDeadline|default_if_none:""}}
+            </td>
+            <td class="text-center">
+                {{i.U_OverdueDays}}
+            </td>
+            <td class="text-center">
+                {{i.U_InteluckPenaltyCalc}}
+            </td>
+            <td class="text-center">
+            <!-- CRD Waived Days -->
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input'>
+            </td>
+            <td class="text-center">
+            <!-- IRD Waived Days -->
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input'>
+            </td>
+            <td class="text-center">
+                {{i.U_LostPenaltyCalc}}
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input amount' value="{{i.U_PenaltiesManual|default_if_none:0.00}}">
+            </td>
+            <td class="text-center">
+                {{i.U_TotalSubPenalties}}
+            </td>
+            <td class="text-center">
+                <select class='form-control form-control-sm editable-text input-serialize row-input'>
+                    <option value="" {% if i.U_Waived == None %} selected {% endif %} >-</option>
+                    <option value="N" {% if i.U_Waived == 'N' %} selected {% endif %}>No</option>
+                    <option value="Y" {% if i.U_Waived == 'Y' %} selected {% endif %}>Yes</option>
+                </select>
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input amount' value="{{i.U_PercPenaltyCharge|default_if_none:0.00}}">
+            </td>
+            <td class="text-center">
+                <input type='text' class='form-control form-control-sm editable-text input-serialize row-input' value="{{i.U_Approvedby}}">
+            </td>
+            <td class="text-center">
+                {{i.U_TotalPenaltyWaived}}
+            </td>
+        </tr>
+      
+    {% endfor %}
+
+
+  
+
+
+

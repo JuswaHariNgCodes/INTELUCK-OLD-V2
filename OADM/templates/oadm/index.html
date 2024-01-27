@@ -1,0 +1,196 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Admin Settings
+{% endblock %}
+
+{% block content %}
+
+{% include 'topbar.html' %}
+<div class="content-wrapper " >
+  {% include 'sidebar.html' %}
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <!-- START MODULE PROPERTIES -->
+    <p id="moduleName" name="moduleName" class="d-none"></p>
+    <p id="objectType" name="objectType" class="d-none">00</p>
+    <p id="SAPMainTable" name="SAPMainTable" class="d-none"></p>
+    <p id="SAPChildTable1" name="SAPChildTable1" class="d-none"></p>
+    <p id="rowItemType" name="rowItemType" class="d-none"></p>
+    <p id="rowServiceType" name="rowServiceType" class="d-none"></p>
+    <p id="formSettingsURL" name="formSettingsURL" class="d-none"></p>
+    <p id="updateFormSettingsURL" name="updateFormSettingsURL" class="d-none"></p>
+    <p id="updateFormSettingsURL" name="updateFormSettingsURL" class="d-none"></p>
+    <p id="currentLoggedInUserId" name="currentLoggedInUserId" class="d-none"></p>
+    <p id="currentLoggedInEmpId" name="currentLoggedInEmpId" class="d-none" ></p>
+    <p id="currentLoggedInName" name="currentLoggedInName" class="d-none" ></p>
+    <p id="OITMCondition" name="OITMCondition" class="d-none"></p>
+    <!-- DECIMALS -->
+    <p id="TotalsAccuracy" name="TotalsAccuracy" class="d-none database-settings" >{{ request.session.TotalsAccuracy }}</p>
+    <p id="PriceAccuracy" name="PriceAccuracy" class="d-none database-settings" >{{ request.session.PriceAccuracy }}</p>
+    <p id="RateAccuracy" name="RateAccuracy" class="d-none database-settings" >{{ request.session.RateAccuracy }}</p>
+    <p id="AccuracyofQuantities" name="AccuracyofQuantities" class="d-none database-settings" >{{ request.session.AccuracyofQuantities }}</p>
+    <p id="PercentageAccuracy" name="PercentageAccuracy" class="d-none database-settings" >{{ request.session.PercentageAccuracy }}</p>
+    <p id="MeasuringAccuracy" name="MeasuringAccuracy" class="d-none database-settings" >{{ request.session.MeasuringAccuracy }}</p>
+    <p id="QueryAccuracy" name="QueryAccuracy" class="d-none database-settings" >{{ request.session.QueryAccuracy }}</p>
+    <!-- CURRENCIES -->
+    <p id="MainCurncy" name="MainCurncy" class="d-none database-settings" >
+    <p id="SysCurrncy" name="SysCurrncy" class="d-none database-settings" >
+    <!-- DATE FORMAT -->
+    <p id="DateFormat" name="DateFormat" class="database-settings d-none">{{ request.session.DateFormat }}</p>
+    <p id="DateFormatString" name="DateFormatString" class="d-none database-settings" ></p>
+    <!-- END MODULE PROPERTIES -->
+      <div class="container-fluid m-0">
+          <div class="row mb-0">
+          <div id="myProgress" class="d-none m-0 p-0">
+            <div id="myBar" class="m-0 p-0">
+
+            </div>
+          </div>
+          <div class="col-sm-6">
+              <h1 class="m-0">Admin Settings</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6 m-0 ">
+              <ol class="breadcrumb float-sm-right">
+                <div class="btn-group btn-group-sm">
+                  <button type="button" class="btn btn-sm bg-light">Edit<i class="fas fa-edit text-purple text-lg ml-1"></i></button>
+                  <button type="button" class="btn btn-sm bg-primary dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu" role="menu">
+                    <a class="dropdown-item">Cancel<i class="fas fa-ban text-danger text-lg ml-1"></i></a>
+                    <a class="dropdown-item">Close<i class="fas fa-door-closed text-danger text-lg ml-1"></i></a>
+                  </div>
+                </div>
+              </ol>
+          </div><!-- /.col -->
+          </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content-header -->
+
+  
+  <!-- Main content -->
+  <section class="content " >
+    <div class="container-fluid">
+    <form action=""  method="POST" enctype="multipart/form-data" id="OADMForm"  class="form-horizontal card card-primary card-outline mb-5" novalidate >
+      {% csrf_token %}
+      <div class="row card-body container-fluid-custom">
+        <div class="col-lg-12 border-right" id="SydtemFieldsContainer">
+          <div class="row ">
+            <!-- /.col -->
+            <div class="col-sm-12 mx-1">
+                <div class="">
+                  <div class=" p-0 pt-1 border-bottom-0">
+                    <ul class="nav nav-tabs " id="custom-tabs-three-tab" role="tablist">
+                      <li class="nav-item ">
+                        <a class="nav-link content-tab active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#formSettings" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Form Settings</a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link content-tab" id="custom-tabs-three-home-tab" data-toggle="pill" href="#databaseSettings" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Database Settings</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body  card-outline">
+                    <div class="tab-content oadm-custom-content" id="custom-tabs-three-tabContent" >
+                      <div class="tab-pane fade show active" id="formSettings" role="tab panel" aria-labelledby="formSettings">
+                        <div class="" >
+                          <div class=" p-0 pt-1 border-bottom-0">
+                            <ul class="nav nav-tabs " id="custom-tabs-three-tab" role="tablist">
+                              <li class="nav-item ">
+                                <a class="nav-link content-tab active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#salesTab" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Sales</a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link content-tab" id="custom-tabs-three-home-tab" data-toggle="pill" href="#purchasingTab" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Purchasing</a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link content-tab" id="custom-tabs-three-home-tab" data-toggle="pill" href="#bankingTab" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Banking</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="card-body  card-outline">
+                            <div class="tab-content custom-content" id="custom-tabs-three-tabContent" >
+                              <div class="tab-pane module-type-tab fade show active" id="salesTab" role="tab panel" aria-labelledby="marketingTab">
+                                <div class="" >
+                                  <div class=" p-0 pt-1 border-bottom-0">
+                                    <ul class="nav nav-tabs " id="SalesModule" role="tablist">
+                                      <li class="nav-item ">
+                                        <a class="nav-link content-tab module-tab active" id="moduleTabOQUT" data-toggle="pill" href="#oqut" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">OQUT</a>
+                                      </li>
+                                      <li class="nav-item ">
+                                        <a class="nav-link content-tab module-tab " id="moduleTabORDR" data-toggle="pill" href="#ordr" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">ORDR</a>
+                                      </li>
+                                      <li class="nav-item ">
+                                        <a class="nav-link content-tab module-tab " id="moduleTabODLN" data-toggle="pill" href="#odln" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">ODLN</a>
+                                      </li>
+                                      <li class="nav-item ">
+                                        <a class="nav-link content-tab module-tab " id="moduleTabOINV" data-toggle="pill" href="#oinv" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">OINV</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="card-body  card-outline">
+                                    <div class="tab-content custom-content" id="SalesModuleContent" >
+                                      <div class="tab-pane sub-tab fade show active" id="oqut" role="tab panel" aria-labelledby="oqut">
+                                        <div class="form-group row m-0">
+                                          
+                                        </div>
+                                      </div>
+                                      <div class="tab-pane sub-tab fade show" id="ordr" role="tab panel" aria-labelledby="ordr">
+                                        <div class="form-group row m-0">
+                                          <select class=" form-control form-control-sm col-sm-1 my-1 diapi" id="DocType" name="DocType">
+                                            <option value="0">Item</option>
+                                            <option value="1">Service</option>
+                                          </select>
+                                        </div>
+                                        <div id="rowLoader" class="d-none"></div>
+                                        <div class="overflow-auto" >
+                                         
+                                            <div id="ContentRows" class="card-body table-responsive p-0" style="height: 600px; width: 2100px">
+                                              <table class="table table-head-fixed text-nowrap table-bordered table-sm mx-0" id="tblContentRows" >
+                                                
+                                              </table>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.card -->
+                </div>
+                <!-- <hr/> -->
+              </div>
+            </div>
+            
+            
+        </div>
+        
+      </div>
+      <div id="submitButtons" class="card-footer card-primary card-outline">
+        <button type="submit" name="action" value="update" class="btn btn-lg btn-success editable-submit-button submit-buttons" id="btnUpdateConfirm">Update</button>
+        <button type="button" name="action" value="cancel" class="btn btn-lg btn-warning editable-submit-button submit-buttons" id="btnCancelProgress">Cancel</button>
+      </div>
+    </form>
+    </div>
+  </section>
+  <!-- /.content -->
+  <datalist id='ItemCodeQueryResult' name='ItemCodeQueryResult'>
+    </datalist>
+</div>
+  <!-- <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"> -->
+  {% include "oadm/modals/modals.html" %}
+
+
+  <script type="text/javascript" src="{% static 'oadm/main.js' %}"></script>
+  <script type="text/javascript" src="{% static 'oadm/modals/modals.js' %}"></script>
+  
+  {% endblock %}
+  
+

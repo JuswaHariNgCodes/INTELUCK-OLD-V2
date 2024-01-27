@@ -1,0 +1,415 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Sales Order
+{% endblock %}
+
+{% block content %}
+
+{% include 'topbar.html' %}
+
+<div class="content-wrapper custom-background-main-card prevent-select" >
+  {% include 'sidebar.html' %}
+  <!-- Content Header (Page header) -->
+  <section class="content-header ">
+    <!-- START MODULE PROPERTIES -->
+    <p id="moduleName" name="moduleName" class="d-none">ordr</p>
+    <p id="objectType" name="objectType" class="d-none">17</p>
+    <p id="SAPMainTable" name="SAPMainTable" class="d-none">ordr</p>
+    <p id="SAPChildTable1" name="SAPChildTable1" class="d-none">rdr1</p>
+    <p id="rowItemType" name="rowItemType" class="d-none">rdr1</p>
+    <p id="rowServiceType" name="rowServiceType" class="d-none">rdr2</p>
+    <p id="formSettingsURL" name="formSettingsURL" class="d-none">get-form-settings-ordr</p>
+    <p id="updateFormSettingsURL" name="updateFormSettingsURL" class="d-none">post-form-settings-ordr</p>
+    <p id="currentLoggedInUserId" name="currentLoggedInUserId" class="d-none"></p>
+    <p id="currentLoggedInEmpId" name="currentLoggedInEmpId" class="d-none" ></p>
+    <p id="currentLoggedInName" name="currentLoggedInName" class="d-none" ></p>
+    <p id="OITMCondition" name="OITMCondition" class="d-none"></p>
+
+    <!-- DECIMALS -->
+    <p id="TotalsAccuracy" name="TotalsAccuracy" class="d-none database-settings" >{{ request.session.TotalsAccuracy }}</p>
+    <p id="PriceAccuracy" name="PriceAccuracy" class="d-none database-settings" >{{ request.session.PriceAccuracy }}</p>
+    <p id="RateAccuracy" name="RateAccuracy" class="d-none database-settings" >{{ request.session.RateAccuracy }}</p>
+    <p id="AccuracyofQuantities" name="AccuracyofQuantities" class="d-none database-settings" >{{ request.session.AccuracyofQuantities }}</p>
+    <p id="PercentageAccuracy" name="PercentageAccuracy" class="d-none database-settings" >{{ request.session.PercentageAccuracy }}</p>
+    <p id="MeasuringAccuracy" name="MeasuringAccuracy" class="d-none database-settings" >{{ request.session.MeasuringAccuracy }}</p>
+    <p id="QueryAccuracy" name="QueryAccuracy" class="d-none database-settings" >{{ request.session.QueryAccuracy }}</p>
+    <!-- CURRENCIES -->
+    <p id="MainCurncy" name="MainCurncy" class="d-none database-settings" >
+    <p id="SysCurrncy" name="SysCurrncy" class="d-none database-settings" >
+    <!-- DATE FORMAT -->
+    <p id="DateFormat" name="DateFormat" class="database-settings d-none">{{ request.session.DateFormat }}</p>
+    <p id="DateFormatString" name="DateFormatString" class="d-none database-settings" ></p>
+
+    <!-- MASTER DATA TYPES -->
+    <p id="CardType" name="CardType" class="d-none ocrd-settings" >C</p>
+    <!-- END MODULE PROPERTIES -->
+      <div class="container-fluid m-0 ">
+          <div class="row mb-0">
+          <div id="myProgress" class="d-none m-0 p-0">
+            <div id="myBar" class="m-0 p-0">
+
+            </div>
+          </div>
+          <div class="col-sm-6">
+              <h1 class="m-0">Sales Order</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6 m-0 ">
+              <ol class="breadcrumb float-sm-right">
+                <div class="btn-group btn-group-sm">
+                  <button type="button" class="btn btn-sm bg-light">Edit<i class="fas fa-edit text-purple text-lg ml-1"></i></button>
+                  <button type="button" class="btn btn-sm bg-primary dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu" role="menu">
+                    <a class="dropdown-item">Cancel<i class="fas fa-ban text-danger text-lg ml-1"></i></a>
+                    <a class="dropdown-item">Close<i class="fas fa-door-closed text-danger text-lg ml-1"></i></a>
+                  </div>
+                </div>
+              </ol>
+          </div><!-- /.col -->
+          </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content-header -->
+
+  
+  <!-- Main content -->
+  <section class="content" >
+    <div class="container-fluid">
+    <form action=""  method="POST" enctype="multipart/form-data" id="ORDRForm"  class="form-horizontal" novalidate autocomplete="off">
+      {% csrf_token %}
+
+      <div id="modulebody" class="row container-fluid-custom gx-3">
+        <div id="SydtemFieldsContainer" class="col-lg-9" >
+          <div class="card card-primary card-outline custom-background-header-content" style="height: 180vh !important">
+            <div class="card-body">
+              <div class="overflow-none">
+                <div >
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="form-group row m-0" >
+                        <label for="CardCode" class="col-sm-5 col-form-label">Customer</label>
+                        <div class="col-sm-7 ">
+                          <div class="input-group input-group-sm" id="CardCodeDiv" name="CardCodeDiv">
+                            <div class="input-group-prepend d-none">
+                              <a type="button" class="btn btn-warning"><i class="fas fa-arrow-alt-circle-right"></i></a>
+                            </div>
+                            <input type="text" class="form-control form-control-sm editable-text input-serialize diapi required " list="CardCodeQueryResult" id="CardCode" name="CardCode" data-SQL-field="CardCode" data-name="CardName" data-table="OCRD" data-field="CardCode" data-listID="CardCode" data-modal-id="#modalBusinessPartnerList">
+                            <div class="input-group-append">
+                              <a type="button" id="btnCardCode" class="btn btn-flat bg-primary editable-text-button" data-toggle="modal" data-target="#modalBusinessPartnerList"  ><i class="fas fa-stream" ></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row m-0">
+                        <label for="CardName" class="col-sm-5 col-form-label">Name</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control form-control-sm editable-text input-serialize required" id="CardName" name="CardName" data-SQL-field="CardName" data-default-trigger="getBusinessPartnerDetails()" tabindex="-1" readonly>
+                        </div>
+                      </div>
+                      <div class="form-group row m-0">
+                        <label for="CntctCode" class="col-sm-5 col-form-label">Contact Person</label>
+                        <div class="col-sm-7">
+                          <div class="input-group input-group-sm" id="CntctCodeDiv" name="CntctCodeDiv">
+                            <select type="text" class="form-control form-control-sm  input-serialize input-with-other-table diapi cardcodedependentoptions select-to-fill" id="ContactPerson" name="CntctCode" data-SQL-field="CntctCode" data-default-trigger="getBusinessPartnerDetails()" data-options="ContactEmployees" data-options-code="InternalCode" data-options-name="Name"   >
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row m-0 ">
+                        <label for="NumAtCard" class="col-sm-5 col-form-label">Customer Ref. No.</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control form-control-sm editable-text input-serialize diapi" id="NumAtCard" name="NumAtCard" >
+                        
+                        </div>
+                      </div>
+                      <div class="form-group row m-0">
+                        <select class=" form-control form-control-sm col-sm-5" id="CurSource" name="CurSource" >
+                          <option value="C">BP Currency</option>
+                          <option value="L">Local Currency</option>
+                          <option value="S">System Currency</option>
+                        </select>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control form-control-sm editable-text input-serialize diapi" id="DocCurrency" name="DocCurrency" data-default-source="Currency" readonly>
+                        </div>
+                        <div class="col-sm-4">
+                          <input type="text" class="form-control form-control-sm text-right editable-text input-serialize amount-format d-none diapi" id="DocRate" name="DocRate" data-format="RateDec" >
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-lg-3">
+                      
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-lg-3">
+                      
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-lg-3">
+                      <div class="form-group row m-0" >
+                        <label for="emp_id" class="col-sm-2 col-form-label">No</label>
+                        <select class=" form-control form-control-sm col-sm-3" id="Series" name="Series">
+                          <option value="L">Primary</option>
+                          <option value="S">Manual</option>
+                        </select>
+                        <div class="col-sm-7">
+                          <input type="hidden" class="form-control form-control-sm editable-text input-serialize" id="DocEntry" name="DocEntry" readonly>
+                          <input type="text" class="form-control form-control-sm editable-text input-serialize text-right" id="DocNum" name="DocNum" value={{ nextDocNum }} readonly>
+                        </div>
+                      </div>
+                      <div class="form-group row m-0">
+                        <label for="name" class="col-sm-5 col-form-label">Status</label>
+                        <div class="col-sm-7">
+                          <input type="hidden" class="form-control form-control-sm editable-text input-serialize" id="DocStatus" name="DocStatus"  readonly>
+                          <input type="hidden" class="form-control form-control-sm editable-text input-serialize" id="CANCELED" name="CANCELED"  readonly>
+                          <input type="text" class="form-control form-control-sm editable-text input-serialize" id="DocStatusName" name="DocStatusName"  value="Open" readonly>
+                        </div>
+                      </div>
+                      <div class="form-group row m-0">
+                        <label for="email" class="col-sm-5 col-form-label">Posting Date</label>
+                        <div class="col-sm-7">
+                          <div class="input-group input-group-sm date date-group default-date-group" id="postingdate" data-target-input="nearest">
+                              <input type="text" class="form-control form-control-sm datetimepicker-input default-date diapi" data-target="#postingdate" id="DocDate" name="DocDate" />
+                              <div class="input-group-append " data-target="#postingdate" data-toggle="datetimepicker">
+                                <a type="button" id="" class="btn btn-flat bg-primary btn-default-date btn-date"><i class="far fa-calendar-alt"></i></a>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row m-0">
+                        <label for="NumAtCard" class="col-sm-5 col-form-label">Delivery Date</label>
+                        <div class="col-sm-7">
+                          <div class="input-group input-group-sm date date-group" id="docduedate" data-target-input="nearest">
+                              <input type="text" class="form-control form-control-sm datetimepicker-input diapi" data-target="#docduedate" id="DocDueDate" name="DocDueDate"/>
+                              <div class="input-group-append" data-target="#docduedate" data-toggle="datetimepicker" >
+                                <a type="button" id="btnCntctCode" class="btn btn-flat bg-primary btn-date"><i class="far fa-calendar-alt"></i></a>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row m-0">
+                        <label for="NumAtCard" class="col-sm-5 col-form-label">Document Date</label>
+                        <div class="col-sm-7">
+                          <div class="input-group input-group-sm date date-group default-date-group" id="taxdate" data-target-input="nearest">
+                              <input type="text" class="form-control form-control-sm datetimepicker-input default-date diapi" data-target="#taxdate" id="TaxDate" name="TaxDate"/>
+                              <div class="input-group-append" data-target="#taxdate" data-toggle="datetimepicker" id="test">
+                                <a type="button" id="btnCntctCode" class="btn btn-flat bg-primary btn-date"><i class="far fa-calendar-alt"></i></a>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-sm-12 mx-1">
+                        <div class="">
+                          <div class="p-0 pt-1 border-bottom-0">
+                            <ul class="nav nav-tabs " id="custom-tabs-three-tab" role="tablist">
+                              <li class="nav-item ">
+                                <a class="nav-link content-tab active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#contents" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Contents</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link content-tab" id="custom-tabs-three-profile-tab" data-toggle="pill" href="#logistics" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="false">Logistics</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link content-tab" id="custom-tabs-three-messages-tab" data-toggle="pill" href="#acconting" role="tab" aria-controls="custom-tabs-three-messages" aria-selected="false">Accounting</a>
+                              </li>
+                              <li class="nav-item d-none">
+                                <a class="nav-link content-tab" id="custom-tabs-three-settings-tab" data-toggle="pill" href="#attachments" role="tab" aria-controls="custom-tabs-three-settings" aria-selected="false">Attachments</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="card-body card-primary card-outline custom-background-inner-content dark-mode" style="height: 700px !important">
+                            <div class="tab-content custom-content" id="custom-tabs-three-tabContent" >
+                              <div class="tab-pane fade show active" id="contents" role="tab panel" aria-labelledby="contents" >
+                                <div class="form-group row m-0">
+                                  <select class=" form-control form-control-sm col-sm-1 my-1 diapi" id="DocType" name="DocType">
+                                    <option value="0">Item</option>
+                                    <option value="1">Service</option>
+                                  </select>
+                                  <a type="button" class="nav-link btn row-options custom-background-inner-content dark-mode"  id="" title="Query Manager">
+                                    <i class="fas fa-trash-alt text-danger text-lg"></i>
+                                  </a>
+                                  <a type="button" class="nav-link btn row-options custom-background-inner-content dark-mode"  id="" title="Query Manager">
+                                    <i class="fas fa-clone text-success text-lg"></i>
+                                  </a>
+                                </div>
+                                <div class="overflow-auto" >
+                                  <div id="rowLoader" class="d-none"></div>
+                                    <div id="ContentRows" class="card-body table-responsive p-0" style="height: 400px; width: 2000px">
+                                      <table class="table table-head-fixed text-nowrap table-bordered table-sm mx-0" id="tblContentRows" >
+                                        
+                                      </table>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="logistics" role="tabpanel" aria-labelledby="logistics" >
+                                {% include 'ordr/partials/ORDR-template-logistics.html' %}
+                              </div>
+                              <div class="tab-pane fade" id="acconting" role="tabpanel" aria-labelledby="acconting" >
+                                {% include 'ordr/partials/ORDR-template-accounting.html' %}
+                              </div>
+                              <div class="tab-pane fade d-none" id="attachments" role="tabpanel" aria-labelledby="attachments">
+                              
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /.card -->
+                        </div>
+                        <hr/>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="form-group row m-0" >
+                          <label for="emp_id" class="col-sm-5 col-form-label">Sales Employee</label>
+                          <div class="col-sm-7">
+                            <select class="form-control form-control-sm select-invisible-options" id="SalesPersonCode" name="SalesPersonCode" data-default-source="SalesPersonCode" data-SQL-field="SlpCode" data-default-trigger="getBusinessPartnerDetails()">
+                              {% for i in salesEmployeeList %}
+                              <option value="{{i.0}}" label="{{i.1}}"></option>
+                              {%endfor%}
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row m-0" >
+                          <label for="emp_id" class="col-sm-5 col-form-label">Owner</label>
+                          <div class="col-sm-7">
+                            <div class="input-group input-group-sm" id="OwnerCodeDiv" name="OwnerCodeDiv">
+                              <div class="input-group-prepend d-none">
+                                <a type="button" class="btn btn-warning"><i class="fas fa-arrow-alt-circle-right"></i></a>
+                              </div>
+                              <input type="hidden" class="form-control form-control-sm editable-text input-serialize diapi" id="DocumentsOwner" name="OwnerCode" data-table="OHEM" value="{{ request.session.sapb1_employee_id }}" readonly>
+                              <input type="text" class="form-control form-control-sm editable-text input-serialize input-with-other-table-name" name="EmpName" data-table="OHEM" data-table-name="EmpName" data-table-field="EmpName" list="OwnerCodeQueryResult" data-table="OHEM" data-table-field="EmpName" value="{{request.session.lastName}}, {{ request.session.firstName}}" readonly>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row m-0" >
+                          <label for="emp_id" class="col-sm-5 col-form-label">Remarks</label>
+                          <div class="col-sm-7">
+                              <textarea type="text" class="form-control form-control-sm editable-text input-serialize diapi"  id="Comments" name="Comments" rows="6" style="resize: none;"></textarea>
+                          </div>
+                        </div>
+                      </div> 
+                      <!-- /.col -->
+                      <div class="col-lg-3">
+                      
+                      </div>
+                      <!-- /.col -->
+                      <div class="col-lg-3">
+                      
+                      </div>
+                      <!-- /.col -->
+                      <div class="col-sm-3">
+                        <div class="form-group row m-0">
+                          <label for="name" class="col-sm-5 col-form-label">Total Before Discount</label>
+                          
+                          <div class="col-sm-7">
+                            <input type="text" class="form-control form-control-sm editable-text input-serialize text-right amount-format amount" id="TotalBeforeDiscount" name="TotalBeforeDiscount" data-format="TotalsAccuracy" readonly>
+                          </div>
+                        </div>
+                        <div class="form-group row m-0">
+                          <label for="name" class="col-sm-3 col-form-label">Discount</label>
+                          <div class="col-sm-2">
+                            <input type="text" class="form-control form-control-sm editable-text input-serialize text-right amount-format diapi amount" id="DiscountPercent" name="DiscPrcnt" data-format="PercentageAccuracy" >
+                          </div>
+                          <div class="col-sm-2">
+                            <label for="name" class="col-sm-2 col-form-label">%</label>
+                          </div>
+                          <div class="col-sm-5">
+                            <input type="text" class="form-control form-control-sm editable-text input-serialize text-right amount-format amount" id="DiscSum" name="DiscSum" data-format="TotalsAccuracy">
+                          </div>
+                        </div>
+                        <div class="form-group row m-0">
+                          <label for="name" class="col-sm-5 col-form-label">Tax</label>
+                          <div class="col-sm-7">
+                            <input type="text" class="form-control form-control-sm editable-text input-serialize text-right amount-format  amount" id="VatSum" name="VatSum" data-format="TotalsAccuracy">
+                          </div>
+                        </div>
+                        <div class="form-group row m-0">
+                          <label for="name" class="col-sm-5 col-form-label">Total</label>
+                          <div class="col-sm-7">
+                            <input type="text" class="form-control form-control-sm editable-text input-serialize text-right amount-format amount" id="DocTotal" name="DocTotal" data-format="TotalsAccuracy" readonly>
+                          </div>
+                        </div>
+                      </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="submitButtons" class="card-footer card-primary card-outline">
+              <div class="btn-group">
+                  <button type="button" name="action" class="btn btn-lg btn-success fresh-submit-button submit-buttons" id="btnAddConfirm">Add & View</button>
+                  <a type="button" class="btn btn-lg btn-success dropdown-toggle dropdown-icon submit-buttons" data-toggle="dropdown">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </a>
+                  <div class="dropdown-menu" role="menu">
+                    <button type="submit" class="btn btn-lg btn-success dropdown-item" >Add & New</button>
+                    <button type="submit" class="btn btn-lg btn-success dropdown-item" >Add & View</button>
+                  </div>
+              </div>
+              <button type="submit" name="action" value="update" class="btn btn-lg btn-success d-none editable-submit-button submit-buttons" id="btnUpdateConfirm">Update</button>
+              <button type="button" name="action" value="cancel" class="btn btn-lg btn-warning editable-submit-button submit-buttons" id="btnCancelProgress">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3"  >
+          <div class="card card-primary card-outline" style="height: 180vh !important">
+            <div class="card-body" >
+              <div class="form-group row mb-3 ">
+                <div class="input-group input-group-sm" id="CntctCodeDiv" name="CntctCodeDiv">
+                  <select type="text" class="form-control form-control-sm  input-serialize input-with-other-table diapi cardcodedependentoptions " id="UDFCategory" name="UDFCategory">
+                    <option value="General">General</option>
+                    <option value="All">All Categories</option>
+                  </select>
+                </div>
+              </div>
+              <div class="overflow-auto" >
+                <div id="udfContainer" style="height: 120vh !important">
+                  
+                </div>
+              </div>
+            </div>
+            <div class="card-footer card-primary card-outline">
+              <button type="button" name="action" value="cancel" class="btn btn-lg btn-warning float-right editable-submit-button submit-buttons" id="">Cancel</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </form>
+    </div>
+  </section>
+  <!-- /.content -->
+  
+</div>
+
+  {% include "ordr/modals/modals.html" %}
+  <!-- INDEPENDENT DATALIST -->
+  <datalist id='CardCodeQueryResult' name='CardCodeQueryResult' class="datalist">
+    {% for i in businessPartnerList %}
+    <option value="{{i.0}}" label="{{i.1}}"></option>
+    {%endfor%}
+  </datalist>
+  <datalist id='ItemCodeQueryResult' name='ItemCodeQueryResult' class="datalist">
+    {% for i in itemList %}
+    <option value="{{i.0}}" label="{{i.1}}"></option>
+    {%endfor%}
+  </datalist>
+  <datalist id='UomCodeQueryResult' name='UomCodeQueryResult' class="datalist">
+  
+  </datalist>
+
+  
+  <!-- END INDEPENDENT DATALIST -->
+  <!-- DEPENDENT DATALIST -->
+
+  <!-- END DEPENDENT DATALIST -->
+  <script type="text/javascript" src="{% static 'ordr/functions.js' %}"></script>
+  <script type="text/javascript" src="{% static 'ordr/main.js' %}"></script>
+  <script type="text/javascript" src="{% static 'ordr/modals/modals.js' %}"></script>
+ 
+  {% endblock %}
+  
+

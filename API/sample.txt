@@ -1,0 +1,56 @@
+--batch_36522ad7-fc75-4b56-8c71-56071383e77c
+
+Content-Type: application/http 
+Content-Transfer-Encoding:binary
+
+POST /b1s/v1/BusinessPartners
+Content-Type: application/json
+
+{"CardCode":"Bing001", "CardName":"Bing001", "CardType": "C"}
+
+
+
+
+--changeset_36522ad7-fc75-4b56-8c71-56071383e77c
+Content-Type: application/http 
+Content-Transfer-Encoding: binary 
+
+POST /b1s/v1/BusinessPartners
+Content-Type: application/json
+
+{"CardCode":"Bing002", "CardName":"Bing002", "CardType": "C"}
+
+--changeset_36522ad7-fc75-4b56-8c71-56071383e77c--
+
+
+
+
+
+--changeset_36522ad7-fc75-4b56-8c71-56071383e77c
+Content-Type: application/http 
+Content-Transfer-Encoding: binary 
+
+
+POST /b1s/v1/BusinessPartners
+Content-Type: application/json
+
+{"CardCode":"Bing003", "CardName":"Bing003", "CardType": "C"}
+
+--changeset_36522ad7-fc75-4b56-8c71-56071383e77c--
+
+
+
+--changeset_36522ad7-fc75-4b56-8c71-56071383e77c
+Content-Type: application/http 
+Content-Transfer-Encoding: binary 
+
+
+POST /b1s/v1/BusinessPartners
+Content-Type: application/json
+
+{"CardCode":"Bing004", "CardName":"Bing004", "CardType": "C"}
+
+--changeset_36522ad7-fc75-4b56-8c71-56071383e77c--
+
+
+--batch_36522ad7-fc75-4b56-8c71-56071383e77c--

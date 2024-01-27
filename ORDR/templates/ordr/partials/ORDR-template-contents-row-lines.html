@@ -1,0 +1,45 @@
+
+<thead>
+    <tr class='text-center custom-row'>
+        <th class="text-center" style="width: 50px !important" >
+            #
+        </th>
+
+        {% for i in contentRows %}
+            <th class="text-center {{ i.dnone }}" width="{{ i.width }}">{{ i.name }}</th>
+        {% endfor %}
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="text-center rownumber">
+            1
+        </td>  
+        {% for i in contentRows %}
+            <td class="text-center {{ i.dnone }}">
+                {% if i.type == 'input' and i.modal != '' %}
+                    <div class='input-group input-group-sm'>
+                        <input type='text' class='form-control form-control-sm editable-text input-serialize row-input-with-search row-input'  name='{{ i.id }}' data-type='{{i.type}}' data-format='' list='{{i.dataListID}}QueryResult' data-table='{{i.dataListTable}}' data-name='{{i.connectedName}}' data-connected-id='{{i.connectedID}}' data-field='{{i.dataListFieldToSearch}}' data-listID='{{i.dataListID}}'   data-modal-id='#{{i.modal}}' data-valid-values='{{i.validValues}}' data-function-details='{{i.functionDetails}}' data-row-add-verifier='{{i.rowAddVerifier}}' data-masterdata-field="{{i.defaultCode}}" data-function-trigger="{{i.functionTriggerBy}}" tabindex='{{i.tabIndex}}'  {{i.readOnly}}/>
+                    
+                        <div class='input-group-append'>
+                            <a type='button' class='btn btn-flat bg-primary editable-text-button dark' data-toggle='modal' data-target='#{{i.modal}}' data-row-add-verifier='{{i.rowAddVerifier}}' ><i class='fas fa-stream' ></i></a>
+                        </div>
+                    </div>
+
+                {% elif i.type == 'input' and i.modal == '' %}
+                    <input type='text' class='form-control form-control-sm editable-text input-serialize row-input {{i.textAlign}} {{i.format}}'  name='{{ i.id  }}' data-type='{{i.type}}' data-format='{{i.decimalFormat}}' data-masterdata-field="{{i.defaultCode}}" data-function-details='{{i.functionDetails}}' data-function-trigger="{{i.functionTriggerBy}}" tabindex='{{i.tabIndex}}' {{i.readOnly}} >
+               
+                {% elif i.type == 'select'  %}
+                    <select class='form-control form-control-sm row-input'  name='{{ i.id  }}' data-type='{{i.type}}' data-format='' data-function-trigger="{{i.functionTriggerBy}}">
+                        {% for t in taxOptions %}
+                            <option value='{{t.0}}' data-rate='{{t.2}}' >{{t.0}} - {{t.1}}</option>
+                        {% endfor %}
+                    </select>  
+                         
+                {% endif %}
+            </td>
+        {% endfor %}
+    </tr>
+</tbody>
+
+

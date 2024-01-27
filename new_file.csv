@@ -1,0 +1,282 @@
+,Unnamed: 0,Error Message,Upload Status,Booking Date,Booking Number,"Client Name
+{CardName}",SAP CLIENT CODE,Trucker Name,SAP vendor CODE,Plate number,Vehicle Type & Capacity,Delivery Origin,Destination,Delivery Status,"Delivery Completion Date
+(PER DTR)",No. of drops on trip ticket,Trip Type,Remarks,Document Number
+0,,,,01/06/2023,TESTBN1,"Coca-cola beverages phils., inc",25.02-C1,Boykins trading & logistics corp,1.0072-V2,NDL9841,6 Wheeler Closed Van,"Obrero , Quezon City",LP LEVISTE AVE  EDISON STREET BARRIO IBAYO MERVILLE PARA�AQUE,Delivered,01/06/2023,,6 Pallets,Total weight: 3269.7,Shipment# 25008393
+1,,,,01/06/2023,TESTBN2,"Coca-cola beverages phils., inc",25.02-C1,Boykins trading & logistics corp,1.0072-V2,NDI6372,6 Wheeler Closed Van,"Obrero , Quezon City",LP LEVISTE AVE  EDISON STREET BARRIO IBAYO MERVILLE PARA�AQUE,Delivered,01/06/2023,,6 Pallets,Total weight: 3640.31,Shipment# 25008394
+2,,,,01/06/2023,TESTBN3,"Coca-cola beverages phils., inc",25.-C1,Boykins trading & logistics corp,1.0072-V2,NDH3612,6 Wheeler Closed Van,"Obrero , Quezon City",SM STA MESA 502356707,Delivered,01/06/2023,,6 Pallets,Total weight: 2679.14,Shipment# 25008387
+3,,,,01/06/2023,TESTBN4,"Coca-cola beverages phils., inc",25.02-C1,God message enterprises,1.0178-V2,NBB1068,6 Wheeler Closed Van,"Obrero , Quezon City","1,Mercury 502355632",Delivered,01/06/2023,,4 Pallets,"Total weight:3,695.200",Shipment#:  25008396
+4,,,,01/06/2023,TESTBN5,"Coca-cola beverages phils., inc",25.02-C1,God message enterprises,1.0178-V2,CAJ8133,6 Wheeler Closed Van,"Obrero , Quezon City","1:Jhondy store
+ #503760735",Delivered,,,4 Pallets,"Total weight: 2,268",Shipment#: 245006601
+5,,,,01/06/2023,TESTBN6,"Coca-cola beverages phils., inc",25.07-C1,Adjaj trucking services,1.0018-V1,NAE5247,6 Wheeler Closed Van,"Silangan Industrial Estate Canlubang, Calamba City, Laguna 4027","1.Ms.Sonrose minimart
+ # 503069819
+ 
+ 2.Price commercial
+ #503304347
+ 
+ 3.KFC
+ #505124776
+ 
+ 4.Savemore
+ #505333203",Delivered,01/06/2023,,6 Pallets,Total weight 3737kg,Shipment#  25006315
+6,,,,01/06/2023,TESTBN7,"Coca-cola beverages phils., inc",25.07-C1,Adjaj trucking services,1.0018-V1,CAH3848,6 Wheeler Closed Van,"Silangan Industrial Estate Canlubang, Calamba City, Laguna 4027","1. MW Paete#502356888
+ 
+ 
+ Co-load#25006660
+ 1 Ms.RJE moval#504752117",Delivered,01/06/2023,,6 Pallets,"Total weight:4,055kg",Shipment#  25006289/25006660
+7,,,,01/06/2023,TESTBN8,"Coca-cola beverages phils., inc",25.07-C1,Adjaj trucking services,1.0018-V1,NDN3280,6 Wheeler Closed Van,"Silangan Industrial Estate Canlubang, Calamba City, Laguna 4027",1.m&w sta. maria#504931372,Delivered,01/06/2023,,6 Pallets,Total weight:4467kgs.,Shipment#  25006308
+8,,,,01/06/2023,TESTBN9,"Coca-cola beverages phils., inc",25.04-C1,Jhrc logistics services,1.0225-V1,NEB6630,6 Wheeler Closed Van,"Sampaloc, Dasmarinas City 4114 Cavite","1. Wendys sm -502312325
+ 2. Greenwich bayan -502362331
+ 3. Waltermart dasma -502362569
+ 4. Dominos pizza arbo -504127730
+ 5. Chowking central -504751162
+ 6. Manginasaldasma -50525819",Delivered,01/06/2023,,7 Pallets,Total weight: 2614kg,Shipment#  25008657
+9,,,,01/06/2023,TESTBN10,Robinsons Appliances,156.01-C1,Blue arrow logistics services,1.0067-V2,CBP1641,6 Wheeler Closed Van,"Manila Bay Thread Corporation, 107 Lopez Jaena St, Marikina, 1800 Metro Manila",malolos bulacan,Delivered,01/06/2023,,,,WAYBILL #:  0160379
+10,,,,01/06/2023,TESTBN11,Robinsons Appliances,156.01-C1,Blue arrow logistics services,1.0067-V2,PEO133,6 Wheeler Closed Van,"Manila Bay Thread Corporation, 107 Lopez Jaena St, Marikina, 1800 Metro Manila",Novaliches,Delivered,01/06/2023,,,,WAYBILL #: 0160737
+11,,,,01/06/2023,TESTBN12,Robinsons Appliances,156.01-C1,Blue arrow logistics services,1.0067-V2,NVO216,6 Wheeler Closed Van,"Manila Bay Thread Corporation, 107 Lopez Jaena St, Marikina, 1800 Metro Manila",RHI marikina,Delivered,01/07/2023,,,,WAYBILL #: 0160614
+12,,,,01/06/2023,TESTBN13,Robinsons Appliances,156.01-C1,Blue arrow logistics services,1.0067-V2,CBN7808,6 Wheeler Closed Van,"Manila Bay Thread Corporation, 107 Lopez Jaena St, Marikina, 1800 Metro Manila",TBA by client,Cancelled,,,,,WAYBILL #: 
+13,,,,01/06/2023,TESTBN14,Concepcion-carrier air conditioning company,14.01-C1,Global h&b megatrade corp.,1.0176-V2,CBJ-9191,10 Wheeler Wing Van,Guzent whs cabuyao,Carmona,Delivered,01/06/2023,,,incrementals: 3 add manpower / 300 per head,WAYBILL # 0169702
+14,,,,01/06/2023,TESTBN15,Concepcion-carrier air conditioning company,14.01-C1,Global h&b megatrade corp.,1.0176-V2,CBQ-1967,10 Wheeler Wing Van,Guzent whs cabuyao,Robinsons Marikina,Delivered,01/06/2023,,,incrementals: 3 add manpower / 200 per head,WAYBILL # 
+15,,,,01/06/2023,TESTBN16,Concepcion-carrier air conditioning company,14.01-C1,Global h&b megatrade corp.,1.0176-V2,CBQ-1962,10 Wheeler Wing Van,Guzent whs cabuyao,Robinsons Marikina,Delivered,01/06/2023,,,incrementals: 3 add manpower / 200 per head,WAYBILL # 0169714
+16,,,,01/06/2023,TESTBN17,Manila Comissario Central Inc,117.01-C1,Day2day logistics inc,1.0107-V2,D2G 777,6 Wheeler Closed Van,"7760 Narra Rd, San Antonio, San Pedro, Laguna, Philippines","KUYA J PARK SQUARE MAKATI
+ Kuya J SM Jazz Mall Makati
+ Kuya J Makati Walter Mart",Delivered,01/06/2023,,,,WAYBILL #  :  0158281
+17,,,,01/06/2023,TESTBN18,Manila Comissario Central Inc,117.01-C1,Day2day logistics inc,1.0107-V2,NBE 8908,4 Wheeler Closed Van,"7760 Narra Rd, San Antonio, San Pedro, Laguna, Philippines","KuyaJ Serin Tagaytay
+ KJ SM STA ROSA FRANCHISE",Delivered,01/06/2023,,,,WAYBILL #  :  0158283
+18,,,,01/06/2023,TESTBN19,Manila Comissario Central Inc,117.01-C1,Day2day logistics inc,1.0107-V2,NFZ 7017,4 Wheeler Closed Van,"7760 Narra Rd, San Antonio, San Pedro, Laguna, Philippines","Kuya J Venice Grand Canal
+ Kuya J SMDC Grace Mall
+ KuyaJ Otis",Delivered,01/06/2023,,,,WAYBILL #  :  0158286
+19,,,,01/06/2023,TESTBN20,Manila Comissario Central Inc,117.01-C1,Day2day logistics inc,1.0107-V2,NBF 6716,4 Wheeler Closed Van,"7760 Narra Rd, San Antonio, San Pedro, Laguna, Philippines","PLK SM Grand Central
+ PLK 999 Shopping Mall
+ PLK SM Fairview",Delivered,01/06/2023,,,,WAYBILL #  :  0158219
+20,,,,01/06/2023,TESTBN21,"Neltex development co., inc.",102.01-C1,J.m de leon transport,1.0207-V2,NDH2690,6 Wheeler Closed Van,Brgy Langkaan Dasmarinas Cavite,Sta. Mesa,Delivered,01/06/2023,,,,WAYBILL #  :  0162392
+21,,,,01/06/2023,TESTBN22,"Neltex development co., inc.",102.01-C1,J.m de leon transport,1.0207-V2,CAE8143,6 Wheeler Closed Van,Brgy Langkaan Dasmarinas Cavite,Sta. Mesa,Delivered,01/06/2023,,,,WAYBILL #  :  0162220
+22,,,,01/06/2023,TESTBN23,Puratos philippines,120.01-C1,Lynns trucking services,1.0279-V1,DAZ2784,AUV / L300,"14 Perfecto Avenue, Bagumbayan Tanyag Industrial Zone Taguig City",Taguig / Taytay Rizal / Pasig / Marikina / San mateo Rizal,Delivered,01/06/2023,,,,TRANSPORT ORDER#: 4102413218
+23,,,,01/06/2023,TESTBN24,Puratos philippines,120.01-C1,G&h trucking services,1.0165-V1,AAk4291,AUV / L300,"14 Perfecto Avenue, Bagumbayan Tanyag Industrial Zone Taguig City",Valenzuela City,Delivered,01/06/2023,,,,TRANSPORT ORDER#: 4102412313
+24,,,,01/06/2023,TESTBN25,Puratos philippines,120.01-C1,Andcor support marketing inc.,1.0034-V2,DAQ 3756,AUV / L300,"14 Perfecto Avenue, Bagumbayan Tanyag Industrial Zone Taguig City",Manila,Delivered,01/06/2023,,,,TRANSPORT ORDER#: 4102413241
+25,,,,01/06/2023,TESTBN26,Puratos philippines,120.01-C1,Eum car rental services,1.0143-V1,NEW3765,AUV / L300,"14 Perfecto Avenue, Bagumbayan Tanyag Industrial Zone Taguig City",Quezon City / San juan / Novaliches / Caloocan,Delivered,01/06/2023,,,,TRANSPORT ORDER#: 4102413219
+26,,,,01/06/2023,TESTBN27,Leslie corporation,74.01-C1,Rjel god's will trucking services,1.0371-V2,NAO 3761,4 Wheeler Closed Van,"4 Dama De Noche Street, United Paranaque Subd. IV, Paranaque City",UNIMART INCORPORATED,Delivered,01/06/2023,,,,WAYBILL #  : 0158333
+27,,,,01/06/2023,TESTBN28,Century chemical corporation,18.01-C1,Rjel god's will trucking services,1.0371-V2,NBG 6017,4 Wheeler Closed Van,49 Toctocan St. Brgy. Masambong 1115 Quezon City,"MARTON HARDWARE
+ GLASS HAUZ HARDWARE
+ FAVS HARDWARE & CONSTRUCTION
+ FAR EASTER HARDWARE & FURNITURE
+ REYLINS BUILDERS DEPOT",Delivered,01/06/2023,,,,WAYBILL #  :  0160901
+28,,,,01/06/2023,TESTBN29,Bounty fresh food inc.,10.01-C1,Harold reyes trucking services,1.0190-V1,CBP8156,6 Wheeler Reefer Van,P1: Pulilan,"1st Drop BFFI EMPLOYEE (HEAD OFFICE) CALOOCAN 130
+ 2TONNER - INOZA - 11PM RCI",Delivered,01/06/2023,,,,DDR # : rpdd0000987
+29,,,,01/06/2023,TESTBN30,Bounty fresh food inc.,10.01-C1,Harold reyes trucking services,1.0190-V1,CBQ6336,6 Wheeler Reefer Van,P1: Pulilan,"1st Drop KAREILA MGT CORP - CIRCUIT MAKATI 68
+ 2nd Drop KAREILA MGT CORP - FORT BONIFACIO 73
+ 2TONNER - INOZA - 10PM RCI",Delivered,01/06/2023,,,,DDR # :  rpdd0000986
+30,,,,01/06/2023,TESTBN31,Bounty fresh food inc.,10.01-C1,Harold reyes trucking services,1.0190-V1,NEG5703,6 Wheeler Reefer Van,P1: Pulilan,"1st Drop KAREILA MGT CORP - CEBU 41
+ 2nd Drop KAREILA MGT CORP - DAVAO 68
+ 2TONNER - INOZA - 10PM RCI",Delivered,01/06/2023,,,,DDR # :  RPDD0000985
+31,,,,01/06/2023,TESTBN32,Bounty fresh food inc.,10.01-C1,Jm aces trucking services,1.0541-V2,CAQ6970,6 Wheeler Reefer Van,P1: Pulilan,"1st Drop SOUTHEASTASIA RETAIL INC. - UP TOWN CENTER 130
+ 2TONNER - INOZA 10PM RCI",Delivered,01/06/2023,,,,DDR # :  RPD0000984
+32,,,,01/06/2023,TESTBN33,Century pacific food inc.,19.01-C1,Jvd freight management,1.0248-V2,CBN7993,6 Wheeler Closed Van,Sandoval Pasig,"sanford nova
+ walter mart",Delivered,01/06/2023,,,Wb:0171119,DR #: 101378
+33,,,,01/06/2023,TESTBN34,Century pacific food inc.,19.01-C1,Jvd freight management,1.0248-V2,CBP4190,6 Wheeler Closed Van,Sandoval Pasig,SF TANAY,Delivered,01/06/2023,,,Wb:0171291,DR #: 101384
+34,,,,01/06/2023,TESTBN35,Century pacific food inc.,19.01-C1,Jvd freight management,1.0248-V2,CAO3681,6 Wheeler Closed Van,Sandoval Pasig,"S.F Katipunan
+ S.F P Tuazon
+  S.F Anonas",Delivered,01/06/2023,,,Wayb:0170768,DR #: 101374
+35,,,,01/06/2023,TESTBN36,Century pacific food inc.,19.01-C1,Jvd freight management,1.0248-V2,CBN2866,6 Wheeler Closed Van,Sandoval Pasig,"Kareila corporation Edison merville paranaque
+ Grand union supermarket Aguirre ave bf homes",Delivered,01/06/2023,,,Wb:0170923,DR #: 101410
+36,,,,01/06/2023,TESTBN37,Quanta paper marketing inc.,121.02-C1,Bryan jomer trucking services,1.0075-V2,GAI1757,4 Wheeler Closed Van,Quanta Phil. Warehouse (Soong Lapu2x),Watson DC,Delivered,01/06/2023,,,,DTT#: 122282
+37,,,,01/06/2023,TESTBN38,Quanta paper marketing inc.,121.04-C1,Bjsp transport services,1.0066-V1,NEI5504,H100,"149-A Rt. Rev. G. Aglipay, Mandaluyong City",San Pablo,Delivered,01/06/2023,,,,DTT#: 125097
+38,,,,01/06/2023,TESTBN39,Quanta paper marketing inc.,121.04-C1,R.b bautista trucking services,1.0351-V1,NCT2036,AUV / L300,"149-A Rt. Rev. G. Aglipay, Mandaluyong City",TAGUIG,Delivered,01/06/2023,,,,DTT#: 125109
+39,,,,01/06/2023,TESTBN40,Quanta paper marketing inc.,121.04-C1,Anikaiden transport services,1.0036-V1,NFW1307,H100,"149-A Rt. Rev. G. Aglipay, Mandaluyong City","Bacoor
+ Imus",Delivered,01/06/2023,,,,DTT#: 125098
+40,,,,01/06/2023,TESTBN41,Quanta paper marketing inc.,121.04-C1,Malayu delivery services,1.0288-V1,BOC547,AUV / L300,"149-A Rt. Rev. G. Aglipay, Mandaluyong City",PARAñaque,Delivered,01/06/2023,,,,DTT#: 125113
+41,,,,01/06/2023,TESTBN42,Quanta paper marketing inc.,121.04-C1,Malayu delivery services,1.0288-V1,NCR1862,AUV / L300,"149-A Rt. Rev. G. Aglipay, Mandaluyong City",MANILA,Delivered,01/06/2023,,,,DTT#: 125114
+42,,,,01/06/2023,TESTBN43,Quanta paper marketing inc.,121.04-C1,Andcor support marketing inc.,1.0034-V2,DAQ3420,AUV / L300,"149-A Rt. Rev. G. Aglipay, Mandaluyong City",TAGUIG,Delivered,01/06/2023,,,,DTT#: 125102
+43,,,,01/06/2023,TESTBN44,Quanta paper marketing inc.,121.04-C1,Crisco trucking services,1.0096-V1,NAQ7083,AUV / L300,"149-A Rt. Rev. G. Aglipay, Mandaluyong City",MAKATI,Delivered,01/06/2023,,,,DTT#: 125125
+44,,,,01/06/2023,TESTBN45,Quanta paper marketing inc.,121.04-C1,R.b bautista trucking services,1.0351-V1,NCT2036,AUV / L300,"149-A Rt. Rev. G. Aglipay, Mandaluyong City",MAKATI,Delivered,01/06/2023,,,,DTT#: 125132
+45,,,,01/06/2023,TESTBN46,Quanta paper marketing inc.,121.04-C1,Anikaiden transport services,1.0036-V1,NFW1307,H100,"149-A Rt. Rev. G. Aglipay, Mandaluyong City",ALABANG,Delivered,01/06/2023,,,,DTT#: 125142
+46,,,,01/06/2023,TESTBN47,Quanta paper marketing inc.,121.04-C1,Malayu delivery services,1.0288-V1,NCR1862,AUV / L300,"149-A Rt. Rev. G. Aglipay, Mandaluyong City",QUEZON CITY,Delivered,01/06/2023,,,,DTT#: 125144
+47,,,,01/06/2023,TESTBN48,Quanta paper marketing inc.,121.04-C1,Andcor support marketing inc.,1.0034-V2,DAQ3756,AUV / L300,"149-A Rt. Rev. G. Aglipay, Mandaluyong City",QUEZON CITY,Delivered,01/06/2023,,,,DTT#: 125147
+48,,,,01/06/2023,TESTBN49,Star paper corporation,136.01-C1,J araza trucking services,1.0202-V2,NAG4066,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",Parañaque,Delivered,01/06/2023,,,Trucker checker,WAYBILL # 01202383
+49,,,,01/06/2023,TESTBN50,Star paper corporation,136.01-C1,Rayvann trucking services,1.0358-V1,NIB1734,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",Pasig/Marikina/ Rizal (Antipolo/ Angono),Delivered,01/06/2023,,,Trucker checker,WAYBILL # 0202386
+50,,,,01/06/2023,TESTBN51,Star paper corporation,136.01-C1,Unieye corporation,1.0414-V2,XSF770,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",Pasig/ Mandaluyong/ Taguig,Delivered,01/06/2023,,,Trucker checker,WAYBILL # 0202387
+51,,,,01/06/2023,TESTBN52,Star paper corporation,136.01-C1,Evan mybhoy transport,1.0144-V1,CAU1797,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",Pangasinan (Sta. Barbara),Delivered,01/06/2023,,,Trucker checker,WAYBILL # 0202388
+52,,,,01/06/2023,TESTBN53,Star paper corporation,136.01-C1,Evan mybhoy transport,1.0144-V1,NAX1071,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",Tarlac,Delivered,01/06/2023,,,Trucker checker,WAYBILL # 0202385
+53,,,,01/06/2023,TESTBN54,Star paper corporation,136.01-C1,J araza trucking services,1.0202-V2,NBF8957,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",Sta. Cruz/ Binondo,Delivered,01/06/2023,,,Trucker checker,WAYBILL # 0202384
+54,,,,01/06/2023,TESTBN55,Star paper corporation,136.01-C1,Abby & cesar trucking services,1.0015-V2,UWE848,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila","Sampoloc / Sta, Cruz Manila / Binondo",Delivered,01/06/2023,,,Trucker Checker,WAYBILL # 0202389
+55,,,,01/06/2023,TESTBN56,Star paper corporation,136.01-C1,Abby & cesar trucking services,1.0015-V2,NAX8775,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",quezon cITY/ Cubao,Delivered,01/06/2023,,,Trucker Checker,WAYBILL # 0202395
+56,,,,01/06/2023,TESTBN57,Star paper corporation,136.01-C1,Evan mybhoy transport,1.0144-V1,NBG3442,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",quezon cITY/ Cubao,Delivered,01/06/2023,,,Trucker checker,WAYBILL # 0202396
+57,,,,01/06/2023,TESTBN58,Star paper corporation,136.01-C1,J araza trucking services,1.0202-V2,NAM7947,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",Pasay /Paranaque,Delivered,01/06/2023,,,Trucker Checker,WAYBILL # 0202390
+58,,,,01/06/2023,TESTBN59,Star paper corporation,136.01-C1,Al quibete trucking services,1.0024-V2,XKG470,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",Cubao,Delivered,01/06/2023,,,Trucker Checker,WAYBILL # 0202394
+59,,,,01/06/2023,TESTBN60,Star paper corporation,136.01-C1,Jitzu trucking services,1.0226-V2,MAI1468,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",Quezon City/ Novaliches/ Caloocan,Delivered,01/06/2023,,,Trucker Checker,WAYBILL # 0202391
+60,,,,01/06/2023,TESTBN61,Star paper corporation,136.01-C1,Jyy trucking services,1.0544-V1,NBQ 1292,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",Malabon / Valezuela,Delivered,01/06/2023,,,Trucker Checker,WAYBILL # 0202392
+61,,,,01/06/2023,TESTBN62,Star paper corporation,136.01-C1,Unieye corporation,1.0414-V2,AMA2014,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",Marikina/ Rizal,Delivered,01/06/2023,,,Trucker checker,WAYBILL # 0202398
+62,,,,01/06/2023,TESTBN63,Star paper corporation,136.01-C1,J araza trucking services,1.0202-V2,NBF8957,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",parañaque,Delivered,01/06/2023,,,Trucker Checker,WAYBILL # 0202397
+63,,,,01/06/2023,TESTBN64,Star paper corporation,136.01-C1,Day2day logistics inc,1.0107-V2,NAO 3979,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",,Cancelled,,,,,WAYBILL #
+64,,,,01/06/2023,TESTBN65,Star paper corporation,136.01-C1,Day2day logistics inc,1.0107-V2,NFY 2638,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",,Cancelled,,,,,WAYBILL #
+65,,,,01/06/2023,TESTBN66,Star paper corporation,136.01-C1,Day2day logistics inc,1.0107-V2,NGL2519,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",,Cancelled,,,,,WAYBILL #
+66,,,,01/06/2023,TESTBN67,Star paper corporation,136.01-C1,Transpacer intergroup inc.,1.0409-V1,NCK7277,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",,Cancelled,,,,,WAYBILL #
+67,,,,01/06/2023,TESTBN68,Star paper corporation,136.01-C1,Day2day logistics inc,1.0107-V2,Confirmed to follow details,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",,Cancelled,,,,,WAYBILL #
+68,,,,01/06/2023,TESTBN69,Star paper corporation,136.01-C1,Unieye corporation,1.0414-V2,Confirmed to follow details,6 Wheeler Closed Van,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",,Cancelled,,,,,WAYBILL #
+69,,,,01/06/2023,TESTBN70,Star paper corporation,136.01-C1,Mg segovia's trucking services,1.0295-V1,NCV4009,AUV / L300,"46 Joy St, Grace Park West, Quezon City, 1115 Metro Manila",Mandaluyong/ Pasig,Delivered,01/06/2023,,,Trucker Checker,WAYBILL # 0202399
+70,,,,01/06/2023,TESTBN71,Bridge distribution,13.01-C1,In line freight forwarding corporation,1.0584-V2,NEG9233,6 Wheeler Closed Van,#22 Gen. Evangelista St. Bagong Barrio Caloocan City,"2, Manila Navotas Area
+  3 drops
+  With 1 additional Helper",Cancelled,,,,"cancell by client, due to changes of delivery location client cancel the unit",WAYBILL #: 
+71,,,,01/06/2023,TESTBN72,"Virginia foods, inc.",146.01-C1,Jfjd trucking,1.0222-V2,NGP4344,4 Wheeler Reefer Van,"Jentec Storage ,Jennys Pasig","Rob magnolia, Shopwise commonwealth, Sm cainta, Rob metroeast",Delivered,01/06/2023,,,,WAYBILL #: 0159782
+72,,,,01/06/2023,TESTBN73,"Virginia foods, inc.",146.01-C1,Jfjd trucking,1.0222-V2,NBM6756,6 Wheeler Reefer Van,"Jentec Storage ,Jennys Pasig","Landers Otis, Rob Otis, Rob ermita, Metro binondo, Mym",Delivered,01/06/2023,,,,WAYBILL #: 0159840
+73,,,,01/06/2023,TESTBN74,Co ban kiat hardware inc.,24.01-C1,Isko transport services,1.0199-V1,NFW1239,AUV / L300,"555 Quirino Avenue, Brgy. Tambo, Paranaque CIty","1. SEAA CORPORATION
+  LOS BAÑOS LAGUNA
+ 
+ 2. MAQUILING LOS BAÑOS
+ 
+ 3. ACE HDWE SM CALAMBA",Delivered,01/06/2023,,,"PULLOUT
+ ACE HDWE SM CALAMBA",TRIP TICKET# D20230104152049
+74,,,,01/06/2023,TESTBN75,Metroexpress Connect Inc.,84.01-C1,Rmtj courier services,1.0482-V1,NED1756,H100,San Fernando Pampanga,Vista Hub Tower 2 Molino,Cancelled,,,,"8.9K Vat Inc TRA 
+ Cancelled by client due to pick issue",WAYBILL #:  
+75,,,,01/06/2023,TESTBN76,Safexpress Logistics Inc.,157.02-C1,Oro jj-ac enterprises and general services,1.0321-V2,,6 Wheeler Closed Van,Safexpress Logistics Inc. - CDO,"Gaisano Inc. Iligan, Robinsons Supermarket Iligan, Puregold Price Club Iligan, Waffle Kauswagan.",Cancelled,,,,,NCK3143
+76,,,,01/06/2023,TESTBN77,Safexpress Logistics Inc.,157.02-C1,Dumo group intl corp.,1.0122-V2,,4 Wheeler Closed Van,Safexpress Logistics Inc. - CDO,"Robinsons Supermarket Gusa, Robinsons Supermarket Limketai, Shopwise LKK CDO,The Marketplace CDO,Supervalue Inc. Carmen CDO,Ysu Marketing Corporation.",Cancelled,,,,,WJB679
+77,,,,01/06/2023,TESTBN78,"Megabucks Merchandising Corp,",7.04-C1,"A1-trucking services, inc.",1.0011-V2,NFX9800,10 Wheeler Wing Van,Baliti San Fernando Pampanga,BMI UN PACO,Delivered,01/06/2023,,,,HTT# 138380
+78,,,,01/06/2023,TESTBN79,"Megabucks Merchandising Corp,",7.04-C1,"A1-trucking services, inc.",1.0011-V2,NDL2705,10 Wheeler Wing Van,Baliti San Fernando Pampanga,SUCAT,Delivered,01/06/2023,,,,HTT# 138382
+79,,,,01/06/2023,TESTBN80,"Megabucks Merchandising Corp,",7.04-C1,R.m. pascual trucking services,1.0352-V2,CAL4562,10 Wheeler Wing Van,Baliti San Fernando Pampanga,BAGUIO,Delivered,01/07/2023,,,,HTT# 138517
+80,,,,01/06/2023,TESTBN81,"Megabucks Merchandising Corp,",7.04-C1,"A1-trucking services, inc.",1.0011-V2,NGA 3265,10 Wheeler Wing Van,Baliti San Fernando Pampanga,PACO,Delivered,01/07/2023,,,,HTT# 138415
+81,,,,01/06/2023,TESTBN82,"Megabucks Merchandising Corp,",7.04-C1,"A1-trucking services, inc.",1.0011-V2,NDL2705,10 Wheeler Wing Van,Baliti San Fernando Pampanga,SUCAT,Delivered,01/07/2023,,,,HTT# 138410
+82,,,,01/06/2023,TESTBN83,"Megabucks Merchandising Corp,",7.04-C1,"A1-trucking services, inc.",1.0011-V2,NFX9800,10 Wheeler Wing Van,Baliti San Fernando Pampanga,PACO,Delivered,01/07/2023,,,,HTT# 138411
+83,,,,01/06/2023,TESTBN84,"Megabucks Merchandising Corp,",7.04-C1,"A1-trucking services, inc.",1.0011-V2,NEX5179,10 Wheeler Wing Van,Baliti San Fernando Pampanga,PACO,Delivered,01/07/2023,,,,HTT# 138414
+84,,,,01/06/2023,TESTBN85,"Megabucks Merchandising Corp,",7.04-C1,Balajadia Trucking Services,1.0448-V2,CAJ7525,10 Wheeler Wing Van,Baliti San Fernando Pampanga,pasig wise,Delivered,01/07/2023,,,,HTT# 138404
+85,,,,01/06/2023,TESTBN86,"Megabucks Merchandising Corp,",7.04-C1,Balajadia Trucking Services,1.0448-V2,CAJ7526,10 Wheeler Wing Van,Baliti San Fernando Pampanga,BMI UN PACO,Delivered,01/06/2023,,,,HTT# 138381
+86,,,,01/06/2023,TESTBN87,Absolute sales corp.,7.02-C1,Mcm best trucking services corporation,1.0290-V2,CCO 5258,10 Wheeler Wing Van,Km.43 National Hi-Way Brgy.Sala Cabuyao City Laguna,ASC sales office paco,Delivered,01/06/2023,,,,HTT# 697881
+87,,,,01/06/2023,TESTBN88,Absolute sales corp.,7.02-C1,D&l pesigan trucking services,1.0102-V2,NEW9029,10 Wheeler Wing Van,Km.43 National Hi-Way Brgy.Sala Cabuyao City Laguna,pasig wise,Delivered,01/06/2023,,,,HTT# 697887
+88,,,,01/06/2023,TESTBN89,Absolute sales corp.,7.02-C1,Glerish transport services,1.0175-V2,UBA285,10 Wheeler Closed Van,Km.43 National Hi-Way Brgy.Sala Cabuyao City Laguna,paco,Delivered,01/06/2023,,,,HTT# 697880
+89,,,,01/06/2023,TESTBN90,Absolute sales corp.,7.02-C1,Glerish transport services,1.0175-V2,REA863,10 Wheeler Wing Van,Km.43 National Hi-Way Brgy.Sala Cabuyao City Laguna,pasig wise,Delivered,01/06/2023,,,,HTT# 697882
+90,,,,01/06/2023,TESTBN91,Absolute sales corp.,7.02-C1,Glerish transport services,1.0175-V2,RFT733,10 Wheeler Wing Van,Km.43 National Hi-Way Brgy.Sala Cabuyao City Laguna,paco,Delivered,01/06/2023,,,,HTT# 697891
+91,,,,01/06/2023,TESTBN92,Absolute sales corp.,7.02-C1,Glerish transport services,1.0175-V2,ABK1654,10 Wheeler Closed Van,Km.43 National Hi-Way Brgy.Sala Cabuyao City Laguna,paco,Delivered,01/06/2023,,,,HTT# 697879
+92,,,,01/06/2023,TESTBN93,Absolute sales corp.,7.02-C1,Glerish transport services,1.0175-V2,CBN2036,10 Wheeler Closed Van,Km.43 National Hi-Way Brgy.Sala Cabuyao City Laguna,paco,Delivered,01/06/2023,,,,HTT# 697877
+93,,,,01/06/2023,TESTBN94,Absolute sales corp.,7.02-C1,D&l pesigan trucking services,1.0102-V2,NEW9029,10 Wheeler Closed Van,Km.43 National Hi-Way Brgy.Sala Cabuyao City Laguna,pasig wise,Cancelled,,,,,HTT# 655538
+94,,,,01/06/2023,TESTBN95,Absolute sales corp.,7.02-C1,Glerish transport services,1.0175-V2,CBN2036,10 Wheeler Closed Van,Km.43 National Hi-Way Brgy.Sala Cabuyao City Laguna,pasig wise,Delivered,01/07/2023,,,,HTT# 697961
+95,,,,01/06/2023,TESTBN96,Absolute sales corp.,7.02-C1,Glerish transport services,1.0175-V2,ABK1654,10 Wheeler Closed Van,Km.43 National Hi-Way Brgy.Sala Cabuyao City Laguna,pasig wise,Delivered,01/07/2023,,,,HTT# 697963
+96,,,,01/06/2023,TESTBN97,Absolute sales corp.,7.02-C1,Glerish transport services,1.0175-V2,REA863,10 Wheeler Closed Van,Km.43 National Hi-Way Brgy.Sala Cabuyao City Laguna,pasig wise,Delivered,01/07/2023,,,,HTT# 697984
+97,,,,01/06/2023,TESTBN98,Absolute sales corp.,7.02-C1,Mcm best trucking services corporation,1.0290-V2,ABJ8025,10 Wheeler Closed Van,Km.43 National Hi-Way Brgy.Sala Cabuyao City Laguna,pasig wise,Delivered,01/07/2023,,,,HTT# 697932
+98,,,,01/06/2023,TESTBN99,Absolute sales corp.,7.02-C1,Mcm best trucking services corporation,1.0290-V2,CCO 5258,10 Wheeler Closed Van,Km.43 National Hi-Way Brgy.Sala Cabuyao City Laguna,pasig wise,Delivered,01/07/2023,,,,HTT# 697960
+99,,,,01/06/2023,TESTBN100,Golden Brew Marketing Inc.,7.06-C1,Tejada transport services,1.0400-V1,NBH9026,6 Wheeler Closed Van,Asia Brewery Inc. - Mandaue,ROBINSON SUPERMARKET - TAYUD,Delivered,01/07/2023,,,379 BOXES,Waybill: 0195856
+100,,,,01/06/2023,TESTBN101,Golden Brew Marketing Inc.,7.06-C1,Tejada transport services,1.0400-V1,GAU9467,6 Wheeler Closed Van,Asia Brewery Inc. - Mandaue,DYNASTY MGT @ DEVT CORP.,Delivered,01/06/2023,,,366 BOXES,Waybill: 0195855
+101,,,,01/06/2023,TESTBN102,"Coca-cola beverages phils., inc",25.01-C1,Hch enterprise,1.0191-V2,Cab4316,6 Wheeler Closed Van,"Antipolo DC, 46 Sumulong Hwy, Antipolo, 1870 Rizal","Nare p. Labrador/Rex store
+ 505348051
+ 503565053",Delivered,01/06/2023,,4 Pallets,"Total weights:2,325.850",Shipment#: 25009794
+102,,,,01/06/2023,TESTBN103,"Coca-cola beverages phils., inc",25.02-C1,God message enterprises,1.0178-V2,CAJ8133,6 Wheeler Closed Van,"Obrero , Quezon City","1:Mercury drug
+ #502355632",Delivered,01/06/2023,,4 Pallets,"Total weight: 3,553,660",Shipment#: 25008395
+103,,,,01/06/2023,TESTBN104,"Coca-cola beverages phils., inc",25.07-C1,Adjaj trucking services,1.0018-V1,NCC3521,6 Wheeler Closed Van,"Silangan Industrial Estate Canlubang, Calamba City, Laguna 4027","1. Wise merchant
+ 505269912
+ 
+ Co-load: 25006661
+ 
+ 1. Boyge
+ 505301993",Delivered,01/06/2023,,6 Pallets,Total weight:3125klg,Shipment#  25006661/25006306
+104,,,,01/06/2023,TESTBN105,"Coca-cola beverages phils., inc",25.07-C1,Adjaj trucking services,1.0018-V1,ADH2282,6 Wheeler Closed Van,"Silangan Industrial Estate Canlubang, Calamba City, Laguna 4027","1,m,w siniloan#503258779",Delivered,01/06/2023,,6 Pallets,Total weigth 3983kg,"Shipment# 25006309
+"
+105,,,,01/06/2023,TESTBN106,"Coca-cola beverages phils., inc",25.02-C1,God message enterprises,1.0178-V2,NBB1068,6 Wheeler Closed Van,"Obrero , Quezon City","1,Eyepop
+ 2,Jazz Art Taxi",Delivered,01/06/2023,,4 Pallets,"Total weight:2,595.200",Shipment#:  25006725
+106,,,,01/06/2023,TESTBN107,"Coca-cola beverages phils., inc",25.01-C1,Boykins trading & logistics corp,1.0072-V2,CCN2979,6 Wheeler Closed Van,"Antipolo DC, 46 Sumulong Hwy, Antipolo, 1870 Rizal",LTP TERESA 503686117,Delivered,01/06/2023,,6 Pallets,Total weight: 2719.65,Shipment#: 25009653
+107,,,,01/06/2023,TESTBN108,"Coca-cola beverages phils., inc",25.04-C1,Jhrc logistics services,1.0225-V1,NEB6630,6 Wheeler Closed Van,"Sampaloc, Dasmarinas City 4114 Cavite","
+1. Svi dasma -502362511
+2. Sanford paliparan -504828644
+3. Sanford salawag -504487236",Delivered,01/06/2023,,7 Pallets,Total weight: 4200kg,Shipment# 25008655
+108,,,,01/06/2023,TESTBN109,"Coca-cola beverages phils., inc",25.07-C1,Adjaj trucking services,1.0018-V1,NAA9806,6 Wheeler Closed Van,"Silangan Industrial Estate Canlubang, Calamba City, Laguna 4027",MR IB ISAHAN / MS MANIEGO,Delivered,01/06/2023,,6 Pallets,Total weigth  3983kg,Shipment# 25012440
+109,,,,01/06/2023,TESTBN110,Absolute Sales Corp. - Paco,7.08-C1,Fxd express inc.,1.0539-V2,CBN 4696,6 Wheeler Closed Van,paco,Puregold Merkado Uptown,Delivered,01/06/2023,,,,Waybill:0200107
+110,,,,01/06/2023,TESTBN111,Robinson Handyman Inc.,156.04-C1,Blue arrow logistics services,1.0067-V2,CBN1584,6 Wheeler Closed Van,Marikina,,Delivered,,,,,WAYBILL #: 0160803
+111,,,,01/06/2023,TESTBN112,Co ban kiat hardware inc.,24.01-C1,Jn&a trucking services,1.0234-V1,TFF714,AUV / L300,"555 Quirino Avenue, Brgy. Tambo, Paranaque CIty","ACE HARDWARE SM TRECE MARTIREZ - PULL OUT
+ACE HARDWARE SM ROSARIO
+ALL HOME KAWIT
+ALL HOME TANZA
+WILCON DEPOT GEN TRIAS
+ACE HARDWARE SM BACOORD",Delivered,01/06/2023,,,,TRIPTICKET#: D20230105135315
+112,,,,01/06/2023,TESTBN113,Co ban kiat hardware inc.,24.01-C1,Jn&a trucking services,1.0234-V1,NCL8974,AUV / L300,"555 Quirino Avenue, Brgy. Tambo, Paranaque CIty","WILCON DEPOT CALUMPIT
+ALL HOME MALOLOS
+ACE HARDWARE WALTERMART MALOLOS
+QUAENSA FOOD INC. BALAGTAS",Delivered,01/06/2023,,,,TRIP TICKET#  D20230105113306
+113,,,,01/06/2023,TESTBN114,Co ban kiat hardware inc.,24.01-C1,Pjexpress trucking services,1.0566-V1,NEL9014,AUV / L300,"555 Quirino Avenue, Brgy. Tambo, Paranaque CIty","ACE HARDWARE TAGAYTAY (FILIN VEST FORA)
+ACE HARDWARE TAGAYTAY (WIND RESIDENCES)
+ACE HARDWARE MENDEZ CAVITE",Delivered,01/06/2023,,,,TRIP TICKET#  D20230105121756
+114,,,,01/06/2023,TESTBN115,"Megabucks Merchandising Corp,",7.04-C1,Kyoob logistics service,1.0261-V2,NGR7554,10 Wheeler Wing Van,Baliti San Fernando Pampanga,SUCAT,Delivered,01/06/2023,,,,HTT#  138383
+115,,,,01/06/2023,TESTBN116,Nestle philippines inc.,104.04-C1,Tsa angel trucking services,1.0411-V2,KAK 3281,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,FDC - Koronadal,Delivered,01/06/2023,,interisland,185913,P300706629
+116,,,,01/06/2023,TESTBN117,Nestle philippines inc.,104.04-C1,Ro trucking services,1.0374-V1,CAH7281,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,Rosabaya Distributors - Tagum,Delivered,01/07/2023,,interisland,185919,P300706634
+117,,,,01/06/2023,TESTBN118,Nestle philippines inc.,104.04-C1,Oro jj-ac enterprises and general services,1.0321-V2,CCN4174,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,Rosabaya Distributors - Tagum,Delivered,01/09/2023,,interisland,185923,P300706633
+118,,,,01/06/2023,TESTBN119,Nestle philippines inc.,104.04-C1,Oro jj-ac enterprises and general services,1.0321-V2,KAL3968,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,Rosabaya Distributors - Tagum,Delivered,01/06/2023,,interisland,185924,P300706635
+119,,,,01/06/2023,TESTBN120,Nestle philippines inc.,104.04-C1,Winter rain trucking services,1.0438-V2,CAK 6284,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,KCC Mall de Zamboanga,Delivered,01/06/2023,,intra-city,185891,P300706776
+120,,,,01/06/2023,TESTBN121,Nestle philippines inc.,104.04-C1,Maglangit trucking services,1.0286-V2,101804,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,KCC Mall de Zamboanga,Delivered,01/06/2023,,intra-city,185880,P300706780
+121,,,,01/06/2023,TESTBN122,Nestle philippines inc.,104.04-C1,Oro jj-ac enterprises and general services,1.0321-V2,NET8441,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,KCC Mall de Zamboanga,Delivered,01/06/2023,,interisland,185910,P300707462
+122,,,,01/06/2023,TESTBN123,Nestle philippines inc.,104.04-C1,"Jyp hauling services, inc",1.0250-V2,RJT654,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,KCC Mall de Zamboanga,Delivered,01/06/2023,,intra-city,185909,P300707463
+123,,,,01/06/2023,TESTBN124,Nestle philippines inc.,104.04-C1,Gra eco corp,1.0181-V2,CAU2230,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,Maguindanao Distribution System Inc.,Delivered,01/07/2023,,intra-city,185907,P300706869
+124,,,,01/06/2023,TESTBN125,Nestle philippines inc.,104.04-C1,Gra eco corp,1.0181-V2,KAN9533,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,Maguindanao Distribution System Inc.,Delivered,01/06/2023,,intra-city,185881,P300706868
+125,,,,01/06/2023,TESTBN126,Nestle philippines inc.,104.04-C1,Talia trucking services,1.0399-V2,ABK6878,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,MDSI - Midsayap,Delivered,01/06/2023,,interisland,185912,P300707099
+126,,,,01/06/2023,TESTBN127,Nestle philippines inc.,104.04-C1,Talia trucking services,1.0399-V2,NGR7600,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,MDSI - Midsayap,Delivered,01/07/2023,,interisland,185914,P300707111
+127,,,,01/06/2023,TESTBN128,Nestle philippines inc.,104.04-C1,Talia trucking services,1.0399-V2,1571595,6 Wheeler Forward Wing Van,Nestlé Philippines Inc. - CDO,D' Paragon AA Corporation,Delivered,01/07/2023,,interisland,185918,P300706775
+128,,,,01/06/2023,TESTBN129,Nestle philippines inc.,104.04-C1,Gra eco corp,1.0181-V2,MAS4158,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,FDC - Iligan,Delivered,01/06/2023,,city delivery,185925,P300707358
+129,,,,01/06/2023,TESTBN130,Nestle philippines inc.,104.04-C1,Gra eco corp,1.0181-V2,MAS4159,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,FDC - Iligan,Delivered,01/06/2023,,city delivery,185927,P300707356
+130,,,,01/06/2023,TESTBN131,Nestle philippines inc.,104.04-C1,Gra eco corp,1.0181-V2,NET2869,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,Gaisano Mall of Digos,Delivered,01/07/2023,,interisland,185915,P300707489
+131,,,,01/06/2023,TESTBN132,Nestle philippines inc.,104.04-C1,Gra eco corp,1.0181-V2,Mar-71,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,Gaisano Mall of Tagum,Delivered,01/07/2023,,interisland,185917,P300707490
+132,,,,01/06/2023,TESTBN133,Nestle philippines inc.,104.04-C1,Talia trucking services,1.0399-V2,CAF8418,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,Gaisano Mall of Tagum,Delivered,01/07/2023,,interisland,185922,P300707501
+133,,,,01/06/2023,TESTBN134,Nestle philippines inc.,104.04-C1,Talia trucking services,1.0399-V2,1176938,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,DSG Sons Grp Inc. Gaisano Mall,Delivered,01/07/2023,,interisland,185920,P300707488
+134,,,,01/06/2023,TESTBN135,Nestle philippines inc.,104.04-C1,Talia trucking services,1.0399-V2,CBQ3379,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,Fivel Food Service - Pacana,Delivered,01/06/2023,,city delivery,185929,P300707499
+135,,,,01/06/2023,TESTBN136,Nestle philippines inc.,104.04-C1,Talia trucking services,1.0399-V2,NEW2688,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,KCC Mall de Zamboanga,Delivered,01/06/2023,,interisland,185911,P300707464
+136,,,,01/06/2023,TESTBN137,Nestle philippines inc.,104.04-C1,Talia trucking services,1.0399-V2,KAH8132,4 Wheeler Closed Van,Nestlé Philippines Inc. - CDO,NCCC Panacan (SPOT RATE),Delivered,01/06/2023,,interisland,185910,P300706910
+137,,,,01/06/2023,TESTBN138,Nestle philippines inc.,104.04-C1,Talia trucking services,1.0399-V2,JAB3688,6 Wheeler Forward Closed Van,Nestlé Philippines Inc. - CDO,DSG Sons Grp Inc. Gaisano Mall,Delivered,01/06/2023,,interisland,185921,P300707487
+138,,,,01/06/2023,TESTBN139,Nestle philippines inc.,104.04-C1,Talia trucking services,1.0399-V2,JAM 2339,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,FDC Bulua,Delivered,01/06/2023,,city delivery,185928,P300707528
+139,,,,01/06/2023,TESTBN140,Nestle philippines inc.,104.04-C1,Talia trucking services,1.0399-V2,CAE3276,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,FDC Bulua,Delivered,01/06/2023,,city delivery,,P300707528
+140,,,,01/06/2023,TESTBN141,Nestle philippines inc.,104.04-C1,Jky trucking,1.0231-V1,NEP6580,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,KCC Mall de Zamboanga,Cancelled,,,,,
+141,,,,01/06/2023,TESTBN142,Nestle philippines inc.,104.04-C1,Gra eco corp,1.0181-V2,Mar-71,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,Maguindanao Distribution System Inc.,Cancelled,,,,,
+142,,,,01/06/2023,TESTBN143,Nestle philippines inc.,104.04-C1,Oro jj-ac enterprises and general services,1.0321-V2,NET8441,10 Wheeler Wing Van,Nestlé Philippines Inc. - CDO,MDSI - Midsayap,Cancelled,,,,,
+143,,,,01/06/2023,TESTBN144,Nestle philippines inc.,104.03-C1,Mactan star transport services,1.0284-V2,YLJ 886,6 Wheeler Closed Van,Nestlé Philippines Inc. - Cebu,"Growsari, Inc. - Mandaue Cebu",Delivered,01/06/2023,,,181046,P300707253
+144,,,,01/06/2023,TESTBN145,Nestle philippines inc.,104.03-C1,Crd transcargo,1.0536-V2,GAS 9407,6 Wheeler Closed Van,Nestlé Philippines Inc. - Cebu,Robinson's Cebu Dry DC,Delivered,01/06/2023,,,181048,P300707726
+145,,,,01/06/2023,TESTBN146,Nestle philippines inc.,104.03-C1,Crd transcargo,1.0536-V2,YGS 744,6 Wheeler Closed Van,Nestlé Philippines Inc. - Cebu,Akroasia Trading Corporation,Delivered,01/06/2023,,,181047,P300707729
+146,,,,01/06/2023,TESTBN147,Nestle philippines inc.,104.03-C1,Toya j trucking services,1.0556-V1,GAS 1286,AUV / L300,Nestlé Philippines Inc. - Cebu,"Growsari, Inc. - Mandaue Cebu",Delivered,01/06/2023,,,181045,P300707254
+147,,,,01/06/2023,TESTBN148,Nestle philippines inc.,104.05-C1,B.g.o. transport services,1.0059-V1,ABQ1079,4 Wheeler Closed Van,Nestlé Philippines Inc. - Bulacan,Puregold Price Club - Kasiglahan,Delivered,01/06/2023,,,,P300707305
+148,,,,01/06/2023,TESTBN149,Nestle philippines inc.,104.05-C1,D1 delivery services,1.0581-V2,NGP4401,10 Wheeler Wing Van,Nestlé Philippines Inc. - Bulacan,Super 8 Grocery Warehouse - Pasig,Delivered,01/06/2023,,,203968,P300707773
+149,,,,01/06/2023,TESTBN150,Nestle philippines inc.,104.05-C1,D1 delivery services,1.0581-V2,NGP6400,10 Wheeler Wing Van,Nestlé Philippines Inc. - Bulacan,Suy Sing Commercial - Meycauayan,Delivered,01/06/2023,,,203965,P300707580
+150,,,,01/06/2023,TESTBN151,Nestle philippines inc.,104.05-C1,D1 delivery services,1.0581-V2,NGP6408,10 Wheeler Wing Van,Nestlé Philippines Inc. - Bulacan,Batzam Sales Distribution,Delivered,01/06/2023,,,,P300707765
+151,,,,01/06/2023,TESTBN152,Nestle philippines inc.,104.05-C1,D1 delivery services,1.0581-V2,CBQ6849,10 Wheeler Wing Van,Nestlé Philippines Inc. - Bulacan,Batzam Sales Distribution,Irregular,01/06/2023,,,,P300707762
+152,,,,01/06/2023,TESTBN153,Nestle philippines inc.,104.05-C1,D1 delivery services,1.0581-V2,CAZ1507,10 Wheeler Wing Van,Nestlé Philippines Inc. - Bulacan,Robinson's Supermarket - North DC,Delivered,01/06/2023,,,,P300707465
+153,,,,01/06/2023,TESTBN154,Nestle philippines inc.,104.05-C1,D1 delivery services,1.0581-V2,NGR4099,10 Wheeler Wing Van,Nestlé Philippines Inc. - Bulacan,"Optimized Customer Solutions, Inc.",Delivered,01/06/2023,,,207683,P300707769
+154,,,,01/06/2023,TESTBN155,Nestle philippines inc.,104.05-C1,D1 delivery services,1.0581-V2,CAN6248,10 Wheeler Wing Van,Nestlé Philippines Inc. - Bulacan,"Optimized Customer Solutions, Inc.",Delivered,01/06/2023,,,210755,P300707768
+155,,,,01/06/2023,TESTBN156,Nestle philippines inc.,104.05-C1,D1 delivery services,1.0581-V2,CAZ1457,10 Wheeler Wing Van,Nestlé Philippines Inc. - Bulacan,"Right Moves, Inc.",Delivered,01/06/2023,,,203970,P300707754
+156,,,,01/06/2023,TESTBN157,Nestle philippines inc.,104.05-C1,La gracia trucking services,1.0588-V1,CBP8728,6 Wheeler Forward Wing Van,Nestlé Philippines Inc. - Bulacan,Right Goods South Operations Inc.,Delivered,01/06/2023,,,,P300707718
+157,,,,01/06/2023,TESTBN158,Nestle philippines inc.,104.05-C1,Otw courier services,1.0323-V1,WLQ698,6 Wheeler Closed Van,Nestlé Philippines Inc. - Bulacan,"Puregold Price Club, Inc. - Langit",Delivered,01/06/2023,,,203969,P300707780
+158,,,,01/06/2023,TESTBN159,Nestle philippines inc.,104.05-C1,D'movers trucking services,1.0101-V2,NBS2319,AUV / L300,Nestlé Philippines Inc. - Bulacan,Puregold Price Club - Mariveles,Delivered,01/06/2023,,,210526,P300707778
+159,,,,01/06/2023,TESTBN160,Nestle philippines inc.,104.05-C1,Ivdein trucking services,1.0201-V2,NIC8363,AUV / L300,Nestlé Philippines Inc. - Bulacan,"Lawson Philippines, Inc. - Pasig
+Convenience Distribution Inc.",Delivered,01/06/2023,,,204104,P300707772
+160,,,,01/06/2023,TESTBN161,Nestle philippines inc.,104.05-C1,Otw courier services,1.0323-V1,NEO4270,AUV / L300,Nestlé Philippines Inc. - Bulacan,Ultra Mega Multi Sales - Manila,Delivered,01/06/2023,,,190981,P300707779
+161,,,,01/06/2023,TESTBN162,Nestle philippines inc.,104.05-C1,J land trucking services,1.0203-V1,CCO6484,6 Wheeler Closed Van,Nestlé Philippines Inc. - Bulacan,Puregold Price Club - Binangonan,Delivered,01/06/2023,,,176535,P300706513
+162,,,,01/06/2023,TESTBN163,Nestle philippines inc.,104.05-C1,Orobla transport services,1.0322-V1,NDZ9570,AUV / L300,Nestlé Philippines Inc. - Bulacan,Puregold Price Club - Binangonan,Delivered,01/06/2023,,,210350,P300706513
+163,,,,01/06/2023,TESTBN164,Nestle philippines inc.,104.05-C1,D1 delivery services,1.0581-V2,NGS3965,10 Wheeler Wing Van,Nestlé Philippines Inc. - Bulacan,OCSI - San Fernando,Delivered,01/06/2023,,,203966,P300707506
+164,,,,01/06/2023,TESTBN165,Nestle philippines inc.,104.05-C1,Mrrb transport services,1.0470-V1,NIE2770,4 Wheeler Closed Van,Nestlé Philippines Inc. - Bulacan,RGSOI - Mandaluyong,Cancelled,,,,,
+165,,,,01/06/2023,TESTBN166,Nestle philippines inc.,104.05-C1,J land trucking services,1.0203-V1,CAB9144,6 Wheeler Closed Van,Nestlé Philippines Inc. - Bulacan,RGSOI - Mandaluyong,Cancelled,,,,,
+166,,,,01/06/2023,TESTBN167,Nestle philippines inc.,104.05-C1,J land trucking services,1.0203-V1,PYO622,6 Wheeler Closed Van,Nestlé Philippines Inc. - Bulacan,RGSOI - Mandaluyong,Cancelled,,,,,
+167,,,,01/06/2023,TESTBN168,Nestle philippines inc.,104.06-C1,Rmtj courier services,1.0482-V1,CBQ1313,6 Wheeler Closed Van,Nestlé Philippines Inc. - Batino,Airspeed International Corporation Pascor Drive,Delivered,01/06/2023,,,196827,P300707645
+168,,,,01/07/2023,TESTBN169,Ph global jet express inc.,66.01-C1,De leon-amador trading,1.0109-V2,URI758,6 Wheeler Closed Van,"653 HONORIO LOPEZ BLVD, BALUT TONDO MANILA","LP LEVISTE AVE , EDISON STREET BARRIO IBAYO MERVILLE PARAÑAQUE",Delivered,01/07/2023,,,Divert destination to Merville,WAYBILL# : 0198546
+169,,,,01/07/2023,TESTBN170,Ph global jet express inc.,66.01-C1,Dreams management and logistics services (dlms) inc.,1.0121-V2,CBJ5493,10 Wheeler Wing Van,"653 HONORIO LOPEZ BLVD, BALUT TONDO MANILA",Isabela,Delivered,01/08/2023,,,,WAYBILL# : 0190226
+170,,,,01/07/2023,TESTBN171,Ph global jet express inc.,66.01-C1,Fcl pacific traders co.,1.0149-V2,NET5882,10 Wheeler Wing Van,"653 HONORIO LOPEZ BLVD, BALUT TONDO MANILA",Cebu,Delivered,01/11/2023,,,,WAYBILL# : 0198586
+171,,,,01/07/2023,TESTBN172,Ph global jet express inc.,66.01-C1,De leon-amador trading,1.0109-V2,URI758,6 Wheeler Closed Van,"653 HONORIO LOPEZ BLVD, BALUT TONDO MANILA","LP LEVISTE AVE , EDISON STREET BARRIO IBAYO MERVILLE PARAÑAQUE",Delivered,01/08/2023,,,,WAYBILL# 0178898
+172,,,,01/07/2023,TESTBN173,Ph global jet express inc.,66.01-C1,De leon-amador trading,1.0109-V2,NEV7668,6 Wheeler Closed Van,"653 HONORIO LOPEZ BLVD, BALUT TONDO MANILA","LP LEVISTE AVE , EDISON STREET BARRIO IBAYO MERVILLE PARAÑAQUE",Delivered,01/07/2023,,,,WAYBILL# 0211222
+173,,,,01/07/2023,TESTBN174,Ph global jet express inc.,66.01-C1,De leon-amador trading,1.0109-V2,NBL4574,6 Wheeler Closed Van,"653 HONORIO LOPEZ BLVD, BALUT TONDO MANILA","LP LEVISTE AVE , EDISON STREET BARRIO IBAYO MERVILLE PARAÑAQUE",Delivered,01/08/2023,,,,WAYBILL# 0198492
+174,,,,01/07/2023,TESTBN175,Ph global jet express inc.,66.01-C1,De leon-amador trading,1.0109-V2,UOR724,6 Wheeler Closed Van,"653 HONORIO LOPEZ BLVD, BALUT TONDO MANILA","LP LEVISTE AVE , EDISON STREET BARRIO IBAYO MERVILLE PARAÑAQUE",Delivered,01/08/2023,,,,WAYBILL# 0198489
+175,,,,01/07/2023,TESTBN176,Ph global jet express inc.,66.01-C1,De leon-amador trading,1.0109-V2,CCO 1441,6 Wheeler Closed Van,"653 HONORIO LOPEZ BLVD, BALUT TONDO MANILA","LP LEVISTE AVE , EDISON STREET BARRIO IBAYO MERVILLE PARAÑAQUE",Delivered,01/08/2023,,,,WAYBILL# 0178895
+176,,,,01/07/2023,TESTBN177,Ph global jet express inc.,66.01-C1,De leon-amador trading,1.0109-V2,NBL4369,6 Wheeler Closed Van,"653 HONORIO LOPEZ BLVD, BALUT TONDO MANILA","LP LEVISTE AVE , EDISON STREET BARRIO IBAYO MERVILLE PARAÑAQUE",Delivered,01/07/2023,,,JTMMDCN-NCR-201-01-0207,WAYBILL# 0211169
+177,,,,01/07/2023,TESTBN178,Ph global jet express inc.,66.01-C1,In line freight forwarding corporation,1.0584-V2,NAL5477,10 Wheeler Wing Van,"653 HONORIO LOPEZ BLVD, BALUT TONDO MANILA","LP LEVISTE AVE , EDISON STREET BARRIO IBAYO MERVILLE PARAÑAQUE",Delivered,01/08/2023,,,,WAYBILL#  0191909
+178,,,,01/07/2023,TESTBN179,Ph global jet express inc.,66.01-C1,De leon-amador trading,1.0109-V2,CBN2199,10 Wheeler Wing Van,"653 HONORIO LOPEZ BLVD, BALUT TONDO MANILA","TCT No. 512280 Barangay Banay-Banay, Municipality of Cabuyao, Province of Laguna",Delivered,01/08/2023,,,,WAYBILL# 0198542
+179,,,,01/07/2023,TESTBN180,Ph global jet express inc.,66.01-C1,De leon-amador trading,1.0109-V2,NEG1144,10 Wheeler Wing Van,"653 HONORIO LOPEZ BLVD, BALUT TONDO MANILA",MMDC Taguig,Delivered,01/08/2023,,,Rate: 13K,WAYBILL# 0198580
+180,,,,01/07/2023,TESTBN181,Ph global jet express inc.,66.01-C1,God message enterprises,1.0178-V2,NEG5825,10 Wheeler Wing Van,"653 HONORIO LOPEZ BLVD, BALUT TONDO MANILA","TCT No. 512280 Barangay Banay-Banay, Municipality of Cabuyao, Province of Laguna",Delivered,01/08/2023,,,"Rate: 11.5K
+ JTMMDCN-SOUTH 201-01-000024",WAYBILL#  0225901
+181,,,,01/07/2023,TESTBN182,Ph global jet express inc.,66.01-C1,God message enterprises,1.0178-V2,CAZ2427,10 Wheeler Wing Van,"653 HONORIO LOPEZ BLVD, BALUT TONDO MANILA","TCT No. 512280 Barangay Banay-Banay, Municipality of Cabuyao, Province of Laguna",Delivered,01/08/2023,,,"Rate: 11.5K
+ JTMMDCN-SOUTH 201-01-000025",WAYBILL#  0225919
+182,,,,01/07/2023,TESTBN183,Ph global jet express inc.,66.01-C1,Fa tradings hauling and construction services,1.0146-V2,CBQ1924,6 Wheeler Closed Van,54 EK BUILDING HOLY SPIRIT DRIVE BRGY. HOLY SPIRIT QUEZON CITY,#33 KAINGIN ROAD APOLONIO SAMSON QUEZON CITY,Delivered,01/07/2023,,,,Waybill#: 0155579
+183,,,,01/07/2023,TESTBN184,Ph global jet express inc.,66.01-C1,Fa tradings hauling and construction services,1.0146-V2,CBP7417,6 Wheeler Closed Van,"Unit C1-1, Standout Residences Frisco #1038 Brgy. Paraiso, Quezon City",#33 KAINGIN ROAD APOLONIO SAMSON QUEZON CITY,Delivered,01/07/2023,,,,Waybill#: 0155673
+184,,,,01/07/2023,TESTBN185,Ph global jet express inc.,66.01-C1,Pilambato trucking services,1.0335-V1,IOE847,6 Wheeler Closed Van,"Unit C1-1, Standout Residences Frisco #1038 Brgy. Paraiso, Quezon City",#33 KAINGIN ROAD APOLONIO SAMSON QUEZON CITY,Delivered,01/07/2023,,,,Waybill#: 0155541
+185,,,,01/07/2023,TESTBN186,Ph global jet express inc.,66.01-C1,Pilambato trucking services,1.0335-V1,NER4925,6 Wheeler Closed Van,TCC-134 SPEAKER PEREZ ST. BRGY STA MESA HEIGHTS QC,#33 KAINGIN ROAD APOLONIO SAMSON QUEZON CITY,Delivered,01/07/2023,,,,Waybill#: 0155459
+186,,,,01/07/2023,TESTBN187,Ph global jet express inc.,66.01-C1,Kattken transport services,1.0255-V2,CAI5772,6 Wheeler Closed Van,213 BIAK NA BATO CORNER DAGOT ST QC,#33 KAINGIN ROAD APOLONIO SAMSON QUEZON CITY,Delivered,01/07/2023,,,,Waybill#: 0214202
+187,,,,01/07/2023,TESTBN188,Ph global jet express inc.,66.01-C1,Kattken transport services,1.0255-V2,NFY1594,6 Wheeler Closed Van,"INDOPLUS # 6 APO ST., QC",#33 KAINGIN ROAD APOLONIO SAMSON QUEZON CITY,Delivered,01/07/2023,,,,Waybill#: 0105077
+188,,,,01/07/2023,TESTBN189,Ph global jet express inc.,66.01-C1,Jakf trucking services,1.0211-V2,CAZ3495,6 Wheeler Closed Van,"1126 Commonwealth Ave. Extension, NOVALICHES, Quezon city",#33 KAINGIN ROAD APOLONIO SAMSON QUEZON CITY,Delivered,01/07/2023,,,,Waybill#: 0211262
+189,,,,01/07/2023,TESTBN190,Ph global jet express inc.,66.01-C1,A2&m trucking services,1.0012-V1,NAX1064,6 Wheeler Closed Van,760 AURORA BLVD COR. MANGA ROAD QUEZON CITY,#33 KAINGIN ROAD APOLONIO SAMSON QUEZON CITY,Delivered,01/07/2023,,,,Waybill#: 0193531
+190,,,,01/07/2023,TESTBN191,Ph global jet express inc.,66.01-C1,A2&m trucking services,1.0012-V1,NAX1064,6 Wheeler Closed Van,"760 AURORA BLVD COR. MANGA ROAD QUEZON CITY
+",#33 KAINGIN ROAD APOLONIO SAMSON  QUEZON CITY,Delivered,01/07/2023,,,,Waybill#: 0193532
+191,,,,01/07/2023,TESTBN192,Ph global jet express inc.,66.01-C1,Pilambato trucking services,1.0335-V1,CBP4606,6 Wheeler Closed Van,"Unit H & I Aurora Arcade No. 41 Aurora Boulevard, Doña Imelda, Quezon City",#33 KAINGIN ROAD APOLONIO SAMSON QUEZON CITY,Delivered,01/07/2023,,,,Waybill#: 0155292
+192,,,,01/07/2023,TESTBN193,Ph global jet express inc.,66.01-C1,J.m de leon transport,1.0207-V2,NFZ1696,6 Wheeler Closed Van,64 ABD BLDG KAMUNING ROAD QUEZON CITY,#33 KAINGIN ROAD APOLONIO SAMSON QUEZON CITY,Delivered,01/07/2023,,,,Waybill#: 0082332
+193,,,,01/07/2023,TESTBN194,Ph global jet express inc.,66.01-C1,Day2day logistics inc,1.0107-V2,NGL2519,6 Wheeler Closed Van,"STRATA VIEWS BLDG.# 306 P. GUEVARRA ST, STA LUCIA SAN JUAN CITY","C5 AFP-RSBS INDUSTRIAL PARK KM.12 EAST SERVICES RD., WESTERN BICUTAN, TAGUIG CITY",Delivered,01/07/2023,,,,Waybill#: 0158235
+194,,,,01/07/2023,TESTBN195,Ph global jet express inc.,66.01-C1,A2&m trucking services,1.0012-V1,NAR5025,6 Wheeler Closed Van,588 ARAYAT COR. CORDILLERA ST. BRGY MALAMIG MANDALUYONG CITY,"C5 AFP-RSBS INDUSTRIAL PARK KM.12 EAST SERVICES RD., WESTERN BICUTAN, TAGUIG CITY",Delivered,01/07/2023,,,,Waybill#: 0106796
+195,,,,01/07/2023,TESTBN196,Ph global jet express inc.,66.01-C1,Day2day logistics inc,1.0107-V2,NAO3978,6 Wheeler Closed Van,"427 MARTINEZ AVE. , MANDALUYONG CITY",Kaingin,Delivered,01/07/2023,,,,wAYBILL#: 0158296
+196,,,,01/07/2023,TESTBN197,Ph global jet express inc.,66.01-C1,J land trucking services,1.0203-V1,NAW9774,6 Wheeler Closed Van,"1st Floor of the Bldg., Lot 3 P-4 & 3-S, Bayan-Bayanan Ave., Concepcion 1, Marikina City",Kaingin,Delivered,01/07/2023,,,,Waybill#: 0164072
+197,,,,01/07/2023,TESTBN198,Ph global jet express inc.,66.01-C1,J.m de leon transport,1.0207-V2,NAJ6399,6 Wheeler Closed Van,"1st Floor of the Bldg., Lot 3 P-4 & 3-S, Bayan-Bayanan Ave., Concepcion 1, Marikina City","C5 AFP-RSBS INDUSTRIAL PARK KM.12 EAST SERVICES RD., WESTERN BICUTAN, TAGUIG CITY",Delivered,01/07/2023,,,,Waybill#: 0162259
+198,,,,01/07/2023,TESTBN199,Ph global jet express inc.,66.01-C1,J.m de leon transport,1.0207-V2,NAJ6399,6 Wheeler Closed Van,#33 KAINGIN ROAD APOLONIO SAMSON  QUEZON CITY,"C5 AFP-RSBS INDUSTRIAL PARK KM.12 EAST SERVICES RD., WESTERN BICUTAN, TAGUIG CITY",Delivered,01/07/2023,,,,Waybill#: 0162258
+199,,,,01/07/2023,TESTBN200,Ph global jet express inc.,66.01-C1,J.m de leon transport,1.0207-V2,NCK8691,6 Wheeler Closed Van,"B.G. Molina corner Balagtas St., Parang, Marikina City",Kaingin,Delivered,01/07/2023,,,,Waybill#: 0162042

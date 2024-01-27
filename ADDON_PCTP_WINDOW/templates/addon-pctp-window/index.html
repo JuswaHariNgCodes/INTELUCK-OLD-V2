@@ -1,0 +1,415 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  {{ request.session.module_name }}
+{% endblock %}
+
+{% block content %}
+
+{% include 'topbar.html' %}
+
+<div class="content-wrapper custom-background-main-card" >
+  {% include 'sidebar.html' %}
+  <!-- Content Header (Page header) -->
+  <section class="content-header ">
+    <!-- START MODULE PROPERTIES -->
+    <p id="moduleName" name="moduleName" class="d-none">pctpwindow</p>
+    <p id="objectType" name="objectType" class="d-none">17</p>
+    <p id="SAPMainTable" name="SAPMainTable" class="d-none">ordr</p>
+    <p id="SAPChildTable1" name="SAPChildTable1" class="d-none">rdr1</p>
+    <p id="rowItemType" name="rowItemType" class="d-none">rdr1</p>
+    <p id="rowServiceType" name="rowServiceType" class="d-none">rdr2</p>
+    <p id="formSettingsURL" name="formSettingsURL" class="d-none">get-form-settings-ordr</p>
+    <p id="updateFormSettingsURL" name="updateFormSettingsURL" class="d-none">post-form-settings-ordr</p>
+    <p id="currentLoggedInUserId" name="currentLoggedInUserId" class="d-none"></p>
+    <p id="currentLoggedInEmpId" name="currentLoggedInEmpId" class="d-none" ></p>
+    <p id="currentLoggedInName" name="currentLoggedInName" class="d-none" ></p>
+    <p id="OITMCondition" name="OITMCondition" class="d-none"></p>
+    <p id="enableSAPModuleTopBarButtons" name="enableSAPModuleTopBarButtons" class="d-none">N</p>
+
+    <!-- DECIMALS -->
+    <p id="TotalsAccuracy" name="TotalsAccuracy" class="d-none database-settings" >{{ request.session.TotalsAccuracy }}</p>
+    <p id="PriceAccuracy" name="PriceAccuracy" class="d-none database-settings" >{{ request.session.PriceAccuracy }}</p>
+    <p id="RateAccuracy" name="RateAccuracy" class="d-none database-settings" >{{ request.session.RateAccuracy }}</p>
+    <p id="AccuracyofQuantities" name="AccuracyofQuantities" class="d-none database-settings" >{{ request.session.AccuracyofQuantities }}</p>
+    <p id="PercentageAccuracy" name="PercentageAccuracy" class="d-none database-settings" >{{ request.session.PercentageAccuracy }}</p>
+    <p id="MeasuringAccuracy" name="MeasuringAccuracy" class="d-none database-settings" >{{ request.session.MeasuringAccuracy }}</p>
+    <p id="QueryAccuracy" name="QueryAccuracy" class="d-none database-settings" >{{ request.session.QueryAccuracy }}</p>
+    <!-- CURRENCIES -->
+    <p id="MainCurncy" name="MainCurncy" class="d-none database-settings" >
+    <p id="SysCurrncy" name="SysCurrncy" class="d-none database-settings" >
+    <!-- DATE FORMAT -->
+    <p id="DateFormat" name="DateFormat" class="database-settings d-none">{{request.session.DateFormat}}</p>
+    <p id="DateFormatString" name="DateFormatString" class="d-none database-settings" ></p>
+
+    <!-- MASTER DATA TYPES -->
+    <p id="CardType" name="CardType" class="d-none ocrd-settings" >C</p>
+    <!-- END MODULE PROPERTIES -->
+      <div class="container-fluid m-0 ">
+        <div class="row mb-0">
+          <div id="myProgress" class="d-none m-0 p-0">
+            <div id="myBar" class="m-0 p-0">
+
+            </div>
+          </div>
+          <div class="col-sm-6">
+              <h1 class="m-0">{{ request.session.module_name }}</h1>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content-header -->
+
+  
+  <!-- Main content -->
+  <section class="content" >
+    <div class="container-fluid">
+    <form action=""  method="POST" enctype="multipart/form-data" id="ORDRForm"  class="form-horizontal" novalidate autocomplete="off">
+      {% csrf_token %}
+
+      <div id="modulebody" class="row container-fluid-custom gx-3">
+        <div id="SydtemFieldsContainer" class="col-lg-12" >
+          <div class="card card-primary card-outline custom-background-header-content" style="height: 180vh !important">
+            <div class="card-body">
+              <div class="overflow-none">
+                <div >
+                  <form id="pctpSearchForm">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="form-group row m-0">
+                        <label for="Find" class="col-sm-3 col-form-label">Find</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control headerfields" id="Find" name="Find">
+                        </div>
+                      </div>
+                      <div class="form-group row m-0">
+                        <label for="" class="col-sm-3 col-form-label">Booking Date</label>
+                        <div class="col-sm-9" style="display:flex !important">
+                          <label for="From" class="col-sm-2 col-form-label text-right">From:</label>
+                          <input class="form-control text-center headerfields custom-date-input{{forloop.counter}}" id="fromBookingDate{{forloop.counter}}" name="fromBookingDate"/>
+                       
+                          <label for="To" class="col-sm-2 col-form-label text-right">To:</label>
+                          <input class="form-control text-center headerfields custom-date-input{{forloop.counter}}" id="toBookingDate{{forloop.counter}}" name="toBookingDate"/>
+                       
+                        </div>
+                      </div>
+                      <div class="form-group row m-0">
+                        <label for="" class="col-sm-3 col-form-label">Delivery Date</label>
+                        <div class="col-sm-9" style="display:flex !important">
+                          <label for="From" class="col-sm-2 col-form-label text-right">From:</label>
+                          <input class="form-control text-center headerfields custom-date-input{{forloop.counter}}" id="fromDeliveryDate{{forloop.counter}}" name="fromDeliveryDate"/>
+                       
+                          <label for="To" class="col-sm-2 col-form-label text-right">To:</label>
+                          <input class="form-control text-center headerfields custom-date-input{{forloop.counter}}" id="toDeliveryDate{{forloop.counter}}" name="toDeliveryDate"/>
+                       
+                        </div>
+                      </div>
+                      <div class="form-group row m-0 prevent-select ">
+                        <label for="chkBoxFreezePane" class="col-sm-3 col-form-label">Freeze Pane</label>
+                        <div class="col-lg-3">
+                          <label class="switch"> 
+                            <input type="checkbox" id="chkBoxFreezePane" checked>
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-lg-3">
+                      
+                      <div class="form-group row m-0">
+                        <label for="Find" class="col-sm-4 col-form-label">Client Tag</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control headerfields" id="ClientTag" name="ClientTag">
+                        </div>
+                      </div>
+                      <div class="form-group row m-0">
+                        <label for="Find" class="col-sm-4 col-form-label">Trucker Tag</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control headerfields" id="TruckerTag" name="TruckerTag">
+                        </div>
+                      </div>
+                      <div class="form-group row m-0">
+                        <label for="Find" class="col-sm-4 col-form-label">Delivery Status</label>
+                        <div class="col-sm-8">
+                          <select class='form-control headerfields editable-text input-serialize row-input u_deliverystatus' id="DeliveryStatus">
+                            {% if i.U_DeliveryStatus is None %}
+                                <option selected value="">-</option>
+                            {% endif %}
+                            {% for i2 in queryResultDeliveryStatusJson %}
+                                {% if i2.Code == i.U_DeliveryStatus %}
+                                    <option selected value="{{i2.Code}}">{{i2.Name}}</option>
+                                {% else %}
+                                    <option value="{{i2.Code}}">{{i2.Name}}</option>
+                                {% endif%}
+                            {%  endfor %}
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group row m-0">
+                        <label for="Find" class="col-sm-4 col-form-label">POD Status</label>
+                        <div class="col-sm-8">
+                          <select class='form-control headerfields editable-text input-serialize row-input u_triptype' id="PODStatus">
+                            {% if i.U_PODStatusDetail is None %}
+                                <option selected value="">-</option>
+                            {% endif %}
+                            {% for i2 in queryResultPodStatusJson %}
+                                {% if i2.Code == i.U_PODStatusDetail %}
+                                    <option selected value="{{i2.Code}}">{{i2.Name}}</option>
+                                {% else %}
+                                    <option value="{{i2.Code}}">{{i2.Name}}</option>
+                                {% endif%}
+                            {%  endfor %}
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group row m-0">
+                        <label for="Find" class="col-sm-4 col-form-label">PTF No.</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control headerfields" id="PTFNo" name="PTFNo">
+                        </div>
+                      </div>    
+                    </div>
+                    <div class="col-lg-4">
+                      <a type="button" id="btnPctpWindowSearch" class="btn btn-success"><i class="fas fa-search p-2"></i></a>
+                    </div>
+                  </form>  
+                  </div>
+                    <div class="row">
+                      <div class="col-sm-12 mx-1">
+                          <div class="p-0 pt-1 border-bottom-0">
+                            <ul class="nav nav-tabs " id="custom-tabs-three-tab" role="tablist">
+                              <li class="nav-item ">
+                                <a class="nav-link content-tab active px-5" id="summaryTab" data-toggle="pill" href="#summary" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Summary</a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link content-tab px-5" id="podTab" data-toggle="pill" href="#pod" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">POD</a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link content-tab px-5" id="billingTab" data-toggle="pill" href="#billing" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Billing</a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link content-tab px-5" id="tpTab" data-toggle="pill" href="#tp" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">TP</a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link content-tab px-5" id="pricingTab" data-toggle="pill" href="#pricing" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Pricing</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="card-body card-primary card-outline custom-background-inner-content" style="height: 600px !important">
+                            <div class="tab-content custom-content" id="custom-tabs-three-tabContent" >
+                              <div class="tab-pane fade show active" id="summary" role="tab panel" aria-labelledby="summary" >
+                                <div class="overflow-auto" >
+                                  <div id="rowLoader" class="d-none"></div>
+                                    <div id="ContentRows" class="card-body table-responsive p-0" style="height: 800px; width: 100%">
+                                      <table class="table table-head-fixed text-nowrap table-bordered table-sm mx-0" id="tblContentRows" >
+                                        <thead>
+                                          Summary
+                                        </thead>
+                                      </table>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade show prevent-select" id="pod" role="tab panel" aria-labelledby="pod" >
+                                <div class="overflow-auto" >
+                                  <div id="rowLoader" class="d-none"></div>
+                                    <div id="ContentRows" class="card-body  p-0 " style="height: 900px; width: 100%">
+                                      <div class="wrapper-sticky">
+                                        <table class="table table-head-fixed  table-bordered table-sm pctpwindowtable mx-0 d-none" id="tblContentRowsPOD" >
+                                          <thead>
+                                            <tr class='text-center custom-row'>
+                                                <th class="text-center first-col sticky-col first-col-pod bg-yellow">No #</th>
+                                                <th class="text-center second-col sticky-col second-col-pod bg-yellow"><input type='checkbox' id="selectAllPOD" class='form-control headerfields'></input></th>
+                                                <th class="text-center third-col sticky-col third-col-pod bg-yellow">Attachment</th>
+                                                <th class="text-center fourth-col sticky-col fourth-col-pod bg-yellow">Booking Date</th>
+                                                <th class="text-center fifth-col sticky-col sticky-last-column fifth-col-pod bg-yellow" style="min-width:200px !important">Booking Number</th>
+                                                <th class="text-center">SAP ID (Sales Order)</th>
+                                                <th class="text-center" style="min-width:300px !important">Client Name</th>
+                                                <th class="text-center" style="min-width:300px !important">Group Project / Location (SAP)</th>
+                                                <th class="text-center" style="min-width:200px !important">SAP Client</th>
+                                                <th class="text-center" style="min-width:300px !important">Trucker Name</th>
+                                                <th class="text-center" style="min-width:200px !important">SAP Trucker Code</th>
+                                                <th class="text-center" style="min-width:200px !important">Plate Number</th>
+                                                <th class="text-center" style="min-width:200px !important">Vehicle Type & Capacity</th>
+                                                <th class="text-center" style="min-width:400px !important">Deliver Origin</th>
+                                                <th class="text-center">Island (Origin)</th>
+                                                <th class="text-center" style="min-width:400px !important">Destination</th>
+                                                <th class="text-center">Island (Destination)</th>
+                                                <th class="text-center">If Interisland</th>
+                                                <th class="text-center" style="min-width:200px !important">Delivery Status</th>
+                                                <th class="text-center" style="min-width:200px !important">Delivery Completion Date (Per DTR)</th>
+                                                <th class="text-center" style="min-width:200px !important">Delivery Complete Date (Per POD)</th>
+                                                <th class="text-center">No. of Drops</th>
+                                                <th class="text-center" style="min-width:200px !important">Trip Type</th>
+                                                <th class="text-center" style="min-width:400px !important">Remarks</th>
+                                                <th class="text-center">Document Number</th>
+                                                <th class="text-center">Trip Ticket #</th>
+                                                <th class="text-center">Waybill #</th>
+                                                <th class="text-center">Shipment #</th>
+                                                <th class="text-center">Delivery Receipt</th>
+                                                <th class="text-center">Series #</th>
+                                                <th class="text-center">Other POD Document</th>
+                                                <th class="text-center">Remarks (POD)</th>
+                                                <th class="text-center">Received by</th>
+                                                <th class="text-center" style="min-width:200px !important">Client Received Data</th>
+                                                <th class="text-center" style="min-width:200px !important">Actual Data Received Soft Copy (Initial)</th>
+                                                <th class="text-center" style="min-width:200px !important">Initial HC Inteluck Received Data</th>
+                                                <th class="text-center" style="min-width:200px !important">Actual HC Received Data</th>
+                                                <th class="text-center" style="min-width:200px !important">Date Returned</th>
+                                                <th class="text-center">POD in Charge</th>
+                                                <th class="text-center" style="min-width:200px !important">Verified Date Hard Copy GOOD</th>
+                                                <th class="text-center">POD Status (Detail)</th>
+                                                <th class="text-center">PTF (POD Transmitall Form) #</th>
+                                                <th class="text-center">Date Forwarded to BT (Hard Copy)</th>
+                                                <th class="text-center">Verification Turnaround Time (TAT)</th>
+                                                <th class="text-center">POD Turnaround Time (TAT)</th>
+                                                <th class="text-center">Billing Date</th>
+                                                <th class="text-center">Billig Status</th>
+                                                <th class="text-center">Service Type</th>
+                                                <th class="text-center" style="min-width:200px !important">SI #</th>
+                                                <th class="text-center">Billing Team in Charge</th>
+                                                <th class="text-center">BT Remarks</th>
+                                                <th class="text-center">SOB Number</th>
+                                                <th class="text-center">Outline No. (Criteria for GetCocaRates)</th>
+                                                <th class="text-center">CBM (Cubic meter) - Based on SI/DR</th>
+                                                <th class="text-center">Sales Invoice No/Delivery Receipt No.</th>
+                                                <th class="text-center">Delivery Mode</th>
+                                                <th class="text-center">Source Whise - Based on DTT Stamp</th>
+                                                <th class="text-center">Destination - Client Customer</th>
+                                                <th class="text-center">Total Invoice Amount</th>
+                                                <th class="text-center">SO No. - Listed on Delivery Receipt</th>
+                                                <th class="text-center">Forward Load</th>
+                                                <th class="text-center">Back Load</th>
+                                                <th class="text-center">ID Number</th>
+                                                <th class="text-center" style="min-width:200px !important">Type of Accessorial</th>
+                                                <th class="text-center">Approval Status of Accessorial</th>
+                                                <th class="text-center">Time In (Empty Demurrage)</th>
+                                                <th class="text-center">Time Out (Empty Demurrage)</th>
+                                                <th class="text-center">Verified Empty Demurrage</th>
+                                                <th class="text-center">Time In (Loaded Demurrage)</th>
+                                                <th class="text-center">Time Out (Loaded Demurrage)</th>
+                                                <th class="text-center">Verified Loaded Demurrage</th>
+                                                <th class="text-center">Remarks</th>
+                                                <th class="text-center">Time In (Advance Loading)</th>
+                                                <th class="text-center">Day Of The Week</th>
+                                                <th class="text-center">Time In</th>
+                                                <th class="text-center">Time Out</th>
+                                                <th class="text-center">Total No. Exceed</th>
+                                                <th class="text-center">ODO In</th>
+                                                <th class="text-center">ODO Out</th>
+                                                <th class="text-center">Total Usage</th>
+                                                <th class="text-center">Client Submission Status</th>
+                                                <th class="text-center">Client Sub Overdue Days</th>
+                                                <th class="text-center">Client Penalty Calculation</th>
+                                                <th class="text-center">POD Status for Payment Processing</th>
+                                                <th class="text-center">POD Submit Deadline</th>
+                                                <th class="text-center">Overdue Days</th>
+                                                <th class="text-center">Inteluck - Penalty Calculation</th>
+                                                <th class="text-center">CRD Waived Days</th>
+                                                <th class="text-center">IRD Waived Days</th>
+                                                <th class="text-center">Lost - Penalty Calculation</th>
+                                                <th class="text-center" style="min-width:200px !important">Penalties</th>
+                                                <th class="text-center">Total Submission Penalties</th>
+                                                <th class="text-center" style="min-width:100px !important">Waived</th>
+                                                <th class="text-center">%Penalty Charged</th>
+                                                <th class="text-center">Approved by</th>
+                                                <th class="text-center">Total Penalty Waived</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                          
+                                        </tbody>
+                                          <!-- {% include 'addon-pctp-window/partials/addon-pctp-window-contents-row-lines-POD.html' %} -->
+                                        </table>
+                                      </div>
+                                      
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade show" id="billing" role="tab panel" aria-labelledby="billing" >
+                                <div class="overflow-auto" >
+                                  <div id="rowLoader" class="d-none"></div>
+                                    <div id="ContentRows" class="card-body table-responsive p-0 " style="height: 700px; width: 100%">
+                                      <div class="wrapper-sticky">
+                                        <table class="table table-head-fixed text-nowrap table-bordered table-sm pctpwindowtable mx-0" id="tblContentRowsPOD" >
+                                          Billing
+                                        </table>
+                                      </div>
+                                      
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade show" id="tp" role="tab panel" aria-labelledby="tp" >
+                                <div class="overflow-auto" >
+                                  <div id="rowLoader" class="d-none"></div>
+                                    <div id="ContentRows" class="card-body table-responsive p-0 " style="height: 700px; width: 100%">
+                                      <div class="wrapper-sticky">
+                                        <table class="table table-head-fixed text-nowrap table-bordered table-sm pctpwindowtable mx-0" id="tblContentRowsPOD" >
+                                          TP
+                                        </table>
+                                      </div>
+                                      
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade show" id="pricing" role="tab panel" aria-labelledby="pricing" >
+                                <div class="overflow-auto" >
+                                  <div id="rowLoader" class="d-none"></div>
+                                    <div id="ContentRows" class="card-body table-responsive p-0 " style="height: 700px; width: 100%">
+                                      <div class="wrapper-sticky">
+                                        <table class="table table-head-fixed text-nowrap table-bordered table-sm pctpwindowtable mx-0" id="tblContentRowsPOD" >
+                                          Pricing
+                                        </table>
+                                      </div>
+                                      
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- <hr/> -->
+                </div>
+              </div>
+            </div>
+            <div id="submitButtons" class="card-footer card-primary card-outline">
+              <div class="btn-group">
+                  <button type="button" name="action" class="btn btn-lg btn-success fresh-submit-button submit-buttons mx-1" id="btnUpdate">Update</button>
+                  <button type="button" name="action" class="btn btn-lg btn-info fresh-submit-button submit-buttons mx-1" id="btnGeneratePTF">Generate PTF</button>
+                  <button type="button" name="action" class="btn btn-lg btn-info fresh-submit-button submit-buttons mx-1" id="btnGeneratePV">Generate PV</button>
+              </div>
+             </div>
+          </div>
+        </div>
+      </div>
+      
+    </form>
+    </div>
+  </section>
+  <!-- /.content -->
+  
+</div>
+
+  {% include "addon-pctp-window/modals/modals.html" %}
+  {% include "addon-pctp-window/modals/verticals/modal_pod_vertical.html" %}
+  <!-- INDEPENDENT DATALIST -->
+  <datalist id='CardCodeQueryResult' name='CardCodeQueryResult' class="datalist">
+    {% for i in businessPartnerList %}
+    <option value="{{i.0}}" label="{{i.1}}"></option>
+    {%endfor%}
+  </datalist>
+
+
+  
+  <!-- END INDEPENDENT DATALIST -->
+  <!-- DEPENDENT DATALIST -->
+
+  <!-- END DEPENDENT DATALIST -->
+  <script type="text/javascript" src="{% static 'addon-pctp-window/functions.js' %}"></script>
+  <script type="text/javascript" src="{% static 'addon-pctp-window/main.js' %}"></script>
+  <script type="text/javascript" src="{% static 'addon-pctp-window/modals/modals.js' %}"></script>
+ 
+  {% endblock %}
+  
+

@@ -1,0 +1,4 @@
+SELECT 
+    T0.Code,
+    T0.Name
+FROM [@BILLINGSTATUS] T0

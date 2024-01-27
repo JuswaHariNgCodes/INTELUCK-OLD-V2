@@ -1,0 +1,320 @@
+  
+  {% load static %}
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-warning elevation-4" >
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="{{ MEDIA_URL }}logos/inteluckloogo.jpg" alt="AdminLTE Logo" class="brand-image elevation-3">
+      
+      <span class="brand-text font-weight-light">PORTAL ACCESS </span>
+      <br/>
+   
+    </a>
+    
+     
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+           
+            <!-- <img class="img-circle image-sidebar elevation-2" alt="User Image" src="{{ MEDIA_URL }}{{ request.session.user_profilepic }}"> -->
+            <img class="img-circle image-sidebar elevation-2" alt="User Image" src="{{ MEDIA_URL }}{{ request.session.user_profilepic }}">
+           
+          </div>
+          <div class="info">
+            <p href="" class="d-block info-text">Welcome!</p>
+           
+            <h5 href="" class="d-block info-text">{{ request.session.lastName }},</h5>
+            <h5 href="" class="d-block info-text">{{ request.session.firstName }}</h5>
+            <p href="" class="d-block info-text">{{ request.session.username }}</p>
+            <p id="userid" name="userid" class="d-none info-text">{{ request.session.user_id }}</p>
+            <p id="sidebarmodules" name="sidebarmodules" class="d-none info-text">{{ request.session.user_modules }}</p>
+            <p id="baseurl" name="baseurl" class="d-none info-text">{{ request.session.base_dir }}</p>
+          </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" id="sidebarmodules">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item ">
+            <a href="/dashboard/" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt nav-icon-custom"></i>
+              <p> Dashboard </p>
+            </a>
+          </li>
+          <li class="nav-header">MODULES</li>
+          <li class="nav-item" id="Administration">
+            <a href="#Admin" class="nav-link">
+              <i class="nav-icon fas fa-tasks nav-icon-custom"></i>
+              <p>
+              Administration
+              <i class="fas fa-angle-left right nav-icon-caret-custom"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/ousr/user-management" class="nav-link modules adminmodules" data-module="ousr" >
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>User Management</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/top-nav-sidebar.html" class="nav-link modules adminmodules" data-module="ocon">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Connected Clients</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/top-nav-sidebar.html" class="nav-link modules adminmodules" data-module="olic">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>License Administration</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/layout/boxed.html" class="nav-link modules adminmodules" data-module="oapp">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Approval Process</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/oadm/admin-settings" class="nav-link modules adminmodules" data-module="oadm">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Admin Settings</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/api/pctp-latest-200" class="nav-link modules adminmodules" data-module="oadm">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>POD API GET LATEST 200</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/api/pctp-pod-api" class="nav-link modules adminmodules" data-module="oadm">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>POD API GET</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/api/pctp-billing-api" class="nav-link modules adminmodules" data-module="oadm">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>BILLING API GET</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/api/pctp-tp-api" class="nav-link modules adminmodules" data-module="oadm">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>TP API GET</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/api/pctp-pricing-api" class="nav-link modules adminmodules" data-module="oadm">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>PRICING API GET</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item" id="Sales">
+            <a href="#Sales" class="nav-link">
+            <i class="nav-icon fas fa-tags nav-icon-custom"></i>
+              <p>
+                Sales
+                <i class="fas fa-angle-left right nav-icon-caret-custom"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/UI/general.html" class="nav-link modules salesmodules" data-module="oqut">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Sales Quotation</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/ordr/sales-order" class="nav-link modules salesmodules " data-module="ordr">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Sales Order</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/UI/buttons.html" class="nav-link modules salesmodules" data-module="odln">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Delivery</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/UI/sliders.html" class="nav-link modules salesmodules" data-module="oinv">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>A/R Invoice</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item" id="Purchasing">
+            <a href="#Purchasing" class="nav-link" >
+              <i class="nav-icon fas fa-shopping-cart nav-icon-custom"></i>
+              <p>
+                Purchasing
+                <i class="fas fa-angle-left right nav-icon-caret-custom"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/tables/simple.html" class="nav-link modules purchasingmodules" data-module="oprq">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Purchase Request</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link modules purchasingmodules" data-module="opor">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Purchase Order</p>
+                </a>
+              </li>
+              <li class="nav-item"> 
+                <a href="pages/tables/jsgrid.html" class="nav-link modules purchasingmodules" data-module="opdn">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Goods Receipt PO</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item" id="BusinessPartner">
+            <a href="#BusinessPartner" class="nav-link" >
+              <i class="nav-icon fas fa-hands-helping nav-icon-custom"></i>
+              <p>
+                Business Partner
+                <i class="fas fa-angle-left right nav-icon-caret-custom"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link modules businesspartnermodules" data-module="ocrd">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>BP Master Data</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item" id="Inventory">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-boxes nav-icon-custom"></i>
+              <p>
+                Inventory
+                <i class="fas fa-angle-left right nav-icon-caret-custom"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link modules inventorymodules" data-module="oitm">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Item Master Data</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link modules inventorymodules" data-module="oign">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Goods Receipt</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link modules inventorymodules" data-module="oige">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Goods Issue</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link modules inventorymodules" data-module="owtq">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Inventory Request</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link modules inventorymodules" data-module="owtr">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Inventory Transfer</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-header">REPORTS</li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-area nav-icon-custom"></i>
+              <p>
+                Financial Reports
+                <i class="fas fa-angle-left right nav-icon-caret-custom"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/mailbox/mailbox.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Inbox</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/mailbox/compose.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Compose</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/mailbox/read-mail.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Read</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-bar nav-icon-custom"></i>
+              <p>
+                Sales Reports
+                <i class="fas fa-angle-left right nav-icon-caret-custom"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-line nav-icon-custom"></i>
+              <p>
+                Purchasing Reports
+                <i class="fas fa-angle-left right nav-icon-caret-custom"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-header">ADD ONS</li>
+          <li class="nav-item">
+            <a href="/addon-pctp-uploader/addon-pctp-uploader-1" class="nav-link" data-module="addon">
+              <i class="nav-icon fas fa-puzzle-piece nav-icon-custom"></i>
+              <p>PCTP Uploader</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/addon-pctp-window/addon-pctp-window" class="nav-link" data-module="addon">
+              <i class="nav-icon fas fa-puzzle-piece nav-icon-custom"></i>
+              <p>PCTP Window</p>
+            </a>
+          </li>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+  <script type="text/javascript" src="{% static 'script/sidebar.js' %}"></script>

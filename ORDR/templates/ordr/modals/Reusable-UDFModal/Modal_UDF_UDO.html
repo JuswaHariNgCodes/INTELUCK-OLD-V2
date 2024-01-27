@@ -1,0 +1,65 @@
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    <div class="modal-header bg-warning ">
+        <h4 class="modal-title">List of {{ UDO }}</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <table id="tblUDF_UDO" class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                <th>#</th>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Doc Entry</th>
+              </tr>
+              </thead>
+              <tbody>
+                {% for i in udoDetails %}
+                    <tr>
+                        <td class="item-0">{{forloop.counter}}</td>
+                        <td class="item-1">{{i.0}}</td>
+                        <td class="item-2">{{i.1|default_if_none:""}} </td>
+                        <td class="item-3">{{i.2|default_if_none:""}} </td>
+                    </tr>
+                {% endfor %}
+              </tbody>
+        </table>
+    </div>
+    <div class="modal-footer ">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+    </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->
+
+<script>
+    InitializeReusableUDF_UDODatatable();
+
+    function InitializeReusableUDF_UDODatatable(){
+        if ($.fn.dataTable.isDataTable('#tblUDF_UDO')) {
+            // Do something else since the dataTable's already initialized
+            
+            }
+            else {
+            // Initialize the dataTable
+            // setTimeout(function() { 
+                $("#tblUDF_UDO").DataTable({
+                "responsive": false, "lengthChange": false, "autoWidth": false,  "pageLength": 10, "ordering": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+                }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+             
+            // },500);
+        }
+            setTimeout(function() { 
+                $('#modalReusableUDF_UDO').find('.overlay').addClass('d-none');
+                $('#tblUDF_UDO').removeClass('d-none');
+            },600);
+    }
+</script>
+
+

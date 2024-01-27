@@ -1,0 +1,418 @@
+
+/* ------------------------------------------------- MAIN START----------------------------------------*/
+
+.body-custom{
+  zoom: 0.5; /* Other non-webkit browsers */
+  zoom: 50%; /* Webkit browsers */
+}
+.wrapper{
+  min-height: 100% !important;
+  max-height: 100% !important;
+}
+.content-wrapper{
+  min-height: 100% !important;
+  max-height: 100% !important;
+}
+
+div.dataTables_scrollBody table thead .sorting:before,
+div.dataTables_scrollBody table thead .sorting_asc:before,
+div.dataTables_scrollBody table thead .sorting_desc:before {
+display: none !important;
+}
+
+.toast {
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, 0px);
+  z-index: 9999;
+  width: 1200px !important;
+  font-size: 25px !important;
+}
+
+.content-tab {
+  color: black !important;
+}
+
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 1%;
+  height: 10px;
+  background-color: #04AA6D;
+}
+
+.modal-backdrop {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+.datalist option:nth-child(n+11) {
+  background-color: gold;
+  display:none !important;
+
+}
+input::-webkit-calendar-picker-indicator {
+  display:none !important;
+}
+.disabled-a-buttons{
+  pointer-events: none;
+  /* background-color: #C5C5C5 !important; */
+}
+.disabled-a-row-options > i{
+  pointer-events: none;
+  color: #C5C5C5 !important;
+}
+.disabled-sapb1-topbar-buttons, .disabled-sapb1-topbar-buttons > i{
+  pointer-events: none;
+  color: #C5C5C5 !important;
+}
+input, select {
+ border-radius: 5px !important;
+}
+
+.focus-color{
+  background-color: white;
+}
+
+.row-options{
+  background-color: #fdefb2 
+}
+
+.custom-background-topbar{
+  /* background-color: #f5f3ef !important; */
+  color:white ;
+}
+.custom-background-main-body{
+  background-color: #f5f3ef 
+}
+.custom-background-main-card{
+  background-color: #f5f3ef 
+}
+.custom-background-header-content{
+  background-color: white 
+}
+.custom-background-inner-content{
+  background-color: white 
+}
+
+.bd-example-modal-lg .modal-dialog{
+  display: table;
+  position: relative;
+  margin: 0 auto;
+  top: calc(50% - 24px);
+}
+
+.bd-example-modal-lg .modal-dialog .modal-content{
+  background-color: transparent !important;
+  box-shadow: none !important; 
+  border: none;
+}
+
+.amount {
+  text-align: right !important;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.not-prevent-select {
+  -webkit-user-select: all; /* Safari */
+  -ms-user-select: all; /* IE 10 and IE 11 */
+  user-select: all; /* Standard syntax */
+}
+
+/* START SLIDERS TOGGLE FREEZE PANE BY ANNE F */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  /* background-color: #ffc107; */
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ffc107;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.headerfields{
+  margin-bottom:3px !important;
+}
+
+.content-tab{
+  color: white !important;
+}
+
+input[readonly] {
+  background-color: grey !important;
+}
+/* START SLIDERS TOGGLE FREEZE PANE BY ANNE F */
+/* ------------------------------------------------- MAIN END----------------------------------------*/
+/* ------------------------------------------------- LOGIN START----------------------------------------*/
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items:center !important;
+  height: 100vh;
+}
+
+.form{
+  width: 500px;
+  height: 800px;
+  box-shadow: 0 5px 30px black;
+  margin-top: 500px;
+  border-radius: 10px;
+}
+
+.formGroup{
+  display: flex;
+  justify-content: center;
+}
+
+.image-logo-login{
+  box-shadow: 0 2px 10px black;
+  /* border-radius: 50%; */
+}
+
+.container-fluid-custom{
+  height:135vh !important
+}
+
+
+/* ------------------------------------------------- LOGIN END----------------------------------------*/
+/* ------------------------------------------------- TABLES START----------------------------------------*/
+.image-table{
+  width:30px !important;
+  height: 30px !important;
+  border-radius:50% !important;
+  overflow:hidden !important;
+  border:1px solid #f4f7f6 !important;
+  box-shadow:0 0 0 2px #4e4b47 !important;
+}
+
+.pctpwindowtable td{
+  /* background-color: #f5f3ef !important; */
+}
+.wrapper-sticky {
+  position: relative  !important; 
+  overflow: auto  !important; 
+  white-space: nowrap  !important; 
+}
+
+.custom-rows{
+  min-width: 50px !important; 
+  max-width: 50px !important;
+  /* background-color: #F0FFFF' */
+}
+
+tr:not(:first-child) .sticky-col {
+  /* border-top: 3px solid #ffc107  !important; */
+}
+
+.sticky-col {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: white;
+}
+
+.sticky-last-column{
+  border-right: 3px solid #ffc107  !important;
+}
+
+.first-col{
+  width: 51px !important; 
+  min-width: 51px !important; 
+  max-width: 51px !important; 
+}
+.first-col-pod {
+ 
+  left: 0px !important; 
+  z-index: 99 !important; 
+  border-left: 3px solid #ffc107  !important;
+}
+.second-col{ 
+  width: 70px !important; 
+  min-width: 70px !important; 
+  max-width: 70px !important; 
+}
+.second-col-pod {
+  left: 83px !important; 
+  z-index: 99 !important; 
+}
+.third-col {
+  width: 200px !important; 
+  min-width: 200px !important; 
+  max-width: 200px !important; 
+}
+.third-col-pod {
+  width: 200px !important; 
+  min-width: 200px !important; 
+  max-width: 200px !important; 
+  left: 164px !important; 
+  z-index: 99 !important; 
+}
+.fourth-col {
+  width: 250px !important; 
+  min-width: 250px !important; 
+  max-width: 250px !important; 
+}
+.fourth-col-pod {
+  left: 375px !important; 
+  z-index: 99 !important; 
+}
+.fifth-col-pod {
+  width: 200px !important; 
+  min-width: 200px !important; 
+  max-width: 200px !important; 
+}
+.fifth-col-pod {
+  width: 200px !important; 
+  min-width: 200px !important; 
+  max-width: 200px !important; 
+  left: 636px !important; 
+  z-index: 99 !important; 
+}
+
+table > thead > tr > th {
+  white-space: nowrap !important
+}
+
+.content-row-selected{
+  background-color:#e19b6f !important
+}
+
+/* i:not(.not-date) {
+  background-color: #007bff !important;
+  color: white !important
+} */
+
+/* ------------------------------------------------- TABLES END----------------------------------------*/
+/* ------------------------------------------------- SIDEBAR START----------------------------------------*/
+.image-sidebar{
+  width:75px !important;
+  height: 75px !important;
+  border-radius:50% !important;
+  overflow:hidden !important;
+  border:1px solid #4e4b47 !important;
+  box-shadow:0 0 0 2px #4e4b47 !important;
+}
+.sidebar .info-text {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #fff !important;
+  font-family: 'Anek Malayalam', sans-serif;
+  font-family: 'Lato', sans-serif;
+}
+.info {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.nav-icon-custom {
+  color: #e19b6f;
+  font-size: 30px !important;
+  margin-right: 10px !important;
+}
+
+.nav-icon-caret-custom {
+  color: #e19b6f !important;
+  font-size: 30px !important;
+  margin-left: 10px !important;
+}
+
+.main-sidebar{
+  height: 100% !important;
+  position:fixed !important
+}
+
+#sidebarmodules > a.active{
+  background-color: #e19b6f !important
+}
+
+a.active > i.nav-icon-custom{
+  color: #343a40 !important
+}
+
+i.topbar-custom-icon{
+  color: #e19b6f !important;
+}
+/* ------------------------------------------------- SIDEBAR END----------------------------------------*/
+
+
+/* ------------------------------------------------- TOPBAR START----------------------------------------*/
+/* ------------------------------------------------- TOPBAR END----------------------------------------*/
+
+
+/* ------------------------------------------------- OUSR MODULE START----------------------------------------*/
+.profile-user-img{
+  width:200px !important;
+  height:200px !important;
+  border-radius:50% !important;
+  overflow:hidden !important;
+  border:1px solid #f4f7f6 !important;
+  box-shadow:0 0 0 2px #4e4b47 !important;
+  text-align: center !important;
+}
+
+.custom-file-input{
+  background-color: #FDEFB2 !important
+}
+
+
+/* ------------------------------------------------- OUSR MODULE END----------------------------------------*/
+

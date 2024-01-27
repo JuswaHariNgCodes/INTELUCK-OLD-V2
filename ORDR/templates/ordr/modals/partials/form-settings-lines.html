@@ -1,0 +1,148 @@
+{% if docType == '0' %}
+
+
+    {% for i in contentRows %}
+    <tr>
+        <td class="text-center">
+            {{forloop.counter}}
+        </td>
+        <td class="text-center d-none position" data-name="position">
+            {{i.position}}   
+        </td>
+        <td class="text-center d-none width" data-name="width">
+            {{i.width}}   
+        </td>
+        <td class="text-left">
+            {{i.name}}   
+        </td>
+        <td class="text-center" data-name="position">
+            {% if i.dnone == '' %}
+                <input class="visible" type="checkbox" data-name="dnone" checked> 
+            {% elif i.dnone == 'd-none'  %}
+                <input class="visible" type="checkbox" data-name="dnone" > 
+            {% endif %}
+        </td>
+        <td class="text-center d-none id" data-name="id">
+            {{i.id}}   
+        </td>
+        <td class="text-center d-none name" data-name="name">
+            {{i.name}}   
+        </td>
+        <td class="text-center d-none diapi" data-name="diapi">
+            {{i.diapi}}   
+        </td>
+        <td class="text-center d-none masterdata" data-name="masterdata">
+            {{i.masterdata}}   
+        </td>  
+        <td class="text-center d-none modal" data-name="modal">
+            {{i.modal}}   
+        </td>       
+        <td class="text-center d-none type" data-name="type">
+            {{i.type}}   
+        </td>  
+        <td class="text-center d-none selectoptions" data-name="selectoptions">
+            {{i.selectoptions}}   
+        </td>  
+        <td class="text-center d-none format" data-name="format">
+            {{i.format}}   
+        </td>  
+        <td class="text-center d-none dataListTable" data-name="dataListTable">
+            {{i.dataListTable}}   
+        </td>
+        <td class="text-center d-none dataListID" data-name="dataListID">
+            {{i.dataListID}}   
+        </td>
+        <td class="text-center d-none dataListFieldToSearch" data-name="dataListFieldToSearch">
+            {{i.dataListFieldToSearch}}   
+        </td>
+        <td class="text-center d-none connectedName" data-name="connectedName">
+            {{i.connectedName}}   
+        </td>
+        <td class="text-center d-none postable" data-name="postable">
+            {{i.postable}}   
+        </td>
+        <td class="text-center d-none visible" >
+            {{i.dnone}}   
+        </td>
+
+       
+           
+       
+    </tr>
+    {% endfor %}
+
+
+
+{% else %}
+
+    {% for i in contentRows %}
+    <tr>
+        <td class="text-center">
+            {{forloop.counter}}
+        </td>
+        <td class="text-center d-none position" data-name="position">
+            {{i.position}}   
+        </td>
+        <td class="text-center d-none width" data-name="width">
+            {{i.width}}   
+        </td>
+        <td class="text-left">
+            {{i.name}}   
+        </td>
+        <td class="text-center" data-name="position">
+            {% if i.dnone == '' %}
+                <input class="visible" type="checkbox" data-name="dnone" checked> 
+            {% elif i.dnone == 'd-none'  %}
+                <input class="visible" type="checkbox" data-name="dnone" > 
+            {% endif %}
+        </td>
+        <td class="text-center d-none id" data-name="id">
+            {{i.id}}   
+        </td>
+        <td class="text-center d-none name" data-name="name">
+            {{i.name}}   
+        </td>
+        <td class="text-center d-none diapi" data-name="diapi">
+            {{i.diapi}}   
+        </td>
+        <td class="text-center d-none masterdata" data-name="masterdata">
+            {{i.masterdata}}   
+        </td>  
+        <td class="text-center d-none modal" data-name="modal">
+            {{i.modal}}   
+        </td>       
+        <td class="text-center d-none type" data-name="type">
+            {{i.type}}   
+        </td>  
+        <td class="text-center d-none selectoptions" data-name="selectoptions">
+            {{i.selectoptions}}   
+        </td>  
+        <td class="text-center d-none format" data-name="format">
+            {{i.format}}   
+        </td>  
+        <td class="text-center d-none dataListTable" data-name="dataListTable">
+            {{i.dataListTable}}   
+        </td>
+        <td class="text-center d-none dataListID" data-name="dataListID">
+            {{i.dataListID}}   
+        </td>
+        <td class="text-center d-none dataListFieldToSearch" data-name="dataListFieldToSearch">
+            {{i.dataListFieldToSearch}}   
+        </td>
+        <td class="text-center d-none connectedName" data-name="connectedName">
+            {{i.connectedName}}   
+        </td>
+        <td class="text-center d-none postable" data-name="postable">
+            {{i.postable}}   
+        </td>
+        <td class="text-center d-none visible" >
+            {{i.dnone}}   
+        </td>
+
+       
+           
+       
+    </tr>
+    {% endfor %}
+
+{% endif %}

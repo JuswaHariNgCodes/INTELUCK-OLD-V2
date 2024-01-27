@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col-sm-4">
+        <div class="form-group row m-0">
+            <label for="name" class="col-sm-5 col-form-label">Journal Remark</label>
+            <div class="col-sm-7">
+            <input type="text" class="form-control form-control-sm editable-text input-serialize diapi" id="JournalMemo" name="JrnlMemo" data-default-trigger="getBusinessPartnerDetails()">
+            
+            </div>
+        </div>
+        <div class="form-group row m-0">
+            <label for="name" class="col-sm-5 col-form-label">Payment Terms</label>
+            <div class="col-sm-7">
+                <select class=" form-control form-control-sm my-1 select-invisible-options diapi" id="PayTermsGrpCode" name="GroupNum" data-name="GroupNum" data-table="OCTG" data-field="GroupNum" data-SQL-field="GroupNum" data-default-trigger="getBusinessPartnerDetails()">   
+                    {% for i in paymentTermsList %}
+                    <option value="{{i.0}}" label="{{i.1}}"></option>
+                    {%endfor%}
+                </select>
+            </div>
+        </div>
+         
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+        <div class="form-group row m-0">
+            <label for="email" class="col-sm-5 col-form-label">Cancellation Date</label>
+            <div class="col-sm-7">
+                <div class="input-group input-group-sm date date-group" id="cancellationdate" data-target-input="nearest">
+                    <input type="text" class="form-control form-control-sm datetimepicker-input diapi" data-target="#cancellationdate" id="CancelDate" name="CancelDate"/>
+                    <div class="input-group-append" data-target="#cancellationdate" data-toggle="datetimepicker">
+                        <a type="button" id="btnCntctCode" class="btn btn-flat bg-primary"><i class="far fa-calendar-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row m-0">
+            <label for="NumAtCard" class="col-sm-5 col-form-label">Required Date</label>
+            <div class="col-sm-7">
+                <div class="input-group input-group-sm date date-group" id="requirementdate" data-target-input="nearest">
+                    <input type="text" class="form-control form-control-sm datetimepicker-input diapi" data-target="#requirementdate" id="RequriedDate" name="ReqDate"/>
+                    <div class="input-group-append" data-target="#requirementdate" data-toggle="datetimepicker">
+                        <a type="button" id="btnCntctCode" class="btn btn-flat bg-primary"><i class="far fa-calendar-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row m-0">
+            <label for="name" class="col-sm-5 col-form-label">Federal Tax ID</label>
+            <div class="col-sm-7">
+                <input type="text" class="form-control form-control-sm editable-text input-serialize diapi" id="FederalTaxID" name="FederalTaxID" data-default-source="FederalTaxID" data-SQL-field="LicTradNum" data-default-trigger="getBusinessPartnerDetails()">
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+   Login
+{% endblock %}
+
+{% block content %}
+<style>
+
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("{{ MEDIA_URL }}background/manilacitylights.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    
+  }
+
+  
+</style>
+<div class="container text-center prevent-select" >
+  <div class="form dark-mode" >
+  <img src="{{ MEDIA_URL }}logos/inteluckloogo.jpg" width="auto" height="150" class="mt-5 image-logo-login">
+  <form method="POST" action="" class="mx-2" id="form">
+    {% csrf_token %}
+      <div class="d-flex main-div-custom" >
+              <div class="border-0 mt-5 px-4 login-form-custom" >
+                  <div class="row  mb-4 text-center" > 
+                      <h2 class="mb-3 login-text-custom custom-text col-sm-12" >Hey, good to see you again!</h2>
+                      <br/>
+                      <h5 class="mb-0 login-text-custom custom-text col-sm-12">Log in to continue.</h5>
+                  </div>
+              
+                  <div id="myProgress" class="d-none m-0 p-0">
+                      <div id="myBar" class="m-0 p-0">
+
+                      </div>
+                  </div>
+                  <hr/>
+                  <div class="mt-5 mx-3">
+                    {% for message in messages %}
+                    <div class="alert alert-success">
+                        <a class="close" href="#" data-dismiss="alert">×</a>
+                          {{ message }}
+                    </div>
+
+                {% endfor %}
+                      <div class="input-group mt-5" >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class='fas fa-user'></i></span>
+                        </div>
+                        <input type="text" class="form-control" type="text" id="username" name="username" placeholder="Username" value="" autocomplete="off"  required autofocus>
+                      </div>
+                      <div class="input-group mt-3"> 
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class='fas fa-lock'></i></span>
+                          </div>
+                          <input class="form-control" type="password" id="password" name="password" placeholder="Password" autocomplete="off" required >
+                      </div>
+                      <div class="input-group mt-3"> 
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
+                          </div>
+                          <input class="form-control form-select" type="hidden" id="selCompanyName" name="selCompanyName" placeholder="Company" />
+                          <select class="form-control form-select custom-text" type="text" id="selDatabase" name="selDatabase" placeholder="Company"> 
+                          {% for value in data %}
+                            <option value="{{ value.0 }}%{{ value.1 }}" class="custom-text">{{ value.1 }}</option>
+                          {% endfor %}
+                          </select>
+                      </div>
+                      <div class="mb-3 mt-5 ">
+                          <button type="submit" id="btnSubmit" class="btn btn-primary text-center mb-1 btn-custom custom-text" style="width: 100% !important">Login</button>
+                      </div>
+                      <hr/>
+                      <div class="text-center mb-3 mt-5">
+                          <p className="copyright custom-text">&copy; 2022 JCBA Solutions and Consultancy Inc. <br/>
+                              All rights reserved.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+      </div>
+    
+  </form>
+  </div>
+</div>
+{% include "login/modals/modals.html" %}
+
+<script type="text/javascript" src="{% static 'login/main.js' %}"></script>
+<script type="text/javascript" src="{% static 'login/modals/modals.js' %}"></script>
+
+{% endblock %}
+
